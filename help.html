@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TimeBank Kids Help Center - Find answers to common questions, tutorials, and support resources to get the most from TimeBank Kids.">
+    <meta name="keywords" content="TimeBank Kids help, support, FAQ, tutorials, troubleshooting, user guide">
+    <meta name="author" content="TimeBank Kids">
+    
+    <title>Help Center - TimeBank Kids | Support & Resources</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Page-specific styles */
+        .help-hero {
+            background: linear-gradient(135deg, var(--primary-blue-light) 0%, var(--growth-green-light) 100%);
+            padding: var(--spacing-3xl) 0;
+            margin-top: 72px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .help-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -25%;
+            width: 100%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+            transform: rotate(30deg);
+            opacity: 0.5;
+        }
+        
+        .search-box {
+            background: white;
+            border-radius: var(--radius-full);
+            padding: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            max-width: 600px;
+            margin: var(--spacing-xl) auto 0;
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .search-box input {
+            flex: 1;
+            border: none;
+            padding: var(--spacing-md);
+            font-size: 1.125rem;
+            outline: none;
+        }
+        
+        .search-box button {
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            border-radius: var(--radius-full);
+            padding: var(--spacing-md) var(--spacing-xl);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-base);
+        }
+        
+        .search-box button:hover {
+            background: var(--primary-blue-dark);
+            transform: scale(1.05);
+        }
+        
+        .help-categories {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-3xl);
+        }
+        
+        .help-category-card {
+            background: white;
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
+            cursor: pointer;
+        }
+        
+        .help-category-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .help-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gray-100);
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--spacing-md);
+            font-size: 2.5rem;
+            transition: all var(--transition-base);
+        }
+        
+        .help-category-card:hover .help-icon {
+            background: var(--primary-blue-light);
+            transform: scale(1.1);
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-base);
+        }
+        
+        .faq-question {
+            padding: var(--spacing-lg);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 600;
+            transition: all var(--transition-base);
+        }
+        
+        .faq-question:hover {
+            background: var(--gray-50);
+        }
+        
+        .faq-question.active {
+            background: var(--primary-blue-light);
+        }
+        
+        .faq-answer {
+            padding: 0 var(--spacing-lg);
+            max-height: 0;
+            overflow: hidden;
+            transition: all var(--transition-base);
+        }
+        
+        .faq-answer.open {
+            padding: var(--spacing-lg);
+            max-height: 500px;
+        }
+        
+        .tutorial-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-xl);
+        }
+        
+        .tutorial-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
+        }
+        
+        .tutorial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .tutorial-thumbnail {
+            height: 200px;
+            background: var(--gray-300);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            position: relative;
+        }
+        
+        .play-button {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        @media (max-width: 768px) {
+            .help-categories {
+                grid-template-columns: 1fr;
+            }
+            
+            .tutorial-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <span style="color: var(--primary-blue);">⏰</span>
+                TimeBank Kids
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
+                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="index.html#signup" class="btn btn-primary">Get Started</a></li>
+            </ul>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Help Hero -->
+    <section class="help-hero">
+        <div class="container text-center" style="position: relative;">
+            <h1 style="color: white;">How Can We Help?</h1>
+            <p class="lead" style="color: white; opacity: 0.95;">
+                Find answers, watch tutorials, and learn how to make the most of TimeBank Kids
+            </p>
+            
+            <div class="search-box">
+                <input type="text" placeholder="Search for help articles...">
+                <button type="submit">Search</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Help Categories -->
+    <section class="py-3xl">
+        <div class="container">
+            <h2 class="text-center mb-xl">Browse Help Topics</h2>
+            
+            <div class="help-categories">
+                <div class="help-category-card animate-on-scroll">
+                    <div class="help-icon">🚀</div>
+                    <h3>Getting Started</h3>
+                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">
+                        Set up your account, add family members, and start earning screen time
+                    </p>
+                    <a href="#" style="color: var(--primary-blue); font-weight: 600;">
+                        View Articles →
+                    </a>
+                </div>
+                
+                <div class="help-category-card animate-on-scroll">
+                    <div class="help-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Family Management</h3>
+                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">
+                        Add children, set up tasks, manage screen time limits
+                    </p>
+                    <a href="#" style="color: var(--primary-blue); font-weight: 600;">
+                        View Articles →
+                    </a>
+                </div>
+                
+                <div class="help-category-card animate-on-scroll">
+                    <div class="help-icon">💳</div>
+                    <h3>Billing & Account</h3>
+                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">
+                        Subscription management, payment issues, account settings
+                    </p>
+                    <a href="#" style="color: var(--primary-blue); font-weight: 600;">
+                        View Articles →
+                    </a>
+                </div>
+                
+                <div class="help-category-card animate-on-scroll">
+                    <div class="help-icon">📱</div>
+                    <h3>App Features</h3>
+                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">
+                        Learn about all features and how to use them effectively
+                    </p>
+                    <a href="#" style="color: var(--primary-blue); font-weight: 600;">
+                        View Articles →
+                    </a>
+                </div>
+                
+                <div class="help-category-card animate-on-scroll">
+                    <div class="help-icon">🔧</div>
+                    <h3>Troubleshooting</h3>
+                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">
+                        Fix common issues and technical problems
+                    </p>
+                    <a href="#" style="color: var(--primary-blue); font-weight: 600;">
+                        View Articles →
+                    </a>
+                </div>
+                
+                <div class="help-category-card animate-on-scroll">
+                    <div class="help-icon">🔒</div>
+                    <h3>Privacy & Security</h3>
+                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">
+                        Learn how we protect your family's data
+                    </p>
+                    <a href="#" style="color: var(--primary-blue); font-weight: 600;">
+                        View Articles →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Popular Articles -->
+    <section class="py-3xl bg-light">
+        <div class="container">
+            <h2 class="text-center mb-xl">Most Popular Articles</h2>
+            
+            <div class="grid grid-cols-3 md:grid-cols-1 gap-lg">
+                <a href="#" class="card" style="text-decoration: none; color: inherit;">
+                    <h4 style="color: var(--primary-blue); margin-bottom: var(--spacing-sm);">
+                        How to Set Up Your First Child Account
+                    </h4>
+                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">
+                        Step-by-step guide to adding your child and configuring their first tasks
+                    </p>
+                    <span style="color: var(--primary-blue); font-weight: 600;">Read More →</span>
+                </a>
+                
+                <a href="#" class="card" style="text-decoration: none; color: inherit;">
+                    <h4 style="color: var(--primary-blue); margin-bottom: var(--spacing-sm);">
+                        Understanding Screen Time Limits
+                    </h4>
+                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">
+                        Learn how to set healthy boundaries and customize limits by day
+                    </p>
+                    <span style="color: var(--primary-blue); font-weight: 600;">Read More →</span>
+                </a>
+                
+                <a href="#" class="card" style="text-decoration: none; color: inherit;">
+                    <h4 style="color: var(--primary-blue); margin-bottom: var(--spacing-sm);">
+                        Creating Age-Appropriate Tasks
+                    </h4>
+                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">
+                        Tips for assigning tasks that match your child's abilities
+                    </p>
+                    <span style="color: var(--primary-blue); font-weight: 600;">Read More →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Video Tutorials -->
+    <section class="py-3xl">
+        <div class="container">
+            <h2 class="text-center mb-xl">Video Tutorials</h2>
+            <p class="lead text-center mb-xl">Learn with quick, easy-to-follow video guides</p>
+            
+            <div class="tutorial-grid">
+                <div class="tutorial-card animate-on-scroll">
+                    <div class="tutorial-thumbnail" style="background: linear-gradient(135deg, var(--primary-blue-light), var(--primary-blue));">
+                        <div class="play-button">▶️</div>
+                    </div>
+                    <div style="padding: var(--spacing-lg);">
+                        <h4>Getting Started (5 min)</h4>
+                        <p style="color: var(--gray-600); margin-top: var(--spacing-sm);">
+                            Complete walkthrough of setting up your TimeBank Kids account
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="tutorial-card animate-on-scroll">
+                    <div class="tutorial-thumbnail" style="background: linear-gradient(135deg, var(--growth-green-light), var(--growth-green));">
+                        <div class="play-button">▶️</div>
+                    </div>
+                    <div style="padding: var(--spacing-lg);">
+                        <h4>Managing Multiple Kids (3 min)</h4>
+                        <p style="color: var(--gray-600); margin-top: var(--spacing-sm);">
+                            Tips for families with multiple children of different ages
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="tutorial-card animate-on-scroll">
+                    <div class="tutorial-thumbnail" style="background: linear-gradient(135deg, var(--achievement-gold-light), var(--achievement-gold));">
+                        <div class="play-button">▶️</div>
+                    </div>
+                    <div style="padding: var(--spacing-lg);">
+                        <h4>Reward System Deep Dive (4 min)</h4>
+                        <p style="color: var(--gray-600); margin-top: var(--spacing-sm);">
+                            Maximize motivation with our reward and achievement system
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="tutorial-card animate-on-scroll">
+                    <div class="tutorial-thumbnail" style="background: linear-gradient(135deg, var(--accent-coral), var(--accent-purple));">
+                        <div class="play-button">▶️</div>
+                    </div>
+                    <div style="padding: var(--spacing-lg);">
+                        <h4>Mobile App Features (6 min)</h4>
+                        <p style="color: var(--gray-600); margin-top: var(--spacing-sm);">
+                            Tour of all mobile app features for parents and kids
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="py-3xl bg-light">
+        <div class="container">
+            <h2 class="text-center mb-xl">Frequently Asked Questions</h2>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I use TimeBank Kids on multiple devices?</span>
+                        <span style="font-size: 1.5rem;">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Yes! TimeBank Kids works on all your family's devices. Parents can manage from any smartphone, 
+                            tablet, or computer, and kids can access their accounts from their own devices. All data syncs 
+                            automatically across devices.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What happens if my child completes extra tasks?</span>
+                        <span style="font-size: 1.5rem;">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Extra completed tasks earn bonus screen time that can be saved for later use. You can set 
+                            maximum daily limits to ensure healthy boundaries, and unused time can roll over to weekends 
+                            or special occasions based on your settings.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I customize screen time limits for different days?</span>
+                        <span style="font-size: 1.5rem;">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Absolutely! You can set different limits for weekdays, weekends, and even specific days. 
+                            For example, you might allow more screen time on Saturdays or during school holidays. 
+                            The system is fully customizable to match your family's schedule.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is there a minimum age for children to use TimeBank Kids?</span>
+                        <span style="font-size: 1.5rem;">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            TimeBank Kids is designed for children ages 4-17. For younger children (4-7), we recommend 
+                            parent-assisted task completion. The app adapts to show age-appropriate interfaces and 
+                            suggests suitable tasks based on your child's age.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I cancel my subscription?</span>
+                        <span style="font-size: 1.5rem;">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            You can cancel anytime from your account settings with no cancellation fees. Your subscription 
+                            remains active until the end of your current billing period. Before cancelling, you can export 
+                            all your data for your records.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Still Need Help -->
+    <section class="py-3xl">
+        <div class="container">
+            <div class="card" style="background: linear-gradient(135deg, var(--primary-blue), var(--growth-green)); color: white; text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 style="color: white;">Still Need Help?</h2>
+                <p class="lead" style="color: rgba(255,255,255,0.9); margin-bottom: 2rem;">
+                    Our support team is here to help you succeed with TimeBank Kids
+                </p>
+                
+                <div class="grid grid-cols-3 md:grid-cols-1 gap-lg" style="margin-top: var(--spacing-2xl);">
+                    <div>
+                        <div style="font-size: 3rem; margin-bottom: var(--spacing-sm);">💬</div>
+                        <h4 style="color: white;">Live Chat</h4>
+                        <p style="opacity: 0.9;">Get instant answers</p>
+                        <a href="#" class="btn btn-secondary" style="margin-top: var(--spacing-md);">Start Chat</a>
+                    </div>
+                    
+                    <div>
+                        <div style="font-size: 3rem; margin-bottom: var(--spacing-sm);">📧</div>
+                        <h4 style="color: white;">Email Support</h4>
+                        <p style="opacity: 0.9;">24-hour response</p>
+                        <a href="mailto:support@timebankkids.com" class="btn btn-secondary" style="margin-top: var(--spacing-md);">Send Email</a>
+                    </div>
+                    
+                    <div>
+                        <div style="font-size: 3rem; margin-bottom: var(--spacing-sm);">📞</div>
+                        <h4 style="color: white;">Phone Support</h4>
+                        <p style="opacity: 0.9;">Mon-Fri 8AM-8PM PST</p>
+                        <a href="tel:1-800-555-0123" class="btn btn-secondary" style="margin-top: var(--spacing-md);">Call Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#testimonials">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="security.html">Security</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Stay Updated</h4>
+                    <p style="color: var(--gray-400); margin-bottom: 1rem;">Get parenting tips and product updates</p>
+                    <form id="footer-signup" class="flex flex-col gap-sm">
+                        <input 
+                            type="email" 
+                            class="form-input" 
+                            placeholder="Your email" 
+                            required 
+                            style="background: var(--gray-800); border-color: var(--gray-700); color: white;"
+                        >
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 TimeBank Kids. All rights reserved. Made with ❤️ for families everywhere.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const icon = this.querySelector('span:last-child');
+                
+                this.classList.toggle('active');
+                answer.classList.toggle('open');
+                icon.textContent = answer.classList.contains('open') ? '−' : '+';
+            });
+        });
+    </script>
+</body>
+</html>

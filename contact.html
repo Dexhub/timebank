@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact TimeBank Kids - Get in touch with our support team, partnership inquiries, or media requests. We're here to help!">
+    <meta name="keywords" content="contact TimeBank Kids, customer support, partnerships, media inquiries, help center">
+    <meta name="author" content="TimeBank Kids">
+    
+    <title>Contact Us - TimeBank Kids | We're Here to Help</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Page-specific styles */
+        .contact-hero {
+            background: linear-gradient(135deg, var(--primary-blue-light) 0%, var(--primary-blue) 100%);
+            color: white;
+            padding: var(--spacing-3xl) 0;
+            margin-top: 72px;
+        }
+        
+        .contact-hero h1 {
+            color: white;
+        }
+        
+        .contact-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-3xl);
+        }
+        
+        .contact-card {
+            background: white;
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-blue-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--spacing-md);
+            font-size: 1.5rem;
+        }
+        
+        .contact-form-section {
+            background: white;
+            padding: var(--spacing-2xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+        }
+        
+        .office-locations {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-2xl);
+        }
+        
+        .office-card {
+            background: var(--gray-50);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+        }
+        
+        .quick-links-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-2xl);
+        }
+        
+        @media (max-width: 768px) {
+            .contact-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .office-locations {
+                grid-template-columns: 1fr;
+            }
+            
+            .quick-links-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <span style="color: var(--primary-blue);">⏰</span>
+                TimeBank Kids
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
+                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="index.html#signup" class="btn btn-primary">Get Started</a></li>
+            </ul>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container text-center">
+            <h1>Get In Touch</h1>
+            <p class="lead" style="color: white; opacity: 0.9; max-width: 600px; margin: 0 auto;">
+                Whether you need help, have questions, or want to partner with us, we're here for you.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Contact Options -->
+    <section class="py-3xl">
+        <div class="container">
+            <div class="contact-options">
+                <div class="contact-card animate-on-scroll">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email Support</h3>
+                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">
+                        Get help with your account or technical issues
+                    </p>
+                    <a href="mailto:support@timebankkids.com" class="text-primary" style="font-weight: 600;">
+                        support@timebankkids.com
+                    </a>
+                    <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: var(--spacing-sm);">
+                        Response within 24 hours
+                    </p>
+                </div>
+                
+                <div class="contact-card animate-on-scroll">
+                    <div class="contact-icon">💬</div>
+                    <h3>Live Chat</h3>
+                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">
+                        Chat with our support team in real-time
+                    </p>
+                    <button class="btn btn-primary">Start Chat</button>
+                    <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: var(--spacing-sm);">
+                        Available 9 AM - 6 PM PST
+                    </p>
+                </div>
+                
+                <div class="contact-card animate-on-scroll">
+                    <div class="contact-icon">📞</div>
+                    <h3>Phone Support</h3>
+                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">
+                        Speak directly with our support team
+                    </p>
+                    <a href="tel:1-800-555-0123" class="text-primary" style="font-weight: 600;">
+                        1-800-TIMEBANK
+                    </a>
+                    <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: var(--spacing-sm);">
+                        Mon-Fri 8 AM - 8 PM PST
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="grid" style="grid-template-columns: 2fr 1fr; gap: var(--spacing-2xl); margin-top: var(--spacing-3xl);">
+                <div class="contact-form-section">
+                    <h2 style="margin-bottom: var(--spacing-lg);">Send Us a Message</h2>
+                    
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">First Name</label>
+                                <input type="text" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" class="form-input" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Phone (Optional)</label>
+                                <input type="tel" class="form-input">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Subject</label>
+                            <select class="form-input" required>
+                                <option value="">Select a topic</option>
+                                <option value="support">Technical Support</option>
+                                <option value="billing">Billing Question</option>
+                                <option value="partnership">Partnership Inquiry</option>
+                                <option value="media">Media Request</option>
+                                <option value="feedback">Product Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-input" rows="6" required style="resize: vertical;"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                    </form>
+                </div>
+                
+                <div>
+                    <div class="card" style="margin-bottom: var(--spacing-lg);">
+                        <h3 style="margin-bottom: var(--spacing-md);">Quick Answers</h3>
+                        <ul style="list-style: none; margin: 0;">
+                            <li style="padding: var(--spacing-sm) 0;">
+                                <a href="help.html" style="color: var(--primary-blue);">→ Help Center</a>
+                            </li>
+                            <li style="padding: var(--spacing-sm) 0;">
+                                <a href="#" style="color: var(--primary-blue);">→ Setup Guide</a>
+                            </li>
+                            <li style="padding: var(--spacing-sm) 0;">
+                                <a href="#" style="color: var(--primary-blue);">→ Video Tutorials</a>
+                            </li>
+                            <li style="padding: var(--spacing-sm) 0;">
+                                <a href="#" style="color: var(--primary-blue);">→ FAQ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card" style="background: var(--primary-blue-light);">
+                        <h4 style="margin-bottom: var(--spacing-sm);">For Media Inquiries</h4>
+                        <p style="margin-bottom: var(--spacing-md);">Press kit, interviews, and media resources</p>
+                        <a href="mailto:press@timebankkids.com" class="btn btn-primary btn-full">press@timebankkids.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Office Locations -->
+    <section class="py-3xl bg-light">
+        <div class="container">
+            <div class="text-center mb-xl">
+                <h2>Visit Our Offices</h2>
+                <p class="lead">Drop by to say hello or schedule a meeting with our team</p>
+            </div>
+            
+            <div class="office-locations">
+                <div class="office-card animate-on-scroll">
+                    <h3>Headquarters</h3>
+                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">
+                        123 Family Way, Suite 100<br>
+                        San Francisco, CA 94105<br>
+                        United States
+                    </p>
+                    <p style="font-size: 0.875rem;">
+                        <strong>Hours:</strong> Mon-Fri 9 AM - 6 PM PST<br>
+                        <strong>Phone:</strong> (415) 555-0123
+                    </p>
+                </div>
+                
+                <div class="office-card animate-on-scroll">
+                    <h3>East Coast Office</h3>
+                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">
+                        456 Parent Plaza, Floor 5<br>
+                        New York, NY 10013<br>
+                        United States
+                    </p>
+                    <p style="font-size: 0.875rem;">
+                        <strong>Hours:</strong> Mon-Fri 9 AM - 6 PM EST<br>
+                        <strong>Phone:</strong> (212) 555-0456
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-xl">
+                <h3 style="margin-bottom: var(--spacing-lg);">International Partners</h3>
+                <p style="color: var(--gray-600);">
+                    TimeBank Kids is available globally. For international inquiries, please email 
+                    <a href="mailto:international@timebankkids.com" style="color: var(--primary-blue);">international@timebankkids.com</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Quick Links -->
+    <section class="py-3xl">
+        <div class="container">
+            <h2 class="text-center mb-xl">Can't Find What You're Looking For?</h2>
+            
+            <div class="quick-links-grid">
+                <div class="text-center">
+                    <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">🤝</div>
+                    <h4>Partnerships</h4>
+                    <p style="color: var(--gray-600); font-size: 0.875rem;">
+                        Schools, organizations, and businesses
+                    </p>
+                    <a href="mailto:partners@timebankkids.com" style="color: var(--primary-blue);">partners@timebankkids.com</a>
+                </div>
+                
+                <div class="text-center">
+                    <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">💼</div>
+                    <h4>Careers</h4>
+                    <p style="color: var(--gray-600); font-size: 0.875rem;">
+                        Join our mission-driven team
+                    </p>
+                    <a href="careers.html" style="color: var(--primary-blue);">View Open Positions</a>
+                </div>
+                
+                <div class="text-center">
+                    <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">🔒</div>
+                    <h4>Security</h4>
+                    <p style="color: var(--gray-600); font-size: 0.875rem;">
+                        Report security concerns
+                    </p>
+                    <a href="mailto:security@timebankkids.com" style="color: var(--primary-blue);">security@timebankkids.com</a>
+                </div>
+                
+                <div class="text-center">
+                    <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">⚖️</div>
+                    <h4>Legal</h4>
+                    <p style="color: var(--gray-600); font-size: 0.875rem;">
+                        Terms, privacy, and compliance
+                    </p>
+                    <a href="mailto:legal@timebankkids.com" style="color: var(--primary-blue);">legal@timebankkids.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-3xl bg-light">
+        <div class="container">
+            <div class="card" style="background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark)); color: white; text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 style="color: white;">Still Have Questions?</h2>
+                <p class="lead" style="color: rgba(255,255,255,0.9); margin-bottom: 2rem;">
+                    Our support team is standing by to help you get started with TimeBank Kids
+                </p>
+                <div class="flex gap-md justify-center">
+                    <a href="#" class="btn btn-success btn-lg">Start Live Chat</a>
+                    <a href="tel:1-800-555-0123" class="btn btn-secondary btn-lg" style="background: white; color: var(--primary-blue);">Call Us Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#testimonials">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="security.html">Security</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Stay Updated</h4>
+                    <p style="color: var(--gray-400); margin-bottom: 1rem;">Get parenting tips and product updates</p>
+                    <form id="footer-signup" class="flex flex-col gap-sm">
+                        <input 
+                            type="email" 
+                            class="form-input" 
+                            placeholder="Your email" 
+                            required 
+                            style="background: var(--gray-800); border-color: var(--gray-700); color: white;"
+                        >
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 TimeBank Kids. All rights reserved. Made with ❤️ for families everywhere.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

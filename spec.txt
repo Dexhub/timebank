@@ -1,0 +1,151 @@
+1. v0 Product Spec
+Core principle: Don’t get distracted — build the minimum that proves parents will pay for the “Money ↔ Screen Time” loop.
+
+Parent App (iOS first)
+Onboarding
+
+Simple 3-step setup: Connect kid device → Set rules → Add allowance budget
+
+COPPA-compliant parental consent
+
+Tone: “You’re the boss, but with fewer fights.”
+
+Rules Dashboard
+
+Daily phone/app time budget
+
+Downtime schedule (bedtime to morning)
+
+Block list (apps/sites)
+
+Earn rules:
+
+Chores (parent check-off or photo proof)
+
+Skill quests (Khan, Duolingo, typing practice)
+
+Bonus streaks
+
+Money Ledger
+
+Start allowance pool (e.g., $10/week)
+
+Auto-deductions for phone time overage
+
+Auto-bonuses for completed quests/chores
+
+Payment method: manual payout to kid’s Greenlight/Acorns Early card (Phase 1)
+
+Insights Tab
+
+Time saved this week
+
+Apps most used
+
+Money earned/lost
+
+“Arguments avoided” stat for fun
+
+Child Companion App
+Fun, gamified interface showing:
+
+Remaining minutes today
+
+Allowance balance (💰 meter)
+
+Quests available today
+
+Request boost button (“I need 15 mins for homework”)
+
+Rewards animations when earning money/minutes
+
+Backend / Tech
+iOS: FamilyControls + ManagedSettings for device/app restrictions
+
+Auth: Parent account w/ email & password (no kid email needed)
+
+Storage: Firebase or Supabase
+
+Payments: Stripe Connect for parents (future bank integration)
+
+2. Two-Sprint Build Plan
+Sprint 1 (Weeks 1–2)
+
+Implement parent onboarding flow
+
+FamilyControls integration for app time budgets & downtime
+
+Basic rule creation for chores (manual completion toggle)
+
+Child app time meter & request flow
+
+Manual allowance adjustments (no banking yet)
+
+Sprint 2 (Weeks 3–4)
+
+Add skill quest module (manual proof or screenshot upload)
+
+Auto-bonus & deduction logic
+
+Basic analytics dashboard (time saved, money earned/lost)
+
+Stripe integration for parents (payout log, no automated transfer)
+
+Polished animations, brand tone, bug fixes
+
+3. Landing Page Concept — “KidCash” (placeholder name)
+Visual Style
+
+Color palette: Playful + premium — bright yellows, blues, and soft greens (trust + energy)
+
+Font: Rounded sans serif (Google’s Product Sans or SF Rounded)
+
+Hero Imagery: Happy kid holding phone with animated “money meter” going up when doing a chore; parent sipping coffee smiling at “Screen Time: Under Budget” notification
+
+Micro-animations: Chore checkboxes fill, coins fly into wallet, screen time dial moves
+
+Messaging Flow
+[Hero Section]
+Headline:
+
+"Turn screen time into earning time."
+
+Sub-headline:
+
+The app that makes your kids want to put the phone down — and pick up life skills.
+
+CTA:
+[Start Free Trial]
+
+[How It Works — 3 steps]
+
+Set Rules — Decide how much screen time they start with.
+
+Add Rewards — Chores, homework, or learning a skill = more time & money.
+
+Watch It Click — They manage themselves (and you stop nagging).
+
+[Emotional Hook Section]
+
+“No more battles over TikTok. No more begging to do chores. Just smiles, high-fives, and life lessons in money and time.”
+
+Photo: Before & After — stressed parent → chill parent
+
+[Social Proof / Trust Signals]
+
+Quotes from beta parents: “My 12-year-old is asking for more reading time so she can unlock money for the weekend.”
+
+Logos: iOS Screen Time API partner, Stripe partner, COPPA-compliant
+
+[Viral Trigger Section]
+
+Share feature: “Send a challenge to another family — see whose kid earns the most in a week.”
+
+Leaderboard: anonymized scores with fun titles (“Laundry Legend,” “Homework Hero”)
+
+[Final CTA Banner]
+
+Ready for less screen battles and more life wins?
+[Get Started — Free for 14 days]
+
+

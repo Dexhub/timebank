@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join TimeBank Kids - Help us build the future of family technology. Browse open positions and join our mission-driven team.">
+    <meta name="keywords" content="TimeBank Kids careers, jobs, hiring, tech careers, family technology jobs">
+    <meta name="author" content="TimeBank Kids">
+    
+    <title>Careers - TimeBank Kids | Join Our Mission</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Page-specific styles */
+        .careers-hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--growth-green) 100%);
+            color: white;
+            padding: var(--spacing-4xl) 0;
+            margin-top: 72px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .careers-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -25%;
+            width: 100%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            transform: rotate(30deg);
+            opacity: 0.3;
+        }
+        
+        .careers-hero h1 {
+            color: white;
+            font-size: clamp(3rem, 6vw, 4rem);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-2xl);
+        }
+        
+        .value-card {
+            background: white;
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-blue-light);
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--spacing-md);
+            font-size: 2.5rem;
+        }
+        
+        .job-listing {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-lg);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-base);
+            cursor: pointer;
+        }
+        
+        .job-listing:hover {
+            transform: translateX(4px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .job-tags {
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+            margin-top: var(--spacing-md);
+        }
+        
+        .job-tag {
+            background: var(--gray-100);
+            padding: var(--spacing-xs) var(--spacing-md);
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            color: var(--gray-700);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-2xl);
+        }
+        
+        .benefit-item {
+            display: flex;
+            gap: var(--spacing-md);
+            align-items: start;
+        }
+        
+        .benefit-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-blue-light);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.5rem;
+        }
+        
+        .team-photos {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-2xl);
+        }
+        
+        .team-photo {
+            aspect-ratio: 1;
+            background: var(--gray-300);
+            border-radius: var(--radius-md);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @media (max-width: 768px) {
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-photos {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <span style="color: var(--primary-blue);">⏰</span>
+                TimeBank Kids
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
+                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="index.html#signup" class="btn btn-primary">Get Started</a></li>
+            </ul>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Careers Hero -->
+    <section class="careers-hero">
+        <div class="container text-center" style="position: relative;">
+            <h1>Help Us Build the Future of Family</h1>
+            <p class="lead" style="color: rgba(255,255,255,0.95); max-width: 800px; margin: 0 auto;">
+                Join a team that's passionate about empowering families to thrive in the digital age. 
+                We're looking for talented people who share our vision.
+            </p>
+            <div class="flex gap-md justify-center mt-xl">
+                <a href="#positions" class="btn btn-secondary btn-lg" style="background: white; color: var(--primary-blue);">View Open Positions</a>
+                <a href="#culture" class="btn btn-secondary btn-lg" style="background: transparent; border: 2px solid white; color: white;">Learn About Culture</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Mission Section -->
+    <section class="py-3xl">
+        <div class="container">
+            <div class="text-center mb-xl">
+                <h2>Our Mission Drives Everything We Do</h2>
+                <p class="lead" style="max-width: 800px; margin: 0 auto;">
+                    We believe technology should strengthen family bonds, not strain them. Every day, we work to help 
+                    millions of families find balance, teach responsibility, and create lasting memories.
+                </p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card animate-on-scroll">
+                    <div class="value-icon">🌟</div>
+                    <h3>Impact First</h3>
+                    <p style="color: var(--gray-600);">
+                        Every feature we build, every decision we make, starts with one question: 
+                        Will this help families thrive?
+                    </p>
+                </div>
+                
+                <div class="value-card animate-on-scroll">
+                    <div class="value-icon">🤝</div>
+                    <h3>Trust & Transparency</h3>
+                    <p style="color: var(--gray-600);">
+                        We handle family data with extreme care and communicate openly about 
+                        everything we do.
+                    </p>
+                </div>
+                
+                <div class="value-card animate-on-scroll">
+                    <div class="value-icon">🎯</div>
+                    <h3>Excellence Always</h3>
+                    <p style="color: var(--gray-600);">
+                        We set high standards for ourselves because families deserve the very 
+                        best tools and experiences.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Culture Section -->
+    <section id="culture" class="py-3xl bg-light">
+        <div class="container">
+            <h2 class="text-center mb-xl">Life at TimeBank Kids</h2>
+            
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--spacing-3xl); align-items: center;">
+                <div>
+                    <h3 style="margin-bottom: var(--spacing-lg);">A Culture Built on Balance</h3>
+                    <p style="margin-bottom: var(--spacing-lg);">
+                        We practice what we preach. Our team enjoys flexible schedules, generous parental leave, 
+                        and a culture that truly values work-life balance. Because we can't help families find 
+                        balance if we don't have it ourselves.
+                    </p>
+                    
+                    <div style="margin-top: var(--spacing-xl);">
+                        <div style="display: flex; gap: var(--spacing-3xl); margin-bottom: var(--spacing-lg);">
+                            <div>
+                                <h4 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 0;">4.8/5</h4>
+                                <p style="color: var(--gray-600);">Glassdoor Rating</p>
+                            </div>
+                            <div>
+                                <h4 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 0;">96%</h4>
+                                <p style="color: var(--gray-600);">Recommend to Friend</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <blockquote style="border-left: 4px solid var(--primary-blue); padding-left: var(--spacing-lg); margin-top: var(--spacing-xl);">
+                        <p style="font-style: italic; color: var(--gray-700);">
+                            "I've never worked somewhere that so genuinely cares about both its mission and its people. 
+                            The flexibility to be there for my own kids while building something meaningful for millions 
+                            of families is incredible."
+                        </p>
+                        <cite style="color: var(--gray-600);">— Sarah, Senior Engineer</cite>
+                    </blockquote>
+                </div>
+                
+                <div>
+                    <div class="team-photos">
+                        <div class="team-photo" style="background: var(--primary-blue-light);"></div>
+                        <div class="team-photo" style="background: var(--growth-green-light);"></div>
+                        <div class="team-photo" style="background: var(--achievement-gold-light);"></div>
+                        <div class="team-photo" style="background: var(--accent-coral);"></div>
+                        <div class="team-photo" style="background: var(--accent-purple);"></div>
+                        <div class="team-photo" style="background: var(--primary-blue);"></div>
+                        <div class="team-photo" style="background: var(--growth-green);"></div>
+                        <div class="team-photo" style="background: var(--achievement-gold);"></div>
+                    </div>
+                    <p style="text-align: center; margin-top: var(--spacing-md); color: var(--gray-600);">
+                        Our diverse team spans 12 countries and 4 continents
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Benefits Section -->
+    <section class="py-3xl">
+        <div class="container">
+            <h2 class="text-center mb-xl">Benefits That Support Your Whole Life</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item animate-on-scroll">
+                    <div class="benefit-icon">🏥</div>
+                    <div>
+                        <h4>Comprehensive Healthcare</h4>
+                        <p style="color: var(--gray-600);">
+                            100% coverage for you and your family, including dental, vision, and mental health
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item animate-on-scroll">
+                    <div class="benefit-icon">🏖️</div>
+                    <div>
+                        <h4>Flexible Time Off</h4>
+                        <p style="color: var(--gray-600);">
+                            Unlimited PTO, company-wide recharge weeks, and sabbatical options
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item animate-on-scroll">
+                    <div class="benefit-icon">👶</div>
+                    <div>
+                        <h4>Family Support</h4>
+                        <p style="color: var(--gray-600);">
+                            16 weeks parental leave, childcare assistance, and fertility benefits
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item animate-on-scroll">
+                    <div class="benefit-icon">🏡</div>
+                    <div>
+                        <h4>Remote-First Culture</h4>
+                        <p style="color: var(--gray-600);">
+                            Work from anywhere with quarterly team gatherings and home office stipend
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item animate-on-scroll">
+                    <div class="benefit-icon">📚</div>
+                    <div>
+                        <h4>Growth & Learning</h4>
+                        <p style="color: var(--gray-600);">
+                            $5,000 annual learning budget, mentorship programs, and career coaching
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item animate-on-scroll">
+                    <div class="benefit-icon">💰</div>
+                    <div>
+                        <h4>Competitive Compensation</h4>
+                        <p style="color: var(--gray-600);">
+                            Top-tier salaries, equity for all, and transparent pay scales
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" style="background: var(--primary-blue-light); margin-top: var(--spacing-3xl); text-align: center;">
+                <h3 style="margin-bottom: var(--spacing-md);">🎁 And So Much More...</h3>
+                <p style="margin-bottom: 0;">
+                    Annual wellness stipend • Free TimeBank Kids for your family • Team retreats • 
+                    Volunteer time off • Pet insurance • Commuter benefits • And more!
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Open Positions -->
+    <section id="positions" class="py-3xl bg-light">
+        <div class="container">
+            <h2 class="text-center mb-xl">Open Positions</h2>
+            <p class="lead text-center mb-xl">
+                Join us in building something families will love for generations
+            </p>
+            
+            <div style="max-width: 900px; margin: 0 auto;">
+                <!-- Engineering -->
+                <h3 style="margin-bottom: var(--spacing-lg);">Engineering</h3>
+                
+                <a href="#" class="job-listing" style="display: block; text-decoration: none; color: inherit;">
+                    <div class="job-header">
+                        <div>
+                            <h4 style="margin-bottom: var(--spacing-xs);">Senior Frontend Engineer</h4>
+                            <p style="color: var(--gray-600);">Build delightful experiences for millions of families</p>
+                        </div>
+                        <span class="btn btn-secondary">Apply →</span>
+                    </div>
+                    <div class="job-tags">
+                        <span class="job-tag">Remote</span>
+                        <span class="job-tag">React</span>
+                        <span class="job-tag">TypeScript</span>
+                        <span class="job-tag">$150k - $200k</span>
+                    </div>
+                </a>
+                
+                <a href="#" class="job-listing" style="display: block; text-decoration: none; color: inherit;">
+                    <div class="job-header">
+                        <div>
+                            <h4 style="margin-bottom: var(--spacing-xs);">Backend Engineer - Security Focus</h4>
+                            <p style="color: var(--gray-600);">Help us maintain bank-level security for family data</p>
+                        </div>
+                        <span class="btn btn-secondary">Apply →</span>
+                    </div>
+                    <div class="job-tags">
+                        <span class="job-tag">Remote</span>
+                        <span class="job-tag">Node.js</span>
+                        <span class="job-tag">Security</span>
+                        <span class="job-tag">$140k - $190k</span>
+                    </div>
+                </a>
+                
+                <a href="#" class="job-listing" style="display: block; text-decoration: none; color: inherit;">
+                    <div class="job-header">
+                        <div>
+                            <h4 style="margin-bottom: var(--spacing-xs);">Mobile Developer (iOS/Android)</h4>
+                            <p style="color: var(--gray-600);">Create native experiences that kids and parents love</p>
+                        </div>
+                        <span class="btn btn-secondary">Apply →</span>
+                    </div>
+                    <div class="job-tags">
+                        <span class="job-tag">San Francisco / Remote</span>
+                        <span class="job-tag">React Native</span>
+                        <span class="job-tag">$130k - $180k</span>
+                    </div>
+                </a>
+                
+                <!-- Product & Design -->
+                <h3 style="margin-bottom: var(--spacing-lg); margin-top: var(--spacing-2xl);">Product & Design</h3>
+                
+                <a href="#" class="job-listing" style="display: block; text-decoration: none; color: inherit;">
+                    <div class="job-header">
+                        <div>
+                            <h4 style="margin-bottom: var(--spacing-xs);">Senior Product Designer</h4>
+                            <p style="color: var(--gray-600);">Design intuitive experiences for all family members</p>
+                        </div>
+                        <span class="btn btn-secondary">Apply →</span>
+                    </div>
+                    <div class="job-tags">
+                        <span class="job-tag">Remote</span>
+                        <span class="job-tag">Figma</span>
+                        <span class="job-tag">User Research</span>
+                        <span class="job-tag">$140k - $180k</span>
+                    </div>
+                </a>
+                
+                <a href="#" class="job-listing" style="display: block; text-decoration: none; color: inherit;">
+                    <div class="job-header">
+                        <div>
+                            <h4 style="margin-bottom: var(--spacing-xs);">Product Manager - Growth</h4>
+                            <p style="color: var(--gray-600);">Drive adoption and help more families discover TimeBank Kids</p>
+                        </div>
+                        <span class="btn btn-secondary">Apply →</span>
+                    </div>
+                    <div class="job-tags">
+                        <span class="job-tag">New York / Remote</span>
+                        <span class="job-tag">Analytics</span>
+                        <span class="job-tag">A/B Testing</span>
+                        <span class="job-tag">$150k - $190k</span>
+                    </div>
+                </a>
+                
+                <!-- Marketing & Sales -->
+                <h3 style="margin-bottom: var(--spacing-lg); margin-top: var(--spacing-2xl);">Marketing & Sales</h3>
+                
+                <a href="#" class="job-listing" style="display: block; text-decoration: none; color: inherit;">
+                    <div class="job-header">
+                        <div>
+                            <h4 style="margin-bottom: var(--spacing-xs);">Content Marketing Manager</h4>
+                            <p style="color: var(--gray-600);">Tell our story and help parents navigate digital parenting</p>
+                        </div>
+                        <span class="btn btn-secondary">Apply →</span>
+                    </div>
+                    <div class="job-tags">
+                        <span class="job-tag">Remote</span>
+                        <span class="job-tag">Writing</span>
+                        <span class="job-tag">SEO</span>
+                        <span class="job-tag">$100k - $130k</span>
+                    </div>
+                </a>
+                
+                <!-- Don't see your role? -->
+                <div class="card" style="margin-top: var(--spacing-3xl); text-align: center; background: var(--gray-50);">
+                    <h3>Don't See Your Perfect Role?</h3>
+                    <p style="margin-bottom: var(--spacing-lg);">
+                        We're always looking for exceptional people who share our mission. Send us your resume 
+                        and tell us how you'd like to contribute.
+                    </p>
+                    <a href="mailto:careers@timebankkids.com" class="btn btn-primary">Send Open Application</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Hiring Process -->
+    <section class="py-3xl">
+        <div class="container">
+            <h2 class="text-center mb-xl">Our Hiring Process</h2>
+            <p class="lead text-center mb-xl">
+                We respect your time and aim to make hiring transparent, fair, and efficient
+            </p>
+            
+            <div class="grid grid-cols-4 md:grid-cols-2 gap-lg" style="max-width: 1000px; margin: 0 auto;">
+                <div class="text-center animate-on-scroll">
+                    <div style="width: 60px; height: 60px; background: var(--primary-blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-md); font-weight: 700; font-size: 1.25rem;">
+                        1
+                    </div>
+                    <h4>Application Review</h4>
+                    <p style="color: var(--gray-600); font-size: 0.875rem;">
+                        We review every application and respond within 5 business days
+                    </p>
+                </div>
+                
+                <div class="text-center animate-on-scroll">
+                    <div style="width: 60px; height: 60px; background: var(--primary-blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-md); font-weight: 700; font-size: 1.25rem;">
+                        2
+                    </div>
+                    <h4>Initial Chat</h4>
+                    <p style="color: var(--gray-600); font-size: 0.875rem;">
+                        30-min video call to discuss your experience and answer questions
+                    </p>
+                </div>
+                
+                <div class="text-center animate-on-scroll">
+                    <div style="width: 60px; height: 60px; background: var(--primary-blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-md); font-weight: 700; font-size: 1.25rem;">
+                        3
+                    </div>
+                    <h4>Team Interview</h4>
+                    <p style="color: var(--gray-600); font-size: 0.875rem;">
+                        Meet your potential teammates and dive deeper into the role
+                    </p>
+                </div>
+                
+                <div class="text-center animate-on-scroll">
+                    <div style="width: 60px; height: 60px; background: var(--primary-blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-md); font-weight: 700; font-size: 1.25rem;">
+                        4
+                    </div>
+                    <h4>Decision</h4>
+                    <p style="color: var(--gray-600); font-size: 0.875rem;">
+                        We make decisions quickly and provide feedback either way
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-3xl bg-light">
+        <div class="container">
+            <div class="card" style="background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark)); color: white; text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 style="color: white;">Ready to Make a Difference?</h2>
+                <p class="lead" style="color: rgba(255,255,255,0.9); margin-bottom: 2rem;">
+                    Join us in building technology that strengthens family bonds and helps children develop healthy habits for life.
+                </p>
+                <div class="flex gap-md justify-center">
+                    <a href="#positions" class="btn btn-secondary btn-lg" style="background: white; color: var(--primary-blue);">View Open Positions</a>
+                    <a href="about.html" class="btn btn-secondary btn-lg" style="background: transparent; border: 2px solid white; color: white;">Learn More About Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#testimonials">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="security.html">Security</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Stay Updated</h4>
+                    <p style="color: var(--gray-400); margin-bottom: 1rem;">Get parenting tips and product updates</p>
+                    <form id="footer-signup" class="flex flex-col gap-sm">
+                        <input 
+                            type="email" 
+                            class="form-input" 
+                            placeholder="Your email" 
+                            required 
+                            style="background: var(--gray-800); border-color: var(--gray-700); color: white;"
+                        >
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 TimeBank Kids. All rights reserved. Made with ❤️ for families everywhere.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

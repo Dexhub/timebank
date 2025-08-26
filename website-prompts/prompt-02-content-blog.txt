@@ -1,0 +1,181 @@
+PROMPT 2: Content Strategy & Blog Development
+===========================================
+
+Building upon the foundation website, you will now create a comprehensive content marketing system and blog that establishes TimeBank Kids as the authority on positive parenting and family technology.
+
+OBJECTIVE: Develop a content-rich blog and resource center that educates parents, builds trust, drives SEO traffic, and nurtures leads through the sales funnel.
+
+CONTENT STRATEGY PILLARS:
+1. **Positive Parenting** - Solutions-focused approach to screen time
+2. **Child Development** - Research-backed insights on technology and kids
+3. **Family Life Skills** - Practical guides for raising responsible children
+4. **Money & Life Lessons** - Teaching kids financial literacy and work ethic
+5. **Technology Balance** - Healthy relationships with digital tools
+
+BLOG REQUIREMENTS:
+
+1. BLOG ARCHITECTURE:
+   - Blog homepage with featured articles, categories, search
+   - Category pages for each content pillar
+   - Individual article pages with SEO optimization
+   - Author profiles and bylines
+   - Related articles and internal linking
+   - Newsletter signup integration
+   - Social sharing buttons
+   - Comment system (optional)
+
+2. CONTENT TO CREATE (20 ARTICLES):
+
+   **Positive Parenting (5 articles):**
+   - "The End of Screen Time Battles: A Parent's Guide to Peace"
+   - "Why Positive Reinforcement Beats Punishment Every Time"
+   - "5 Conversation Starters That Replace Screen Time Arguments"
+   - "From Screen Police to Achievement Coach: Transform Your Role"
+   - "Creating Family Rules That Kids Actually Want to Follow"
+
+   **Child Development (4 articles):**
+   - "The Science Behind Kids and Screen Time: What Research Really Shows"
+   - "How to Raise Intrinsically Motivated Children in a Digital Age"
+   - "The Psychology of Reward Systems: Why TimeBank Kids Works"
+   - "Screen Time by Age: Developmental Guidelines for Every Stage"
+
+   **Family Life Skills (4 articles):**
+   - "Teaching Time Management to Kids: Start With What They Love"
+   - "Age-Appropriate Chores That Build Character (And Earn Screen Time)"
+   - "Family Challenge Ideas That Bring Everyone Together"
+   - "Building Responsibility: From Toddler Tasks to Teen Jobs"
+
+   **Money & Life Lessons (4 articles):**
+   - "Financial Literacy for Kids: Start With Screen Time Currency"
+   - "The Allowance Revolution: Earning vs. Entitlement"
+   - "Teaching Kids That Time = Money (And Why It Matters)"
+   - "From Piggy Banks to Investment Accounts: A Parent's Guide"
+
+   **Technology Balance (3 articles):**
+   - "Creating a Family Technology Plan That Works"
+   - "Educational Screen Time vs. Entertainment: How to Tell the Difference"
+   - "The Future of Family Technology: Preparing Kids for Success"
+
+3. ADDITIONAL CONTENT TYPES:
+
+   **Resource Library:**
+   - Printable chore charts by age
+   - Family meeting templates
+   - Screen time tracking worksheets
+   - Conversation starter cards
+   - Goal setting worksheets for kids
+
+   **Expert Interviews:**
+   - Child psychologists on screen time
+   - Financial literacy experts
+   - Education specialists
+   - Successful parents sharing strategies
+
+   **Case Studies:**
+   - "How the Johnson Family Ended Screen Time Wars in 30 Days"
+   - "From Chaos to Calm: A Single Mom's Screen Time Success Story"
+   - "The Transformation: Turning a Gaming-Obsessed Teen Around"
+
+   **Video Content:**
+   - Parent testimonials
+   - Expert interview highlights
+   - How-to guides for setting up family systems
+   - Kid-friendly explainers about earning screen time
+
+4. SEO OPTIMIZATION:
+
+   **Target Keywords:**
+   - Primary: "screen time for kids", "parental controls", "family apps"
+   - Long-tail: "how to reduce screen time arguments", "teaching kids responsibility"
+   - Local: "family apps Denver", "screen time help [city]"
+   - Problem-aware: "kids addicted to phones", "screen time battles"
+   - Solution-aware: "positive screen time management", "earning screen time"
+
+   **Content Optimization:**
+   - Title tags and meta descriptions for every page
+   - Header tag hierarchy (H1, H2, H3)
+   - Internal linking strategy
+   - Image optimization with alt text
+   - Schema markup for articles
+   - Featured snippets optimization
+
+5. LEAD MAGNETS & CONVERSION:
+
+   **Free Resources:**
+   - "The Parent's Guide to Ending Screen Time Battles" (PDF)
+   - "30-Day Family Challenge Pack" (email course)
+   - "Age-by-Age Chore Chart" (printable)
+   - "Screen Time Assessment Quiz" (interactive)
+
+   **Newsletter Strategy:**
+   - Weekly "Family Win Wednesday" emails
+   - Success stories and tips
+   - Product updates and new features
+   - Exclusive content for subscribers
+
+6. TECHNICAL IMPLEMENTATION:
+
+   **Blog Features:**
+   - Fast-loading article pages
+   - Mobile-optimized reading experience
+   - Social media meta tags
+   - RSS feed for syndication
+   - Sitemap generation
+   - Analytics tracking for content performance
+
+   **User Experience:**
+   - Clean, readable typography
+   - Engaging featured images for each article
+   - Progress indicators for long articles
+   - Related content suggestions
+   - Easy navigation between categories
+
+7. CONTENT CALENDAR:
+
+   **Publishing Schedule:**
+   - 2 blog posts per week
+   - 1 resource/download per month
+   - 1 expert interview per month
+   - Seasonal content (back-to-school, summer break, holidays)
+
+   **Content Distribution:**
+   - Blog publication
+   - Social media promotion
+   - Email newsletter inclusion
+   - Parent Facebook group sharing
+   - LinkedIn articles for B2B reach
+
+8. ANALYTICS & MEASUREMENT:
+
+   **Content Metrics:**
+   - Page views and time on page
+   - Bounce rate and exit rate
+   - Social shares and engagement
+   - Email signups from blog
+   - Content-to-trial conversion rate
+
+   **SEO Metrics:**
+   - Keyword rankings
+   - Organic traffic growth
+   - Backlink acquisition
+   - Featured snippet captures
+
+DESIGN REQUIREMENTS:
+- Consistent with main website branding
+- Easy-to-scan article layouts
+- Prominent CTAs without being pushy
+- Expert author profiles with credentials
+- Trust indicators (publish dates, author bios, citations)
+
+CONVERSION STRATEGY:
+- Soft CTAs within articles (resource downloads)
+- Hard CTAs at article end (free trial)
+- Exit-intent popups with valuable offers
+- Content upgrades specific to each article topic
+
+Create a comprehensive blog system with all 20 articles written in full, properly optimized for SEO, with engaging headlines, valuable content, and strategic conversion elements. Include the resource library materials and lead magnets.
+
+Each article should be 1,500-2,500 words, thoroughly researched, actionable, and positioned to build trust with parents while subtly introducing TimeBank Kids as the solution.
+
+AFTER COMPLETION:
+Run: git add . && git commit -m "Content Strategy: Comprehensive blog with 20 SEO-optimized articles, resource library, and lead magnets added" 

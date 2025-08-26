@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how TimeBank Kids works - The revolutionary family app that transforms screen time battles into teachable moments through gamified rewards.">
+    <meta name="keywords" content="how TimeBank Kids works, screen time management process, family app tutorial, parental control features">
+    <meta name="author" content="TimeBank Kids">
+    
+    <title>How It Works - TimeBank Kids | Transform Screen Time Into Life Lessons</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Page-specific styles */
+        .process-hero {
+            background: linear-gradient(135deg, var(--primary-blue-light) 0%, var(--primary-blue) 100%);
+            color: white;
+            padding: var(--spacing-3xl) 0;
+            margin-top: 72px;
+        }
+        
+        .process-hero h1 {
+            color: white;
+        }
+        
+        .process-step {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-3xl);
+            align-items: center;
+            padding: var(--spacing-3xl) 0;
+        }
+        
+        .process-step:nth-child(even) {
+            direction: rtl;
+        }
+        
+        .process-step:nth-child(even) > * {
+            direction: ltr;
+        }
+        
+        .step-content h2 {
+            color: var(--primary-blue);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--primary-blue);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 700;
+            margin-right: var(--spacing-md);
+        }
+        
+        .step-features {
+            list-style: none;
+            margin-top: var(--spacing-lg);
+        }
+        
+        .step-features li {
+            padding: var(--spacing-sm) 0;
+            padding-left: var(--spacing-lg);
+            position: relative;
+        }
+        
+        .step-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--growth-green);
+            font-weight: 700;
+        }
+        
+        .step-visual {
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-2xl);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+        }
+        
+        .demo-screen {
+            background: white;
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-xl);
+            margin: 0 auto;
+            max-width: 300px;
+        }
+        
+        .faq-section {
+            padding: var(--spacing-3xl) 0;
+            background: var(--gray-50);
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: var(--radius-md);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-md);
+            cursor: pointer;
+            transition: all var(--transition-base);
+        }
+        
+        .faq-item:hover {
+            box-shadow: var(--shadow-md);
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.125rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            margin-top: var(--spacing-md);
+            color: var(--gray-600);
+            display: none;
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+        
+        .faq-toggle {
+            transition: transform var(--transition-base);
+        }
+        
+        @media (max-width: 768px) {
+            .process-step {
+                grid-template-columns: 1fr;
+                direction: ltr;
+            }
+            
+            .process-step:nth-child(even) {
+                direction: ltr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <span style="color: var(--primary-blue);">⏰</span>
+                TimeBank Kids
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="how-it-works.html" class="nav-link" style="color: var(--primary-blue);">How It Works</a></li>
+                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="index.html#signup" class="btn btn-primary">Get Started</a></li>
+            </ul>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="process-hero">
+        <div class="container text-center">
+            <h1>How TimeBank Kids Works</h1>
+            <p class="lead" style="color: white; opacity: 0.9; max-width: 800px; margin: 0 auto;">
+                Transform your family's relationship with screen time in just 4 simple steps. 
+                No complicated setup, no battles - just a positive system that works.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Process Steps -->
+    <section class="py-3xl">
+        <div class="container">
+            <!-- Step 1 -->
+            <div class="process-step animate-on-scroll">
+                <div class="step-content">
+                    <h2><span class="step-number">1</span>Set Up Your Family Account</h2>
+                    <p class="lead">Get started in under 5 minutes with our guided setup process.</p>
+                    <ul class="step-features">
+                        <li>Add each family member with age-appropriate settings</li>
+                        <li>Choose from pre-made task templates or create custom ones</li>
+                        <li>Set screen time goals and earning rates</li>
+                        <li>Configure device connections and time limits</li>
+                    </ul>
+                    <p style="margin-top: var(--spacing-lg);">
+                        <strong>Pro tip:</strong> Start with our recommended settings and adjust as you learn what works best for your family.
+                    </p>
+                </div>
+                <div class="step-visual">
+                    <div class="demo-screen">
+                        <h4 style="margin-bottom: var(--spacing-md);">Family Setup</h4>
+                        <div style="background: var(--gray-100); padding: var(--spacing-md); border-radius: var(--radius-sm); margin-bottom: var(--spacing-sm);">
+                            <strong>👦 Tommy (Age 10)</strong><br>
+                            <small>2hr daily limit • 30min per task</small>
+                        </div>
+                        <div style="background: var(--gray-100); padding: var(--spacing-md); border-radius: var(--radius-sm); margin-bottom: var(--spacing-sm);">
+                            <strong>👧 Emma (Age 12)</strong><br>
+                            <small>3hr daily limit • 45min per task</small>
+                        </div>
+                        <button class="btn btn-primary btn-full mt-md">+ Add Child</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="process-step animate-on-scroll">
+                <div class="step-content">
+                    <h2><span class="step-number">2</span>Kids Complete Real Activities</h2>
+                    <p class="lead">Children earn screen time by completing meaningful tasks and activities.</p>
+                    <ul class="step-features">
+                        <li>Age-appropriate chores and responsibilities</li>
+                        <li>Educational activities like reading or homework</li>
+                        <li>Physical exercise and outdoor play</li>
+                        <li>Family time and helping others</li>
+                    </ul>
+                    <p style="margin-top: var(--spacing-lg);">
+                        <strong>The magic:</strong> Kids are motivated to complete tasks because they see immediate rewards in their time bank.
+                    </p>
+                </div>
+                <div class="step-visual">
+                    <div class="demo-screen">
+                        <h4 style="margin-bottom: var(--spacing-md);">Today's Tasks</h4>
+                        <div style="background: var(--growth-green-light); padding: var(--spacing-sm); border-radius: var(--radius-sm); margin-bottom: var(--spacing-sm);">
+                            ✓ Make bed (+15 min)
+                        </div>
+                        <div style="background: var(--growth-green-light); padding: var(--spacing-sm); border-radius: var(--radius-sm); margin-bottom: var(--spacing-sm);">
+                            ✓ Homework (+45 min)
+                        </div>
+                        <div style="border: 2px solid var(--gray-200); padding: var(--spacing-sm); border-radius: var(--radius-sm); margin-bottom: var(--spacing-sm);">
+                            ⏰ Walk dog (+30 min)
+                        </div>
+                        <div style="border: 2px solid var(--gray-200); padding: var(--spacing-sm); border-radius: var(--radius-sm);">
+                            📚 Read 20 pages (+30 min)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="process-step animate-on-scroll">
+                <div class="step-content">
+                    <h2><span class="step-number">3</span>Smart Time Management</h2>
+                    <p class="lead">Kids learn to budget their earned time across different activities.</p>
+                    <ul class="step-features">
+                        <li>Visual time bank shows current balance</li>
+                        <li>Set priorities for different apps and games</li>
+                        <li>Save time for special occasions</li>
+                        <li>Learn consequences of overspending</li>
+                    </ul>
+                    <p style="margin-top: var(--spacing-lg);">
+                        <strong>Life skill:</strong> Children develop real budgeting skills that translate to financial literacy.
+                    </p>
+                </div>
+                <div class="step-visual">
+                    <div class="demo-screen">
+                        <h4 style="margin-bottom: var(--spacing-md);">Time Bank</h4>
+                        <div style="font-size: 2.5rem; color: var(--primary-blue); font-weight: 700; margin: var(--spacing-md) 0;">
+                            2h 15m
+                        </div>
+                        <p style="color: var(--gray-600); margin-bottom: var(--spacing-lg);">Available today</p>
+                        <div style="font-size: 0.875rem;">
+                            <div style="margin-bottom: var(--spacing-sm);">
+                                🎮 Gaming: 45m used
+                            </div>
+                            <div style="margin-bottom: var(--spacing-sm);">
+                                📺 Videos: 30m used
+                            </div>
+                            <div>
+                                💰 Saved: 1h 30m
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Step 4 -->
+            <div class="process-step animate-on-scroll">
+                <div class="step-content">
+                    <h2><span class="step-number">4</span>Track Progress & Celebrate</h2>
+                    <p class="lead">Watch your family transform with insights and achievements.</p>
+                    <ul class="step-features">
+                        <li>Weekly family reports and insights</li>
+                        <li>Achievement badges and milestones</li>
+                        <li>Positive reinforcement system</li>
+                        <li>Family challenges and goals</li>
+                    </ul>
+                    <p style="margin-top: var(--spacing-lg);">
+                        <strong>Result:</strong> Screen time becomes a tool for teaching responsibility, not a source of conflict.
+                    </p>
+                </div>
+                <div class="step-visual">
+                    <div class="demo-screen">
+                        <h4 style="margin-bottom: var(--spacing-md);">This Week</h4>
+                        <div style="background: var(--achievement-gold-light); padding: var(--spacing-md); border-radius: var(--radius-sm); margin-bottom: var(--spacing-md); text-align: center;">
+                            🏆 7-Day Streak!
+                        </div>
+                        <div style="font-size: 0.875rem;">
+                            <p style="margin-bottom: var(--spacing-sm);"><strong>Tasks completed:</strong> 28/35</p>
+                            <p style="margin-bottom: var(--spacing-sm);"><strong>Time earned:</strong> 14h 30m</p>
+                            <p style="margin-bottom: var(--spacing-sm);"><strong>Family rank:</strong> Top 10%</p>
+                            <p><strong>Next goal:</strong> 30 tasks!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Grid -->
+    <section class="py-3xl bg-light">
+        <div class="container">
+            <div class="text-center mb-xl">
+                <h2>Everything You Need for Success</h2>
+                <p class="lead">Powerful features designed with busy parents in mind</p>
+            </div>
+            
+            <div class="grid grid-cols-3 md:grid-cols-1 gap-lg">
+                <div class="card animate-on-scroll">
+                    <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);">🎯</div>
+                    <h3>Smart Task System</h3>
+                    <p>Age-appropriate tasks that automatically adjust as kids grow. From simple chores to complex responsibilities.</p>
+                </div>
+                
+                <div class="card animate-on-scroll">
+                    <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);">📊</div>
+                    <h3>Real-Time Dashboard</h3>
+                    <p>See everything at a glance. Know exactly what's happening without constant monitoring or nagging.</p>
+                </div>
+                
+                <div class="card animate-on-scroll">
+                    <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);">🏆</div>
+                    <h3>Achievement System</h3>
+                    <p>Kids earn badges, unlock rewards, and see their progress. Positive reinforcement that actually works.</p>
+                </div>
+                
+                <div class="card animate-on-scroll">
+                    <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);">💰</div>
+                    <h3>Financial Education</h3>
+                    <p>Convert time to allowance. Teach budgeting, saving, and the value of work in a way kids understand.</p>
+                </div>
+                
+                <div class="card animate-on-scroll">
+                    <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);">👨‍👩‍👧‍👦</div>
+                    <h3>Family Challenges</h3>
+                    <p>Weekly challenges that get everyone involved. Build stronger bonds while teaching important lessons.</p>
+                </div>
+                
+                <div class="card animate-on-scroll">
+                    <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);">🔒</div>
+                    <h3>Safe & Secure</h3>
+                    <p>Bank-level security, COPPA compliant, and designed with children's privacy as the top priority.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="text-center mb-xl">
+                <h2>Frequently Asked Questions</h2>
+                <p class="lead">Everything you need to know about TimeBank Kids</p>
+            </div>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How is this different from regular parental controls?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Traditional parental controls are restrictive and often lead to conflicts. TimeBank Kids is empowering - it teaches kids to manage their own time by earning it through positive behaviors. Instead of just blocking access, we're teaching valuable life skills like time management, work ethic, and financial literacy.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What ages is TimeBank Kids suitable for?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>TimeBank Kids works best for children ages 6-17. The system adapts to different age groups with appropriate tasks, earning rates, and features. Younger kids get simpler tasks and visual rewards, while teens can access more complex financial education features.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do you prevent kids from gaming the system?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Parents approve completed tasks before time is credited. We use smart verification methods like photo uploads for certain tasks and location verification for outdoor activities. The system also tracks patterns to flag unusual behavior. Most importantly, the positive reinforcement model naturally encourages honest participation.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What devices does it work with?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>TimeBank Kids works with all major platforms: iOS, Android, Windows, Mac, and popular gaming consoles. Our app integrates with device-level controls to enforce time limits across all connected devices. One account manages everything.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What happens if my child runs out of screen time?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>When time runs out, devices enter "earning mode" - kids can see available tasks to earn more time. Emergency override options are available for parents. The key is that kids learn the consequence naturally and are motivated to plan better next time, rather than just being cut off.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-3xl">
+        <div class="container">
+            <div class="card" style="background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark)); color: white; text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 style="color: white;">Ready to Transform Your Family?</h2>
+                <p class="lead" style="color: rgba(255,255,255,0.9); margin-bottom: 2rem;">
+                    Join thousands of families who've discovered a better way to manage screen time
+                </p>
+                <div class="flex gap-md justify-center">
+                    <a href="index.html#signup" class="btn btn-success btn-lg">Start Free Trial</a>
+                    <a href="pricing.html" class="btn btn-secondary btn-lg" style="background: white; color: var(--primary-blue);">View Pricing</a>
+                </div>
+                <p style="font-size: 0.875rem; margin-top: 1rem; opacity: 0.9;">
+                    30-day free trial • No credit card required • Cancel anytime
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#testimonials">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="security.html">Security</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Stay Updated</h4>
+                    <p style="color: var(--gray-400); margin-bottom: 1rem;">Get parenting tips and product updates</p>
+                    <form id="footer-signup" class="flex flex-col gap-sm">
+                        <input 
+                            type="email" 
+                            class="form-input" 
+                            placeholder="Your email" 
+                            required 
+                            style="background: var(--gray-800); border-color: var(--gray-700); color: white;"
+                        >
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 TimeBank Kids. All rights reserved. Made with ❤️ for families everywhere.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

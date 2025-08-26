@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About TimeBank Kids - Learn about our mission to transform screen time battles into teachable moments and the team behind the revolution.">
+    <meta name="keywords" content="About TimeBank Kids, company mission, parenting technology team, screen time solution story">
+    <meta name="author" content="TimeBank Kids">
+    
+    <title>About Us - TimeBank Kids | Our Mission & Story</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Page-specific styles */
+        .about-hero {
+            background: linear-gradient(135deg, var(--primary-blue-light) 0%, var(--primary-blue) 100%);
+            color: white;
+            padding: var(--spacing-3xl) 0;
+            margin-top: 72px;
+        }
+        
+        .about-hero h1 {
+            color: white;
+        }
+        
+        .mission-section {
+            padding: var(--spacing-3xl) 0;
+        }
+        
+        .story-section {
+            background: var(--gray-50);
+            padding: var(--spacing-3xl) 0;
+        }
+        
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-3xl);
+            align-items: center;
+        }
+        
+        .story-image {
+            background: white;
+            padding: var(--spacing-2xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-2xl);
+        }
+        
+        .value-card {
+            text-align: center;
+            padding: var(--spacing-xl);
+        }
+        
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-blue-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--spacing-md);
+            font-size: 2rem;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-2xl);
+        }
+        
+        .team-member {
+            text-align: center;
+        }
+        
+        .team-avatar {
+            width: 150px;
+            height: 150px;
+            background: var(--gray-300);
+            border-radius: 50%;
+            margin: 0 auto var(--spacing-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .stats-section {
+            background: var(--primary-blue);
+            color: white;
+            padding: var(--spacing-3xl) 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--spacing-xl);
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .stat-label {
+            font-size: 1.125rem;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .story-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <span style="color: var(--primary-blue);">⏰</span>
+                TimeBank Kids
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
+                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="about.html" class="nav-link" style="color: var(--primary-blue);">About</a></li>
+                <li><a href="index.html#signup" class="btn btn-primary">Get Started</a></li>
+            </ul>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+        </div>
+    </nav>
+    
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="container text-center">
+            <h1>We're Parents, Just Like You</h1>
+            <p class="lead" style="color: white; opacity: 0.9; max-width: 800px; margin: 0 auto;">
+                TimeBank Kids was born from our own struggles with screen time battles. 
+                We knew there had to be a better way than constant negotiations and guilt.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="text-center mb-xl">
+                <h2>Our Mission</h2>
+                <p class="lead" style="max-width: 800px; margin: 0 auto;">
+                    To transform screen time from a source of family conflict into a powerful tool 
+                    for teaching children essential life skills: time management, work ethic, and financial literacy.
+                </p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card animate-on-scroll">
+                    <div class="value-icon">🎯</div>
+                    <h3>Empower, Don't Control</h3>
+                    <p>We believe in teaching kids to manage their own time rather than imposing strict controls.</p>
+                </div>
+                
+                <div class="value-card animate-on-scroll">
+                    <div class="value-icon">🤝</div>
+                    <h3>Build Trust</h3>
+                    <p>Create transparent systems that both parents and children can trust and understand.</p>
+                </div>
+                
+                <div class="value-card animate-on-scroll">
+                    <div class="value-icon">🌱</div>
+                    <h3>Life Skills First</h3>
+                    <p>Every feature we build focuses on teaching skills that will serve children throughout their lives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Story Section -->
+    <section class="story-section">
+        <div class="container">
+            <div class="story-content">
+                <div class="animate-on-scroll">
+                    <h2>Our Story</h2>
+                    <p style="margin-bottom: var(--spacing-md);">
+                        In 2022, our founder Sarah Chen was at her wit's end. Her three kids were constantly 
+                        battling over screen time, and every day ended in tears and frustration.
+                    </p>
+                    <p style="margin-bottom: var(--spacing-md);">
+                        "I tried everything," Sarah recalls. "Timers, charts, apps that just blocked access. 
+                        Nothing worked long-term. My kids saw screens as forbidden fruit, and I was always the bad guy."
+                    </p>
+                    <p style="margin-bottom: var(--spacing-md);">
+                        Then came the breakthrough: What if kids could earn their screen time like adults earn money? 
+                        What if we could teach them that time has value, effort brings rewards, and they have control 
+                        over their choices?
+                    </p>
+                    <p>
+                        <strong>TimeBank Kids was born.</strong> Today, we're helping thousands of families transform 
+                        their relationship with technology, one earned minute at a time.
+                    </p>
+                </div>
+                
+                <div class="story-image animate-on-scroll">
+                    <div style="text-align: center;">
+                        <div style="font-size: 5rem; margin-bottom: var(--spacing-md);">👨‍👩‍👧‍👦</div>
+                        <h3 style="margin-bottom: var(--spacing-md);">10,000+ Families Strong</h3>
+                        <p style="color: var(--gray-600);">
+                            From single parents to large families, from tech-savvy to tech-worried, 
+                            our community spans every background united by one goal: raising responsible kids.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Team Section -->
+    <section class="py-3xl">
+        <div class="container">
+            <div class="text-center mb-xl">
+                <h2>Meet Our Team</h2>
+                <p class="lead">Parents, educators, and technologists working together</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member animate-on-scroll">
+                    <div class="team-avatar" style="background: var(--primary-blue);">SC</div>
+                    <h4>Sarah Chen</h4>
+                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-sm);">Founder & CEO</p>
+                    <p style="font-size: 0.875rem;">Mom of 3, former Google product manager</p>
+                </div>
+                
+                <div class="team-member animate-on-scroll">
+                    <div class="team-avatar" style="background: var(--growth-green);">MR</div>
+                    <h4>Marcus Rodriguez</h4>
+                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-sm);">CTO</p>
+                    <p style="font-size: 0.875rem;">Dad of 2, 15+ years in EdTech</p>
+                </div>
+                
+                <div class="team-member animate-on-scroll">
+                    <div class="team-avatar" style="background: var(--achievement-gold);">JT</div>
+                    <h4>Dr. Jennifer Taylor</h4>
+                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-sm);">Child Psychology Advisor</p>
+                    <p style="font-size: 0.875rem;">Child development expert, author</p>
+                </div>
+                
+                <div class="team-member animate-on-scroll">
+                    <div class="team-avatar" style="background: var(--primary-blue-dark);">AK</div>
+                    <h4>Alex Kim</h4>
+                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-sm);">Head of Product</p>
+                    <p style="font-size: 0.875rem;">Parent, former teacher, UX specialist</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-xl">
+                <p style="color: var(--gray-600);">
+                    Plus 25+ passionate team members across engineering, support, and community management
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat animate-on-scroll">
+                    <div class="stat-number">10,000+</div>
+                    <div class="stat-label">Happy Families</div>
+                </div>
+                
+                <div class="stat animate-on-scroll">
+                    <div class="stat-number">2.5M</div>
+                    <div class="stat-label">Tasks Completed</div>
+                </div>
+                
+                <div class="stat animate-on-scroll">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Parent Satisfaction</div>
+                </div>
+                
+                <div class="stat animate-on-scroll">
+                    <div class="stat-number">4.9/5</div>
+                    <div class="stat-label">App Store Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Investors Section -->
+    <section class="py-3xl bg-light">
+        <div class="container">
+            <div class="text-center mb-xl">
+                <h2>Backed by the Best</h2>
+                <p class="lead">Trusted by leading investors in education and family technology</p>
+            </div>
+            
+            <div class="flex justify-center items-center gap-xl flex-wrap">
+                <div style="padding: var(--spacing-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+                    <strong>Bessemer Venture Partners</strong>
+                </div>
+                <div style="padding: var(--spacing-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+                    <strong>Reach Capital</strong>
+                </div>
+                <div style="padding: var(--spacing-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+                    <strong>Imaginable Futures</strong>
+                </div>
+                <div style="padding: var(--spacing-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+                    <strong>Learn Capital</strong>
+                </div>
+            </div>
+            
+            <div class="text-center mt-xl">
+                <p style="color: var(--gray-600);">
+                    $12M in funding to help families everywhere transform screen time
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-3xl">
+        <div class="container">
+            <div class="card" style="background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark)); color: white; text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 style="color: white;">Join Our Mission</h2>
+                <p class="lead" style="color: rgba(255,255,255,0.9); margin-bottom: 2rem;">
+                    Help us create a world where technology brings families together instead of driving them apart
+                </p>
+                <div class="flex gap-md justify-center">
+                    <a href="index.html#signup" class="btn btn-success btn-lg">Try TimeBank Kids</a>
+                    <a href="careers.html" class="btn btn-secondary btn-lg" style="background: white; color: var(--primary-blue);">Join Our Team</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#testimonials">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="security.html">Security</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Stay Updated</h4>
+                    <p style="color: var(--gray-400); margin-bottom: 1rem;">Get parenting tips and product updates</p>
+                    <form id="footer-signup" class="flex flex-col gap-sm">
+                        <input 
+                            type="email" 
+                            class="form-input" 
+                            placeholder="Your email" 
+                            required 
+                            style="background: var(--gray-800); border-color: var(--gray-700); color: white;"
+                        >
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 TimeBank Kids. All rights reserved. Made with ❤️ for families everywhere.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

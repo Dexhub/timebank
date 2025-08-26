@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TimeBank Kids Terms of Service - Clear, fair terms written in plain language that families can understand.">
+    <meta name="keywords" content="TimeBank Kids terms of service, user agreement, family app terms, legal terms">
+    <meta name="author" content="TimeBank Kids">
+    
+    <title>Terms of Service - TimeBank Kids</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Page-specific styles */
+        .terms-hero {
+            background: linear-gradient(135deg, var(--gray-50) 0%, white 100%);
+            padding: var(--spacing-3xl) 0;
+            margin-top: 72px;
+        }
+        
+        .terms-nav {
+            position: sticky;
+            top: 100px;
+            background: white;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+        }
+        
+        .terms-nav h3 {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--gray-700);
+        }
+        
+        .terms-nav ul {
+            list-style: none;
+        }
+        
+        .terms-nav li {
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .terms-nav a {
+            color: var(--gray-600);
+            text-decoration: none;
+            font-size: 0.875rem;
+            display: block;
+            padding: var(--spacing-xs) 0;
+            border-left: 3px solid transparent;
+            padding-left: var(--spacing-sm);
+            transition: all var(--transition-base);
+        }
+        
+        .terms-nav a:hover,
+        .terms-nav a.active {
+            color: var(--primary-blue);
+            border-left-color: var(--primary-blue);
+            background: var(--gray-50);
+        }
+        
+        .terms-content {
+            background: white;
+            padding: var(--spacing-2xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .terms-content h2 {
+            margin-top: var(--spacing-2xl);
+            margin-bottom: var(--spacing-lg);
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid var(--gray-200);
+        }
+        
+        .terms-content h2:first-child {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+        
+        .terms-content h3 {
+            margin-top: var(--spacing-xl);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .terms-content ul,
+        .terms-content ol {
+            margin-left: var(--spacing-xl);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .terms-content li {
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .terms-highlight {
+            background: var(--primary-blue-pale);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin: var(--spacing-xl) 0;
+        }
+        
+        .terms-summary {
+            background: linear-gradient(135deg, var(--primary-blue-pale), var(--growth-green-pale));
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--spacing-2xl);
+        }
+        
+        @media (max-width: 768px) {
+            .terms-nav {
+                position: relative;
+                top: 0;
+                margin-bottom: var(--spacing-xl);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <span style="color: var(--primary-blue);">⏰</span>
+                TimeBank Kids
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
+                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="index.html#signup" class="btn btn-primary">Get Started</a></li>
+            </ul>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Terms Hero -->
+    <section class="terms-hero">
+        <div class="container text-center">
+            <h1>Terms of Service</h1>
+            <p class="lead">Clear, fair terms that put families first</p>
+            <p style="color: var(--gray-600); margin-top: var(--spacing-md);">
+                Effective Date: March 15, 2024 | Version 2.0
+            </p>
+        </div>
+    </section>
+    
+    <!-- Terms Content -->
+    <section class="py-3xl">
+        <div class="container">
+            <div class="grid" style="grid-template-columns: 250px 1fr; gap: var(--spacing-2xl);">
+                <!-- Side Navigation -->
+                <aside class="terms-nav">
+                    <h3>Quick Navigation</h3>
+                    <ul>
+                        <li><a href="#summary" class="active">Plain English Summary</a></li>
+                        <li><a href="#acceptance">Acceptance of Terms</a></li>
+                        <li><a href="#eligibility">Eligibility</a></li>
+                        <li><a href="#accounts">Account Terms</a></li>
+                        <li><a href="#usage">Acceptable Use</a></li>
+                        <li><a href="#content">Content & Privacy</a></li>
+                        <li><a href="#payment">Payment Terms</a></li>
+                        <li><a href="#cancellation">Cancellation</a></li>
+                        <li><a href="#warranties">Warranties</a></li>
+                        <li><a href="#limitation">Limitation of Liability</a></li>
+                        <li><a href="#changes">Changes to Terms</a></li>
+                        <li><a href="#contact">Contact Information</a></li>
+                    </ul>
+                </aside>
+                
+                <!-- Main Content -->
+                <div class="terms-content">
+                    <section id="summary">
+                        <div class="terms-summary">
+                            <h2 style="margin-top: 0;">🤝 Plain English Summary</h2>
+                            <p style="font-size: 1.125rem; margin-bottom: var(--spacing-lg);">
+                                We believe legal documents should be understandable. Here's what you're agreeing to:
+                            </p>
+                            <ul style="font-size: 1.125rem; line-height: 1.8;">
+                                <li><strong>Be Nice:</strong> Use TimeBank Kids responsibly and don't harm others</li>
+                                <li><strong>Pay Fair:</strong> If you choose a paid plan, we'll charge you monthly or yearly</li>
+                                <li><strong>Your Data:</strong> You own your family's data, we protect it (see our Privacy Policy)</li>
+                                <li><strong>Cancellation:</strong> Cancel anytime, no questions asked</li>
+                                <li><strong>Kid Safety:</strong> Parents control all child accounts</li>
+                                <li><strong>Our Promise:</strong> We'll work hard to provide a great service</li>
+                            </ul>
+                            <p style="margin-top: var(--spacing-lg); font-style: italic;">
+                                This summary doesn't replace the full terms below, but we hope it helps!
+                            </p>
+                        </div>
+                    </section>
+                    
+                    <section id="acceptance">
+                        <h2>1. Acceptance of Terms</h2>
+                        <p>
+                            By accessing or using TimeBank Kids ("the Service"), you agree to be bound by these Terms of Service ("Terms"). 
+                            If you disagree with any part of these terms, please don't use our Service.
+                        </p>
+                        <p>
+                            These Terms apply to all visitors, users, and others who access or use the Service.
+                        </p>
+                    </section>
+                    
+                    <section id="eligibility">
+                        <h2>2. Eligibility</h2>
+                        <h3>Parent/Guardian Accounts</h3>
+                        <ul>
+                            <li>You must be at least 18 years old</li>
+                            <li>You must have legal authority to consent for any minors you add</li>
+                            <li>You must provide accurate and complete information</li>
+                        </ul>
+                        
+                        <h3>Child Accounts</h3>
+                        <ul>
+                            <li>Must be created and managed by a parent/guardian</li>
+                            <li>Are subject to parental controls at all times</li>
+                            <li>Cannot make purchases or access payment information</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="accounts">
+                        <h2>3. Account Terms</h2>
+                        <h3>Your Responsibilities</h3>
+                        <ul>
+                            <li>Maintain the security of your account and password</li>
+                            <li>Notify us immediately of any unauthorized access</li>
+                            <li>Take responsibility for all activities under your account</li>
+                            <li>Ensure all information provided is accurate and current</li>
+                        </ul>
+                        
+                        <h3>Our Rights</h3>
+                        <p>
+                            We reserve the right to refuse service, terminate accounts, or remove content at our sole discretion, 
+                            particularly if we believe you've violated these Terms.
+                        </p>
+                    </section>
+                    
+                    <section id="usage">
+                        <h2>4. Acceptable Use Policy</h2>
+                        <p>You agree NOT to use TimeBank Kids to:</p>
+                        <ul>
+                            <li>Violate any laws or regulations</li>
+                            <li>Harm or exploit minors in any way</li>
+                            <li>Transmit viruses, malware, or harmful code</li>
+                            <li>Attempt to gain unauthorized access to our systems</li>
+                            <li>Interfere with other users' enjoyment of the service</li>
+                            <li>Use the service for any commercial purposes without our permission</li>
+                            <li>Collect information about other users without consent</li>
+                        </ul>
+                        
+                        <div class="terms-highlight">
+                            <strong>⚠️ Important:</strong> Violation of this policy may result in immediate account termination and legal action.
+                        </div>
+                    </section>
+                    
+                    <section id="content">
+                        <h2>5. Content & Privacy</h2>
+                        <h3>Your Content</h3>
+                        <ul>
+                            <li>You retain all rights to content you create</li>
+                            <li>You grant us a license to use your content to provide the service</li>
+                            <li>You're responsible for content you post</li>
+                            <li>We may remove content that violates these terms</li>
+                        </ul>
+                        
+                        <h3>Privacy</h3>
+                        <p>
+                            Your use of our Service is also governed by our Privacy Policy. Please review our 
+                            <a href="privacy.html">Privacy Policy</a>, which explains how we collect, use, and protect your information.
+                        </p>
+                    </section>
+                    
+                    <section id="payment">
+                        <h2>6. Payment Terms</h2>
+                        <h3>Billing</h3>
+                        <ul>
+                            <li>Subscription fees are billed in advance (monthly or annually)</li>
+                            <li>All fees are in USD unless otherwise stated</li>
+                            <li>Prices are subject to change with 30 days notice</li>
+                            <li>You authorize us to charge your payment method on file</li>
+                        </ul>
+                        
+                        <h3>Refunds</h3>
+                        <ul>
+                            <li>Monthly plans: No refunds for partial months</li>
+                            <li>Annual plans: Pro-rated refund within first 30 days</li>
+                            <li>Exceptional circumstances considered on case-by-case basis</li>
+                        </ul>
+                        
+                        <h3>Free Trial</h3>
+                        <p>
+                            If we offer a free trial, you won't be charged until the trial ends. You can cancel 
+                            anytime during the trial without any charges.
+                        </p>
+                    </section>
+                    
+                    <section id="cancellation">
+                        <h2>7. Cancellation</h2>
+                        <p>
+                            You can cancel your subscription at any time through your account settings. Upon cancellation:
+                        </p>
+                        <ul>
+                            <li>Your subscription remains active until the end of the current billing period</li>
+                            <li>You won't be charged for future periods</li>
+                            <li>You can export your data before account closure</li>
+                            <li>We'll delete your data according to our Privacy Policy</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="warranties">
+                        <h2>8. Warranties & Disclaimers</h2>
+                        <p>
+                            THE SERVICE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. WE DISCLAIM ALL WARRANTIES, 
+                            EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, 
+                            AND NON-INFRINGEMENT.
+                        </p>
+                        <p>
+                            We don't guarantee that:
+                        </p>
+                        <ul>
+                            <li>The service will be uninterrupted or error-free</li>
+                            <li>Defects will be corrected immediately</li>
+                            <li>The service will meet all your requirements</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="limitation">
+                        <h2>9. Limitation of Liability</h2>
+                        <p>
+                            TO THE MAXIMUM EXTENT PERMITTED BY LAW, TIMEBANK KIDS SHALL NOT BE LIABLE FOR ANY INDIRECT, 
+                            INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES.
+                        </p>
+                        <p>
+                            Our total liability shall not exceed the amount you've paid us in the past 12 months.
+                        </p>
+                    </section>
+                    
+                    <section id="changes">
+                        <h2>10. Changes to Terms</h2>
+                        <p>
+                            We may update these Terms from time to time. When we do:
+                        </p>
+                        <ul>
+                            <li>We'll notify you via email or in-app notification</li>
+                            <li>You'll have 30 days to review changes</li>
+                            <li>Continued use after changes means you accept new terms</li>
+                            <li>You can always view current terms at this URL</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="contact">
+                        <h2>11. Contact Information</h2>
+                        <p>Questions about these Terms? Contact us:</p>
+                        
+                        <div class="card" style="background: var(--gray-50); margin-top: var(--spacing-lg);">
+                            <h4>Legal Team</h4>
+                            <p><strong>Email:</strong> legal@timebankkids.com</p>
+                            <p><strong>Phone:</strong> 1-800-TIMEBANK</p>
+                            <p><strong>Mail:</strong> TimeBank Kids Legal Department<br>
+                            123 Family Way, Suite 100<br>
+                            San Francisco, CA 94105</p>
+                        </div>
+                    </section>
+                    
+                    <div class="terms-highlight" style="margin-top: var(--spacing-3xl);">
+                        <h3>🌟 Our Commitment</h3>
+                        <p>
+                            While these terms protect both of us legally, our real commitment is simple: 
+                            We'll work hard every day to help your family thrive in the digital age. 
+                            Thank you for trusting us with that responsibility.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#testimonials">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="security.html">Security</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Stay Updated</h4>
+                    <p style="color: var(--gray-400); margin-bottom: 1rem;">Get parenting tips and product updates</p>
+                    <form id="footer-signup" class="flex flex-col gap-sm">
+                        <input 
+                            type="email" 
+                            class="form-input" 
+                            placeholder="Your email" 
+                            required 
+                            style="background: var(--gray-800); border-color: var(--gray-700); color: white;"
+                        >
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 TimeBank Kids. All rights reserved. Made with ❤️ for families everywhere.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // Smooth scroll and active nav
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.terms-nav a');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

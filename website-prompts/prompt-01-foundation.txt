@@ -1,0 +1,102 @@
+PROMPT 1: Foundation & Core Website Structure
+==========================================
+
+You are a world-class web developer and UX designer building the marketing website for TimeBank Kids - a revolutionary family technology platform that transforms screen time battles into life lessons. 
+
+OBJECTIVE: Create a comprehensive, conversion-optimized marketing website that establishes trust, educates visitors, and drives sign-ups.
+
+BRAND IDENTITY:
+- Company: TimeBank Kids
+- Tagline: "Turn Screen Time Struggles Into Life Lessons"
+- Mission: End screen time battles by teaching kids that time = money, effort = rewards
+- Personality: Optimistic, trustworthy, empowering, family-focused
+- Colors: Primary Blue (#6366F1), Growth Green (#10B981), Achievement Gold (#F59E0B)
+
+CORE VALUE PROPOSITIONS:
+1. Kids WANT to earn more screen time through real-world activities
+2. Parents get peace of mind with reduced family conflict
+3. Families build stronger bonds through shared achievements
+4. Children learn actual life skills: time management, money literacy, work ethic
+
+TARGET AUDIENCES:
+- Primary: Millennial parents (ages 28-43) with kids 8-17
+- Secondary: Gen X parents (ages 44-59) 
+- Emotional drivers: Guilt about screen time, exhaustion from battles, desire to raise responsible kids
+
+WEBSITE REQUIREMENTS:
+
+1. HOMEPAGE STRUCTURE:
+   - Navigation: Logo, How It Works, Pricing, Blog, About, Get Started
+   - Hero Section: Powerful headline, subheading, dual CTAs, trust badges
+   - Problem Section: Statistics showing screen time crisis
+   - Solution Section: How TimeBank Kids works differently
+   - Social Proof: Testimonials, success metrics
+   - How It Works: 4-step process with visuals
+   - Pricing: 3 tiers with feature comparison
+   - Final CTA: Email capture with strong incentive
+   - Footer: Links, contact, social media
+
+2. KEY PAGES TO CREATE:
+   - Homepage (primary conversion page)
+   - How It Works (detailed explanation)
+   - Pricing (transparent, value-focused)
+   - About Us (team credibility, mission)
+   - Blog (content marketing hub)
+   - Privacy & Security (COPPA compliance, safety)
+   - Contact (support, partnerships)
+   - Legal (Terms, Privacy Policy)
+
+3. TECHNICAL SPECIFICATIONS:
+   - Responsive design (mobile-first)
+   - Fast loading (<3 seconds)
+   - SEO optimized with semantic HTML
+   - Accessibility compliant (WCAG 2.1 AA)
+   - Analytics ready (Google Analytics, Facebook Pixel)
+   - Email capture integration
+   - Social sharing optimization
+
+4. CONTENT STRATEGY:
+   - Parent-focused messaging that's empathetic but solution-oriented
+   - Data-driven credibility (statistics, research citations)
+   - Emotional storytelling with rational backing
+   - Clear benefit communication for all family members
+   - Trust-building elements throughout
+
+5. CONVERSION OPTIMIZATION:
+   - Multiple CTAs throughout the journey
+   - Progressive information disclosure
+   - Social proof at key decision points
+   - Risk reduction (free trial, testimonials)
+   - Urgency/scarcity where appropriate
+
+6. DESIGN PRINCIPLES:
+   - Clean, modern, professional aesthetic
+   - Family-friendly but not childish
+   - High contrast for readability
+   - Generous white space
+   - Consistent brand colors and typography
+   - Engaging but not overwhelming
+
+BUILD REQUIREMENTS:
+- Use modern HTML5, CSS3, and vanilla JavaScript
+- Mobile-responsive using CSS Grid and Flexbox
+- Semantic HTML for SEO and accessibility
+- Optimized images with proper alt text
+- Clean, maintainable code structure
+- Cross-browser compatibility
+
+SPECIFIC HOMEPAGE ELEMENTS:
+- Hero: "Turn Screen Time Struggles Into Life Lessons" + phone mockup
+- Problem stats: "54% of parents believe their child is addicted to screens"
+- Solution: 4-feature grid showing core benefits
+- Testimonials: 3 parent quotes with photos
+- How it works: 4-step visual process
+- Pricing: 3 tiers ($0, $12, $25/month)
+- Final CTA: "Start Your Free Trial" with email capture
+
+Create a complete, production-ready website that a visitor could immediately understand the value proposition, trust the company, and be motivated to sign up. Include all HTML, CSS, and JavaScript files needed.
+
+Make this website compelling enough that a busy parent would immediately see the value and want to try the product.
+
+AFTER COMPLETION:
+Run: git add . && git commit -m "Foundation: Core website structure with homepage, navigation, and key pages established" 

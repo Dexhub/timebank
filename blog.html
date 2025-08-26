@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TimeBank Kids Blog - Expert parenting tips, screen time advice, and family technology insights from child development professionals.">
+    <meta name="keywords" content="parenting blog, screen time tips, family technology, digital parenting advice, child development">
+    <meta name="author" content="TimeBank Kids">
+    
+    <title>Blog - TimeBank Kids | Parenting Tips & Screen Time Insights</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Page-specific styles */
+        .blog-hero {
+            background: linear-gradient(135deg, var(--gray-50) 0%, white 100%);
+            padding: var(--spacing-3xl) 0;
+            margin-top: 72px;
+        }
+        
+        .blog-categories {
+            display: flex;
+            gap: var(--spacing-sm);
+            justify-content: center;
+            margin-bottom: var(--spacing-3xl);
+            flex-wrap: wrap;
+        }
+        
+        .category-btn {
+            background: white;
+            border: 2px solid var(--gray-300);
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-base);
+        }
+        
+        .category-btn:hover,
+        .category-btn.active {
+            background: var(--primary-blue);
+            color: white;
+            border-color: var(--primary-blue);
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-3xl);
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            background: var(--gray-300);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .blog-category-tag {
+            position: absolute;
+            top: var(--spacing-md);
+            left: var(--spacing-md);
+            background: var(--primary-blue);
+            color: white;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-sm);
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .blog-content {
+            padding: var(--spacing-lg);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .blog-meta {
+            display: flex;
+            gap: var(--spacing-md);
+            color: var(--gray-600);
+            font-size: 0.875rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .blog-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+            color: var(--gray-900);
+            text-decoration: none;
+            display: block;
+        }
+        
+        .blog-title:hover {
+            color: var(--primary-blue);
+        }
+        
+        .blog-excerpt {
+            color: var(--gray-600);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-md);
+            flex-grow: 1;
+        }
+        
+        .read-more {
+            color: var(--primary-blue);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            transition: gap var(--transition-base);
+        }
+        
+        .read-more:hover {
+            gap: var(--spacing-sm);
+        }
+        
+        .featured-post {
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .featured-post .blog-image {
+            height: 100%;
+        }
+        
+        .newsletter-section {
+            background: var(--primary-blue);
+            color: white;
+            padding: var(--spacing-3xl) 0;
+            margin: var(--spacing-3xl) 0;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-post {
+                grid-column: span 1;
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-post .blog-image {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <span style="color: var(--primary-blue);">⏰</span>
+                TimeBank Kids
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
+                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li><a href="blog.html" class="nav-link" style="color: var(--primary-blue);">Blog</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="index.html#signup" class="btn btn-primary">Get Started</a></li>
+            </ul>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <div class="container text-center">
+            <h1>TimeBank Kids Blog</h1>
+            <p class="lead">Expert insights on digital parenting, screen time management, and raising responsible kids in the digital age</p>
+        </div>
+    </section>
+    
+    <!-- Blog Content -->
+    <section class="py-3xl">
+        <div class="container">
+            <!-- Categories -->
+            <div class="blog-categories">
+                <button class="category-btn active">All Posts</button>
+                <button class="category-btn">Screen Time Tips</button>
+                <button class="category-btn">Parenting</button>
+                <button class="category-btn">Child Development</button>
+                <button class="category-btn">Product Updates</button>
+            </div>
+            
+            <!-- Blog Grid -->
+            <div class="blog-grid">
+                <!-- Featured Post -->
+                <article class="blog-card featured-post animate-on-scroll">
+                    <div class="blog-image">
+                        <span class="blog-category-tag">Featured</span>
+                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, var(--primary-blue-light), var(--primary-blue)); display: flex; align-items: center; justify-content: center; font-size: 4rem;">
+                            📱
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>Dr. Sarah Chen</span>
+                            <span>•</span>
+                            <time>March 15, 2024</time>
+                        </div>
+                        <a href="#" class="blog-title">The Ultimate Guide to Screen Time for Kids: Age-by-Age Recommendations</a>
+                        <p class="blog-excerpt">
+                            Confused about how much screen time is appropriate for your child? Our comprehensive guide breaks down expert recommendations by age group, 
+                            explains the science behind the guidelines, and offers practical tips for implementation.
+                        </p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+                
+                <!-- Regular Posts -->
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-image">
+                        <span class="blog-category-tag">Parenting</span>
+                        <div style="width: 100%; height: 100%; background: var(--growth-green-light); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            🎯
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>Marcus Rodriguez</span>
+                            <span>•</span>
+                            <time>March 12, 2024</time>
+                        </div>
+                        <a href="#" class="blog-title">5 Signs Your Child Is Ready for Screen Time Responsibility</a>
+                        <p class="blog-excerpt">
+                            Learn how to recognize when your child is developmentally ready to manage their own screen time and how TimeBank Kids can help.
+                        </p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-image">
+                        <span class="blog-category-tag">Tips</span>
+                        <div style="width: 100%; height: 100%; background: var(--achievement-gold-light); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            💡
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>Dr. Jennifer Taylor</span>
+                            <span>•</span>
+                            <time>March 10, 2024</time>
+                        </div>
+                        <a href="#" class="blog-title">Transform Chores Into Life Lessons: A Psychologist's Guide</a>
+                        <p class="blog-excerpt">
+                            Discover how to use everyday tasks to teach responsibility, work ethic, and the value of contribution to your children.
+                        </p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-image">
+                        <span class="blog-category-tag">Research</span>
+                        <div style="width: 100%; height: 100%; background: var(--primary-blue-light); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            📊
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>TimeBank Research Team</span>
+                            <span>•</span>
+                            <time>March 8, 2024</time>
+                        </div>
+                        <a href="#" class="blog-title">Study: Kids Who Earn Screen Time Show 40% Better Time Management</a>
+                        <p class="blog-excerpt">
+                            Our latest research reveals surprising benefits when children earn their screen time through completing real-world activities.
+                        </p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-image">
+                        <span class="blog-category-tag">Success Story</span>
+                        <div style="width: 100%; height: 100%; background: var(--growth-green); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            ⭐
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>Lisa Thompson</span>
+                            <span>•</span>
+                            <time>March 5, 2024</time>
+                        </div>
+                        <a href="#" class="blog-title">How We Went From Daily Battles to Family Harmony in 30 Days</a>
+                        <p class="blog-excerpt">
+                            One mom's honest story about implementing TimeBank Kids and the unexpected ways it transformed her family dynamic.
+                        </p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-image">
+                        <span class="blog-category-tag">Product Update</span>
+                        <div style="width: 100%; height: 100%; background: var(--primary-blue); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                            🚀
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>Alex Kim</span>
+                            <span>•</span>
+                            <time>March 3, 2024</time>
+                        </div>
+                        <a href="#" class="blog-title">New Feature: Family Challenges Are Here!</a>
+                        <p class="blog-excerpt">
+                            Introducing weekly family challenges that get everyone moving, learning, and earning together. See what's new in version 2.0.
+                        </p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="flex justify-center gap-sm">
+                <button class="btn btn-secondary">← Previous</button>
+                <span style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                    <button style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--primary-blue); background: var(--primary-blue); color: white; font-weight: 600;">1</button>
+                    <button style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--gray-300); background: white; font-weight: 600;">2</button>
+                    <button style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--gray-300); background: white; font-weight: 600;">3</button>
+                </span>
+                <button class="btn btn-secondary">Next →</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container text-center">
+            <h2 style="color: white;">Get Weekly Parenting Tips</h2>
+            <p class="lead" style="color: rgba(255,255,255,0.9); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Join 50,000+ parents receiving our newsletter with expert advice on screen time, 
+                child development, and creating family harmony.
+            </p>
+            
+            <form class="flex gap-md" style="max-width: 500px; margin: 0 auto;">
+                <input 
+                    type="email" 
+                    class="form-input" 
+                    placeholder="Enter your email" 
+                    required 
+                    style="flex: 1; background: white;"
+                >
+                <button type="submit" class="btn btn-success btn-lg">Subscribe</button>
+            </form>
+            
+            <p style="font-size: 0.875rem; margin-top: 1rem; opacity: 0.9;">
+                We respect your privacy. Unsubscribe at any time.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Popular Topics -->
+    <section class="py-3xl bg-light">
+        <div class="container">
+            <h2 class="text-center mb-xl">Popular Topics</h2>
+            
+            <div class="grid grid-cols-4 md:grid-cols-2 gap-lg">
+                <a href="#" class="card" style="text-decoration: none; color: inherit;">
+                    <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);">🎮</div>
+                    <h4>Gaming & Screen Time</h4>
+                    <p style="color: var(--gray-600);">Balancing gaming with other activities</p>
+                </a>
+                
+                <a href="#" class="card" style="text-decoration: none; color: inherit;">
+                    <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);">📚</div>
+                    <h4>Educational Apps</h4>
+                    <p style="color: var(--gray-600);">Making screen time count</p>
+                </a>
+                
+                <a href="#" class="card" style="text-decoration: none; color: inherit;">
+                    <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);">👨‍👩‍👧‍👦</div>
+                    <h4>Family Activities</h4>
+                    <p style="color: var(--gray-600);">Bonding beyond screens</p>
+                </a>
+                
+                <a href="#" class="card" style="text-decoration: none; color: inherit;">
+                    <div style="font-size: 2.5rem; margin-bottom: var(--spacing-md);">💰</div>
+                    <h4>Financial Literacy</h4>
+                    <p style="color: var(--gray-600);">Teaching money skills early</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#testimonials">Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="security.html">Security</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Stay Updated</h4>
+                    <p style="color: var(--gray-400); margin-bottom: 1rem;">Get parenting tips and product updates</p>
+                    <form id="footer-signup" class="flex flex-col gap-sm">
+                        <input 
+                            type="email" 
+                            class="form-input" 
+                            placeholder="Your email" 
+                            required 
+                            style="background: var(--gray-800); border-color: var(--gray-700); color: white;"
+                        >
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 TimeBank Kids. All rights reserved. Made with ❤️ for families everywhere.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // Category filter
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                // In a real implementation, this would filter the blog posts
+            });
+        });
+    </script>
+</body>
+</html>
