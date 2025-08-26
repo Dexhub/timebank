@@ -64,127 +64,125 @@
     <!-- Main Content -->
     <main id="main-content">
         <!-- Hero Section -->
-        <section class="hero">
-            <div class="decoration-blob decoration-blob-1"></div>
-            <div class="decoration-blob decoration-blob-2"></div>
+        <section class="hero" style="padding: 100px 0 60px; background: linear-gradient(135deg, #E8E9FC 0%, #E5FBF5 100%);">
             <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text animate-on-scroll">
-                        <div class="flex gap-sm items-center mb-md" style="opacity: 0.8;">
-                            <span style="background: var(--achievement-gold-pale); color: var(--achievement-gold-dark); padding: 0.375rem 1rem; border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
-                                <span style="display: inline-block; width: 8px; height: 8px; background: var(--achievement-gold); border-radius: 50%; animation: pulse 2s infinite;"></span>
-                                Over 2M screen time battles resolved peacefully
-                            </span>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+                    <style>
+                        @media (max-width: 768px) {
+                            .hero > .container > div {
+                                grid-template-columns: 1fr !important;
+                                text-align: center;
+                            }
+                            .hero h1 {
+                                font-size: 36px !important;
+                            }
+                            .hero p {
+                                font-size: 18px !important;
+                            }
+                        }
+                    </style>
+                    <div>
+                        <div style="display: inline-flex; align-items: center; gap: 8px; background: #FFF5D6; color: #E5A600; padding: 6px 16px; border-radius: 20px; font-size: 14px; font-weight: 600; margin-bottom: 20px;">
+                            <span style="display: inline-block; width: 8px; height: 8px; background: #FFB800; border-radius: 50%;"></span>
+                            Over 2M screen time battles resolved peacefully
                         </div>
-                        <h1 style="font-weight: 900; letter-spacing: -0.03em;">
-                            Turn <span class="gradient-text">Screen Time Struggles</span><br>
+                        <h1 style="font-size: 48px; font-weight: 900; line-height: 1.1; margin-bottom: 20px;">
+                            Turn <span style="background: linear-gradient(135deg, #5B5FDE 0%, #00D9A5 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Screen Time Struggles</span><br>
                             Into Life Lessons
                         </h1>
-                        <p class="lead" style="max-width: 600px;">
+                        <p style="font-size: 20px; line-height: 1.6; color: #6B7280; margin-bottom: 30px;">
                             End the daily battles. TimeBank Kids transforms screen time from a source of conflict into a powerful teaching tool where kids <strong>want</strong> to earn their time through real-world activities.
                         </p>
                         
-                        <div class="hero-cta flex gap-md" style="margin-top: 2.5rem;">
-                            <a href="#signup" class="btn btn-primary btn-lg shimmer" data-track="cta_click,hero,start_free_trial" style="padding: 1.25rem 2.5rem;">
-                                <span style="display: flex; flex-direction: column; align-items: center; gap: 0.25rem;">
-                                    <span style="font-size: 1.125rem; font-weight: 700;">Start Your Free Trial</span>
-                                    <span style="font-size: 0.875rem; opacity: 0.9; font-weight: 400;">No credit card required</span>
-                                </span>
+                        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                            <a href="#signup" class="btn btn-primary btn-lg" style="padding: 16px 32px; font-size: 18px;">
+                                Start Your Free Trial
                             </a>
-                            <a href="#demo-video" class="btn btn-secondary btn-lg" data-track="cta_click,hero,watch_demo" style="display: flex; align-items: center; gap: 0.5rem;">
-                                <span style="display: inline-flex; width: 24px; height: 24px; background: var(--primary-blue); border-radius: 50%; align-items: center; justify-content: center; color: white;">▶</span>
+                            <a href="#demo-video" class="btn btn-secondary btn-lg" style="display: flex; align-items: center; gap: 8px; padding: 16px 32px;">
+                                <span style="display: inline-flex; width: 24px; height: 24px; background: #5B5FDE; border-radius: 50%; align-items: center; justify-content: center; color: white;">▶</span>
                                 Watch 2-min Demo
                             </a>
                         </div>
                         
-                        <div class="trust-badges flex gap-xl items-center flex-wrap" style="margin-top: 3rem;">
-                            <div class="flex items-center gap-sm hover-lift">
-                                <div style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--growth-green-pale), var(--growth-green-light)); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 4px 12px rgba(0, 217, 165, 0.2);">
+                        <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap; margin-top: 40px;">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div style="width: 48px; height: 48px; background: #E5FBF5; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px;">
                                     🏆
                                 </div>
                                 <div>
-                                    <strong style="display: block; font-size: 1rem; color: var(--gray-900);">10,000+</strong>
-                                    <span style="font-size: 0.875rem; color: var(--gray-600);">Happy Families</span>
+                                    <strong style="display: block; font-size: 16px; color: #111827;">10,000+</strong>
+                                    <span style="font-size: 14px; color: #6B7280;">Happy Families</span>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-sm hover-lift">
-                                <div style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--achievement-gold-pale), var(--achievement-gold-light)); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 4px 12px rgba(255, 184, 0, 0.2);">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div style="width: 48px; height: 48px; background: #FFF5D6; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px;">
                                     ⭐
                                 </div>
                                 <div>
-                                    <strong style="display: block; font-size: 1rem; color: var(--gray-900);">4.9/5</strong>
-                                    <span style="font-size: 0.875rem; color: var(--gray-600);">Parent Rating</span>
+                                    <strong style="display: block; font-size: 16px; color: #111827;">4.9/5</strong>
+                                    <span style="font-size: 14px; color: #6B7280;">Parent Rating</span>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-sm hover-lift">
-                                <div style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--primary-blue-pale), var(--primary-blue-light)); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 4px 12px rgba(91, 95, 222, 0.2);">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div style="width: 48px; height: 48px; background: #E8E9FC; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px;">
                                     🛡️
                                 </div>
                                 <div>
-                                    <strong style="display: block; font-size: 1rem; color: var(--gray-900);">COPPA</strong>
-                                    <span style="font-size: 0.875rem; color: var(--gray-600);">Compliant</span>
+                                    <strong style="display: block; font-size: 16px; color: #111827;">COPPA</strong>
+                                    <span style="font-size: 14px; color: #6B7280;">Compliant</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="hero-image animate-on-scroll" style="position: relative;">
-                        <div class="animate-float" style="background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); padding: 3rem; border-radius: 2.5rem; box-shadow: 0 30px 60px rgba(91, 95, 222, 0.15); border: 1px solid rgba(255,255,255,0.8); position: relative; overflow: hidden;">
-                            <!-- Decorative gradient overlay -->
-                            <div style="position: absolute; top: 0; left: 0; right: 0; height: 100px; background: linear-gradient(to bottom, rgba(91, 95, 222, 0.05), transparent); pointer-events: none;"></div>
+                    <div style="position: relative;">
+                        <div style="background: white; padding: 48px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); text-align: center;">
+                            <div style="background: linear-gradient(135deg, #5B5FDE, #00D9A5); padding: 10px 28px; border-radius: 30px; color: white; font-weight: 700; display: inline-block; margin-bottom: 32px; font-size: 14px;">
+                                EMMA'S TIMEBANK TODAY
+                            </div>
                             
-                            <div style="text-align: center; position: relative;">
-                                <div style="background: linear-gradient(135deg, var(--primary-blue), var(--growth-green)); padding: 0.625rem 1.75rem; border-radius: var(--radius-full); color: white; font-weight: 700; display: inline-block; margin-bottom: 2rem; font-size: 0.875rem; letter-spacing: 0.025em; box-shadow: 0 4px 12px rgba(91, 95, 222, 0.3);">
-                                    EMMA'S TIMEBANK TODAY
+                            <div style="margin-bottom: 32px;">
+                                <div style="font-size: 64px; font-weight: 900; background: linear-gradient(135deg, #5B5FDE, #00D9A5); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; margin: 8px 0;">
+                                    2h 30m
+                                </div>
+                                <p style="color: #6B7280; font-weight: 500; font-size: 18px;">Screen Time Earned</p>
+                            </div>
+                            
+                            <div style="text-align: left; background: #FAFBFC; padding: 28px; border-radius: 16px;">
+                                <div style="font-weight: 700; margin-bottom: 20px; color: #374151; font-size: 14px; text-transform: uppercase;">Today's Achievements</div>
+                                
+                                <div style="display: flex; align-items: center; gap: 16px; padding: 14px; background: #E5FBF5; border-radius: 12px; margin-bottom: 10px;">
+                                    <span style="font-size: 24px;">🧹</span>
+                                    <span style="flex: 1; font-weight: 600; color: #374151;">Cleaned room</span>
+                                    <span style="color: #00B88A; font-weight: 700; font-size: 18px;">+30m</span>
                                 </div>
                                 
-                                <div style="margin-bottom: 2rem;">
-                                    <div style="font-size: 5rem; font-weight: 900; background: linear-gradient(135deg, var(--primary-blue), var(--growth-green)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin: 0.5rem 0; letter-spacing: -0.02em;">
-                                        2h 30m
-                                    </div>
-                                    <p style="color: var(--gray-600); font-weight: 500; font-size: 1.125rem;">Screen Time Earned</p>
+                                <div style="display: flex; align-items: center; gap: 16px; padding: 14px; background: #E8E9FC; border-radius: 12px; margin-bottom: 10px;">
+                                    <span style="font-size: 24px;">📚</span>
+                                    <span style="flex: 1; font-weight: 600; color: #374151;">Homework done</span>
+                                    <span style="color: #4549C0; font-weight: 700; font-size: 18px;">+1h</span>
                                 </div>
                                 
-                                <div style="text-align: left; background: var(--gray-50); padding: 1.75rem; border-radius: var(--radius-xl); box-shadow: inset 0 2px 4px rgba(0,0,0,0.04);">
-                                    <div style="font-weight: 700; margin-bottom: 1.25rem; color: var(--gray-800); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em;">Today's Achievements</div>
-                                    <div class="space-y-sm">
-                                        <div class="flex items-center gap-md hover-grow" style="padding: 0.875rem; background: linear-gradient(135deg, var(--growth-green-pale), rgba(255,255,255,0.8)); border-radius: var(--radius-lg); margin-bottom: 0.625rem; cursor: pointer; transition: all var(--transition-spring); border: 1px solid var(--growth-green-light);">
-                                            <span style="font-size: 1.5rem;">🧹</span>
-                                            <span style="flex: 1; font-weight: 600; color: var(--gray-800);">Cleaned room</span>
-                                            <span style="color: var(--growth-green-dark); font-weight: 700; font-size: 1.125rem;">+30m</span>
-                                        </div>
-                                        <div class="flex items-center gap-md hover-grow" style="padding: 0.875rem; background: linear-gradient(135deg, var(--primary-blue-pale), rgba(255,255,255,0.8)); border-radius: var(--radius-lg); margin-bottom: 0.625rem; cursor: pointer; transition: all var(--transition-spring); border: 1px solid var(--primary-blue-light);">
-                                            <span style="font-size: 1.5rem;">📚</span>
-                                            <span style="flex: 1; font-weight: 600; color: var(--gray-800);">Homework done</span>
-                                            <span style="color: var(--primary-blue-dark); font-weight: 700; font-size: 1.125rem;">+1h</span>
-                                        </div>
-                                        <div class="flex items-center gap-md hover-grow" style="padding: 0.875rem; background: linear-gradient(135deg, var(--achievement-gold-pale), rgba(255,255,255,0.8)); border-radius: var(--radius-lg); margin-bottom: 0.625rem; cursor: pointer; transition: all var(--transition-spring); border: 1px solid var(--achievement-gold-light);">
-                                            <span style="font-size: 1.5rem;">🐕</span>
-                                            <span style="flex: 1; font-weight: 600; color: var(--gray-800);">Walked dog</span>
-                                            <span style="color: var(--achievement-gold-dark); font-weight: 700; font-size: 1.125rem;">+30m</span>
-                                        </div>
-                                        <div class="flex items-center gap-md hover-grow" style="padding: 0.875rem; background: linear-gradient(135deg, rgba(155, 89, 182, 0.1), rgba(255,255,255,0.8)); border-radius: var(--radius-lg); cursor: pointer; transition: all var(--transition-spring); border: 1px solid rgba(155, 89, 182, 0.3);">
-                                            <span style="font-size: 1.5rem;">📖</span>
-                                            <span style="flex: 1; font-weight: 600; color: var(--gray-800);">Read for 20min</span>
-                                            <span style="color: var(--accent-purple); font-weight: 700; font-size: 1.125rem;">+30m</span>
-                                        </div>
-                                    </div>
+                                <div style="display: flex; align-items: center; gap: 16px; padding: 14px; background: #FFF5D6; border-radius: 12px; margin-bottom: 10px;">
+                                    <span style="font-size: 24px;">🐕</span>
+                                    <span style="flex: 1; font-weight: 600; color: #374151;">Walked dog</span>
+                                    <span style="color: #E5A600; font-weight: 700; font-size: 18px;">+30m</span>
                                 </div>
                                 
-                                <!-- Progress indicator -->
-                                <div style="margin-top: 1.5rem; text-align: center;">
-                                    <div style="width: 100%; height: 8px; background: var(--gray-200); border-radius: var(--radius-full); overflow: hidden;">
-                                        <div style="width: 75%; height: 100%; background: linear-gradient(90deg, var(--growth-green), var(--primary-blue)); animation: shimmer 2s infinite;"></div>
-                                    </div>
-                                    <p style="font-size: 0.75rem; color: var(--gray-600); margin-top: 0.5rem;">75% of daily goal achieved</p>
+                                <div style="display: flex; align-items: center; gap: 16px; padding: 14px; background: rgba(155, 89, 182, 0.1); border-radius: 12px;">
+                                    <span style="font-size: 24px;">📖</span>
+                                    <span style="flex: 1; font-weight: 600; color: #374151;">Read for 20min</span>
+                                    <span style="color: #9B59B6; font-weight: 700; font-size: 18px;">+30m</span>
                                 </div>
                             </div>
+                            
+                            <div style="margin-top: 24px;">
+                                <div style="width: 100%; height: 8px; background: #E5E7EB; border-radius: 10px; overflow: hidden;">
+                                    <div style="width: 75%; height: 100%; background: linear-gradient(90deg, #00D9A5, #5B5FDE);"></div>
+                                </div>
+                                <p style="font-size: 12px; color: #6B7280; margin-top: 8px;">75% of daily goal achieved</p>
+                            </div>
                         </div>
-                        
-                        <!-- Floating decorative elements -->
-                        <div style="position: absolute; top: -30px; left: -30px; width: 80px; height: 80px; background: linear-gradient(135deg, var(--achievement-gold), var(--achievement-gold-light)); border-radius: 50%; opacity: 0.2; animation: float 4s ease-in-out infinite; filter: blur(20px);"></div>
-                        <div style="position: absolute; bottom: 30px; right: -40px; width: 100px; height: 100px; background: linear-gradient(135deg, var(--growth-green), var(--growth-green-light)); border-radius: 50%; opacity: 0.15; animation: float 6s ease-in-out infinite reverse; filter: blur(30px);"></div>
-                        <div style="position: absolute; top: 50%; left: -50px; width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light)); border-radius: 50%; opacity: 0.1; animation: float 5s ease-in-out infinite; filter: blur(25px);"></div>
                     </div>
                 </div>
             </div>
