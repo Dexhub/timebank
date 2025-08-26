@@ -8,7 +8,14 @@
       "Bash(ls:*)",
       "Bash(pkill:*)",
       "Bash(true)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(git push:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git ls-tree:*)",
+      "Bash(gh workflow view:*)",
+      "Bash(gh api:*)",
+      "Bash(grep:*)"
     ],
     "deny": []
   }

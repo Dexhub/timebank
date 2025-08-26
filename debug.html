@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Test - TimeBank Kids</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .test-box {
+            background: white;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>TimeBank Kids - Debug Test</h1>
+    
+    <div class="test-box">
+        <h2>CSS Test</h2>
+        <p>Testing if CSS loads: <span id="css-test">Testing...</span></p>
+        <link rel="stylesheet" href="css/styles.css">
+    </div>
+    
+    <div class="test-box">
+        <h2>JavaScript Test</h2>
+        <p>Testing if JS loads: <span id="js-test">Testing...</span></p>
+    </div>
+    
+    <div class="test-box">
+        <h2>Font Test</h2>
+        <p style="font-family: 'Inter', sans-serif;">This text should use Inter font if Google Fonts loads</p>
+        <p>Font family detected: <span id="font-test">Testing...</span></p>
+    </div>
+    
+    <div class="test-box">
+        <h2>CSS Variables Test</h2>
+        <p>Primary Blue: <span id="css-var-test" style="color: var(--primary-blue, red);">Should be blue</span></p>
+    </div>
+    
+    <div class="test-box">
+        <h2>Console Errors</h2>
+        <pre id="console-errors">No errors detected</pre>
+    </div>
+    
+    <script>
+        // Test CSS
+        setTimeout(() => {
+            const testEl = document.createElement('div');
+            testEl.className = 'container';
+            document.body.appendChild(testEl);
+            const computed = window.getComputedStyle(testEl);
+            const maxWidth = computed.getPropertyValue('max-width');
+            document.getElementById('css-test').textContent = maxWidth === '1280px' ? '✓ CSS Loaded' : '✗ CSS Failed';
+            document.getElementById('css-test').className = maxWidth === '1280px' ? 'success' : 'error';
+            testEl.remove();
+        }, 1000);
+        
+        // Test font
+        const fontTest = document.getElementById('font-test');
+        const computedFont = window.getComputedStyle(fontTest.previousElementSibling).fontFamily;
+        fontTest.textContent = computedFont;
+        
+        // Test CSS variables
+        const cssVarTest = document.getElementById('css-var-test');
+        const color = window.getComputedStyle(cssVarTest).color;
+        
+        // Catch errors
+        window.addEventListener('error', (e) => {
+            document.getElementById('console-errors').textContent += '\n' + e.message + ' at ' + e.filename;
+        });
+        
+        // Test JS
+        const script = document.createElement('script');
+        script.src = 'js/main.js';
+        script.onload = () => {
+            document.getElementById('js-test').textContent = '✓ JS Loaded';
+            document.getElementById('js-test').className = 'success';
+        };
+        script.onerror = () => {
+            document.getElementById('js-test').textContent = '✗ JS Failed';
+            document.getElementById('js-test').className = 'error';
+        };
+        document.body.appendChild(script);
+    </script>
+</body>
+</html>
