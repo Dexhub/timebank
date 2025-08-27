@@ -3,444 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact TimeBank Kids - Get in touch with our support team, partnership inquiries, or media requests. We're here to help!">
-    <meta name="keywords" content="contact TimeBank Kids, customer support, partnerships, media inquiries, help center">
-    <meta name="author" content="TimeBank Kids">
-    
-    <title>Contact Us - TimeBank Kids | We're Here to Help</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <title>Contact Us - TimeBank Kids</title>
     <style>
-        /* Page-specific styles */
-        .contact-hero {
-            background: linear-gradient(135deg, #C5C8FF 0%, #5B5FDE 100%);
-            color: white;
-            padding: 64px 0;
-            margin-top: 72px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
-        .contact-hero h1 {
-            color: white;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #1C2051;
         }
         
-        .contact-options {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-bottom: 64px;
-        }
-        
-        .contact-card {
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
             background: white;
-            padding: 32px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            transition: all 0.2s ease;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            z-index: 1000;
+            height: 72px;
         }
         
-        .contact-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 48px rgba(0,0,0,0.16);
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
         }
         
-        .contact-icon {
-            width: 60px;
-            height: 60px;
-            background: #C5C8FF;
-            border-radius: 50%;
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #1C2051;
+            text-decoration: none;
             display: flex;
             align-items: center;
-            justify-content: center;
-            margin: 0 auto 16px;
-            font-size: 1.5rem;
+            gap: 8px;
         }
         
-        .contact-form-section {
-            background: white;
-            padding: 48px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-        
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-        }
-        
-        .office-locations {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+        .nav-menu {
+            display: flex;
+            align-items: center;
             gap: 32px;
-            margin-top: 48px;
+            list-style: none;
         }
         
-        .office-card {
-            background: #F9FAFB;
-            padding: 32px;
+        .nav-menu a {
+            color: #4A4E5A;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .nav-menu a:hover {
+            color: #5B5FDE;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
             border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
         }
         
-        .quick-links-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-            margin-top: 48px;
+        .btn-primary {
+            background: #5B5FDE;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #3A3E96;
+        }
+        
+        .content {
+            margin-top: 72px;
+            min-height: calc(100vh - 72px - 200px);
+            padding: 64px 16px;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(135deg, #E8E9FF 0%, #F9FAFB 100%);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            color: #1C2051;
+        }
+        
+        .lead {
+            font-size: 1.25rem;
+            color: #6E718A;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer {
+            background: #1C2051;
+            color: white;
+            padding: 48px 0 32px;
+            text-align: center;
+        }
+        
+        .footer a {
+            color: #9CA3AF;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            color: white;
         }
         
         @media (max-width: 768px) {
-            .contact-options {
-                grid-template-columns: 1fr;
+            .nav-menu {
+                display: none;
             }
             
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-            
-            .office-locations {
-                grid-template-columns: 1fr;
-            }
-            
-            .quick-links-grid {
-                grid-template-columns: repeat(2, 1fr);
+            h1 {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav style="position: fixed; top: 0; left: 0; right: 0; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); z-index: 1000; height: 72px; display: flex; align-items: center;" role="navigation" aria-label="Main navigation">
-        <div class="container nav-container" style="max-width: 1280px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; height: 100%;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; height: 100%;">
-            <a href="index.html" style="font-size: 1.5rem; font-weight: 800; color: #1C2051; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
                 <span style="color: #5B5FDE;">⏰</span>
                 TimeBank Kids
             </a>
             
-            <ul style="display: flex; align-items: center; gap: 32px; list-style: none; margin: 0; padding: 0;" id="nav-menu">
-                <li><a href="how-it-works.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">How It Works</a></li>
-                <li><a href="pricing.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">Pricing</a></li>
-                <li><a href="blog.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">Blog</a></li>
-                <li><a href="about.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">About</a></li>
-                <li><a href="index.html#signup" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #5B5FDE; color: white; transition: all 0.2s ease;">Get Started</a></li>
+            <ul class="nav-menu">
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#signup" class="btn btn-primary">Get Started</a></li>
             </ul>
-            
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                ☰
-            </button>
         </div>
     </nav>
     
-    <!-- Contact Hero -->
-    <section class="contact-hero">
-        <div class="container text-center" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <h1>Get In Touch</h1>
-            <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">
-                Whether you need help, have questions, or want to partner with us, we're here for you.
-            </p>
+    <div class="content">
+        
+<div class="hero">
+    <div class="container">
+        <span style="color: #00D9A5; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.875rem;">CONTACT US</span>
+        <h1>We're Here to Help</h1>
+        <p class="lead">
+            Have questions? Need support? We'd love to hear from you.
+        </p>
+    </div>
+</div>
+
+<div class="container" style="padding: 64px 16px;">
+    <div style="max-width: 600px; margin: 0 auto;">
+        <div style="background: white; padding: 48px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+            <form>
+                <div style="margin-bottom: 24px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600;">Name</label>
+                    <input type="text" style="width: 100%; padding: 12px 16px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px;" placeholder="Your name">
+                </div>
+                
+                <div style="margin-bottom: 24px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600;">Email</label>
+                    <input type="email" style="width: 100%; padding: 12px 16px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px;" placeholder="your@email.com">
+                </div>
+                
+                <div style="margin-bottom: 24px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600;">Subject</label>
+                    <select style="width: 100%; padding: 12px 16px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px;">
+                        <option>General Inquiry</option>
+                        <option>Technical Support</option>
+                        <option>Billing Question</option>
+                        <option>Feature Request</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                
+                <div style="margin-bottom: 32px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600;">Message</label>
+                    <textarea style="width: 100%; padding: 12px 16px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px; min-height: 150px;" placeholder="How can we help?"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+            </form>
         </div>
-    </section>
-    
-    <!-- Contact Options -->
-    <section style="padding-top: 64px; padding-bottom: 64px;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div class="contact-options">
-                <div class="contact-card animate-on-scroll">
-                    <div class="contact-icon">📧</div>
-                    <h3>Email Support</h3>
-                    <p style="color: #6E718A; margin-bottom: 16px;">
-                        Get help with your account or technical issues
-                    </p>
-                    <a href="mailto:support@timebankkids.com" class="text-primary" style="font-weight: 600;">
-                        support@timebankkids.com
-                    </a>
-                    <p style="font-size: 0.875rem; color: #6E718A; margin-top: 8px;">
-                        Response within 24 hours
-                    </p>
-                </div>
-                
-                <div class="contact-card animate-on-scroll">
-                    <div class="contact-icon">💬</div>
-                    <h3>Live Chat</h3>
-                    <p style="color: #6E718A; margin-bottom: 16px;">
-                        Chat with our support team in real-time
-                    </p>
-                    <button style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #5B5FDE; color: white; transition: all 0.2s ease;">Start Chat</button>
-                    <p style="font-size: 0.875rem; color: #6E718A; margin-top: 8px;">
-                        Available 9 AM - 6 PM PST
-                    </p>
-                </div>
-                
-                <div class="contact-card animate-on-scroll">
-                    <div class="contact-icon">📞</div>
-                    <h3>Phone Support</h3>
-                    <p style="color: #6E718A; margin-bottom: 16px;">
-                        Speak directly with our support team
-                    </p>
-                    <a href="tel:1-800-555-0123" class="text-primary" style="font-weight: 600;">
-                        1-800-TIMEBANK
-                    </a>
-                    <p style="font-size: 0.875rem; color: #6E718A; margin-top: 8px;">
-                        Mon-Fri 8 AM - 8 PM PST
-                    </p>
-                </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px;">
+            <div style="text-align: center;">
+                <div style="font-size: 2rem; margin-bottom: 8px;">📧</div>
+                <h4 style="margin-bottom: 4px;">Email</h4>
+                <p style="color: #6E718A;">support@timebankkids.com</p>
             </div>
-            
-            <!-- Contact Form -->
-            <div class="grid" style="grid-template-columns: 2fr 1fr; gap: 48px; margin-top: 64px;">
-                <div class="contact-form-section">
-                    <h2 style="margin-bottom: 24px;">Send Us a Message</h2>
-                    
-                    <form id="contact-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label class="form-label">First Name</label>
-                                <input type="text" class="form-input" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label class="form-label">Last Name</label>
-                                <input type="text" class="form-input" required>
-                            </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label class="form-label">Email</label>
-                                <input type="email" class="form-input" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label class="form-label">Phone (Optional)</label>
-                                <input type="tel" class="form-input">
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label">Subject</label>
-                            <select class="form-input" required>
-                                <option value="">Select a topic</option>
-                                <option value="support">Technical Support</option>
-                                <option value="billing">Billing Question</option>
-                                <option value="partnership">Partnership Inquiry</option>
-                                <option value="media">Media Request</option>
-                                <option value="feedback">Product Feedback</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label">Message</label>
-                            <textarea class="form-input" rows="6" required style="resize: vertical;"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
-                    </form>
-                </div>
-                
-                <div>
-                    <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                        <h3 style="margin-bottom: 16px;">Quick Answers</h3>
-                        <ul style="list-style: none; margin: 0;">
-                            <li style="padding: 8px 0;">
-                                <a href="help.html" style="color: #5B5FDE;">→ Help Center</a>
-                            </li>
-                            <li style="padding: 8px 0;">
-                                <a href="#" style="color: #5B5FDE;">→ Setup Guide</a>
-                            </li>
-                            <li style="padding: 8px 0;">
-                                <a href="#" style="color: #5B5FDE;">→ Video Tutorials</a>
-                            </li>
-                            <li style="padding: 8px 0;">
-                                <a href="#" style="color: #5B5FDE;">→ FAQ</a>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                        <h4 style="margin-bottom: 8px;">For Media Inquiries</h4>
-                        <p style="margin-bottom: 16px;">Press kit, interviews, and media resources</p>
-                        <a href="mailto:press@timebankkids.com" class="btn btn-primary btn-full">press@timebankkids.com</a>
-                    </div>
-                </div>
+            <div style="text-align: center;">
+                <div style="font-size: 2rem; margin-bottom: 8px;">💬</div>
+                <h4 style="margin-bottom: 4px;">Live Chat</h4>
+                <p style="color: #6E718A;">Mon-Fri 9am-5pm PST</p>
+            </div>
+            <div style="text-align: center;">
+                <div style="font-size: 2rem; margin-bottom: 8px;">📚</div>
+                <h4 style="margin-bottom: 4px;">Help Center</h4>
+                <p style="color: #6E718A;"><a href="help.html" style="color: #5B5FDE;">Browse FAQs</a></p>
             </div>
         </div>
-    </section>
+    </div>
+</div>
+
+    </div>
     
-    <!-- Office Locations -->
-    <section style="padding-top: 64px; padding-bottom: 64px; background: #F9FAFB;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div class="text-center mb-xl">
-                <h2>Visit Our Offices</h2>
-                <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">Drop by to say hello or schedule a meeting with our team</p>
-            </div>
-            
-            <div class="office-locations">
-                <div class="office-card animate-on-scroll">
-                    <h3>Headquarters</h3>
-                    <p style="color: #6E718A; margin-bottom: 16px;">
-                        123 Family Way, Suite 100<br>
-                        San Francisco, CA 94105<br>
-                        United States
-                    </p>
-                    <p style="font-size: 0.875rem;">
-                        <strong>Hours:</strong> Mon-Fri 9 AM - 6 PM PST<br>
-                        <strong>Phone:</strong> (415) 555-0123
-                    </p>
-                </div>
-                
-                <div class="office-card animate-on-scroll">
-                    <h3>East Coast Office</h3>
-                    <p style="color: #6E718A; margin-bottom: 16px;">
-                        456 Parent Plaza, Floor 5<br>
-                        New York, NY 10013<br>
-                        United States
-                    </p>
-                    <p style="font-size: 0.875rem;">
-                        <strong>Hours:</strong> Mon-Fri 9 AM - 6 PM EST<br>
-                        <strong>Phone:</strong> (212) 555-0456
-                    </p>
-                </div>
-            </div>
-            
-            <div class="text-center mt-xl">
-                <h3 style="margin-bottom: 24px;">International Partners</h3>
-                <p style="color: #6E718A;">
-                    TimeBank Kids is available globally. For international inquiries, please email 
-                    <a href="mailto:international@timebankkids.com" style="color: #5B5FDE;">international@timebankkids.com</a>
-                </p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Quick Links -->
-    <section style="padding-top: 64px; padding-bottom: 64px;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <h2 class="text-center mb-xl">Can't Find What You're Looking For?</h2>
-            
-            <div class="quick-links-grid">
-                <div style="text-align: center;">
-                    <div style="font-size: 3rem; margin-bottom: 16px;">🤝</div>
-                    <h4>Partnerships</h4>
-                    <p style="color: #6E718A; font-size: 0.875rem;">
-                        Schools, organizations, and businesses
-                    </p>
-                    <a href="mailto:partners@timebankkids.com" style="color: #5B5FDE;">partners@timebankkids.com</a>
-                </div>
-                
-                <div style="text-align: center;">
-                    <div style="font-size: 3rem; margin-bottom: 16px;">💼</div>
-                    <h4>Careers</h4>
-                    <p style="color: #6E718A; font-size: 0.875rem;">
-                        Join our mission-driven team
-                    </p>
-                    <a href="careers.html" style="color: #5B5FDE;">View Open Positions</a>
-                </div>
-                
-                <div style="text-align: center;">
-                    <div style="font-size: 3rem; margin-bottom: 16px;">🔒</div>
-                    <h4>Security</h4>
-                    <p style="color: #6E718A; font-size: 0.875rem;">
-                        Report security concerns
-                    </p>
-                    <a href="mailto:security@timebankkids.com" style="color: #5B5FDE;">security@timebankkids.com</a>
-                </div>
-                
-                <div style="text-align: center;">
-                    <div style="font-size: 3rem; margin-bottom: 16px;">⚖️</div>
-                    <h4>Legal</h4>
-                    <p style="color: #6E718A; font-size: 0.875rem;">
-                        Terms, privacy, and compliance
-                    </p>
-                    <a href="mailto:legal@timebankkids.com" style="color: #5B5FDE;">legal@timebankkids.com</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- CTA Section -->
-    <section style="padding-top: 64px; padding-bottom: 64px; background: #F9FAFB;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                <h2 style="color: white;">Still Have Questions?</h2>
-                <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">
-                    Our support team is standing by to help you get started with TimeBank Kids
-                </p>
-                <div style="display: flex; gap: 16px; justify-content: center">
-                    <a href="#" style="display: inline-block; padding: 16px 32px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #00D9A5; color: white; font-size: 1.125rem; transition: all 0.2s ease;">Start Live Chat</a>
-                    <a href="tel:1-800-555-0123" class="btn btn-secondary btn-lg" style="background: white; color: #5B5FDE;">Call Us Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer style="background: #1C2051; color: white; padding: 64px 0 32px;" 
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 48px; margin-bottom: 48px;" 
-                <div>
-                    <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 16px; color: white;">Product</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="how-it-works.html">How It Works</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="index.html#testimonials">Reviews</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4>Company</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="about.html">About Us</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4>Support</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="help.html">Help Center</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="security.html">Security</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4>Stay Updated</h4>
-                    <p style="color: #9CA3AF; margin-bottom: 1rem;">Get parenting tips and product updates</p>
-                    <form id="footer-signup" style="display: flex; flex-direction: column; gap: 8px">
-                        <input 
-                            type="email" 
-                            class="form-input" 
-                            placeholder="Your email" 
-                            required 
-                            style="background: #2D3142; border-color: #4A4E5A; color: white;"
-                        >
-                        <button type="submit" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #5B5FDE; color: white; transition: all 0.2s ease;">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            
-            <div style="text-align: center; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); color: #9CA3AF;" 
-                <p>&copy; 2024 TimeBank Kids. All rights reserved. Made with ❤️ for families everywhere.</p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 TimeBank Kids. All rights reserved.</p>
+            <div style="margin-top: 16px;">
+                <a href="privacy.html" style="margin: 0 16px;">Privacy</a>
+                <a href="terms.html" style="margin: 0 16px;">Terms</a>
+                <a href="security.html" style="margin: 0 16px;">Security</a>
+                <a href="contact.html" style="margin: 0 16px;">Contact</a>
             </div>
         </div>
     </footer>
-    
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
 </body>
 </html>

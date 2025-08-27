@@ -3,505 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TimeBank Kids pricing plans - Choose the perfect plan for your family. Start with a 30-day free trial, no credit card required.">
-    <meta name="keywords" content="TimeBank Kids pricing, family app cost, screen time management pricing, parental control subscription">
-    <meta name="author" content="TimeBank Kids">
-    
-    <title>Pricing - TimeBank Kids | Affordable Plans for Every Family</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <title>Pricing - TimeBank Kids</title>
     <style>
-        /* Page-specific styles */
-        .pricing-hero {
-            background: linear-gradient(135deg, #F9FAFB 0%, white 100%);
-            padding: 64px 0;
-            margin-top: 72px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
-        .pricing-toggle-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 16px;
-            margin-bottom: 64px;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #1C2051;
         }
         
-        .toggle-switch {
-            position: relative;
-            width: 60px;
-            height: 30px;
-        }
-        
-        .toggle-switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-        
-        .toggle-slider {
-            position: absolute;
-            cursor: pointer;
+        .nav {
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            bottom: 0;
-            background-color: #D1D5DB;
-            transition: .4s;
-            border-radius: 30px;
-        }
-        
-        .toggle-slider:before {
-            position: absolute;
-            content: "";
-            height: 22px;
-            width: 22px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            transition: .4s;
-            border-radius: 50%;
-        }
-        
-        input:checked + .toggle-slider {
-            background-color: #5B5FDE;
-        }
-        
-        input:checked + .toggle-slider:before {
-            transform: translateX(30px);
-        }
-        
-        .comparison-section {
-            padding: 64px 0;
-            background: #F9FAFB;
-        }
-        
-        .comparison-table {
             background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            z-index: 1000;
+            height: 72px;
         }
         
-        .comparison-table table {
-            width: 100%;
-            border-collapse: collapse;
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
         }
         
-        .comparison-table th,
-        .comparison-table td {
-            padding: 16px;
-            text-align: left;
-            border-bottom: 1px solid #E5E7EB;
-        }
-        
-        .comparison-table th {
-            background: #F9FAFB;
-            font-weight: 600;
-        }
-        
-        .comparison-table tr:last-child td {
-            border-bottom: none;
-        }
-        
-        .check-icon {
-            color: #00D9A5;
-            font-weight: 700;
-        }
-        
-        .x-icon {
-            color: #9CA3AF;
-        }
-        
-        .guarantee-badge {
-            display: inline-flex;
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #1C2051;
+            text-decoration: none;
+            display: flex;
             align-items: center;
             gap: 8px;
-            background: #A3F5E1;
-            color: #00A77D;
-            padding: 8px 16px;
-            border-radius: var(--radius-full);
+        }
+        
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+        
+        .nav-menu a {
+            color: #4A4E5A;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .nav-menu a:hover {
+            color: #5B5FDE;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 12px;
             font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: #5B5FDE;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #3A3E96;
+        }
+        
+        .content {
+            margin-top: 72px;
+            min-height: calc(100vh - 72px - 200px);
+            padding: 64px 16px;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(135deg, #E8E9FF 0%, #F9FAFB 100%);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            color: #1C2051;
+        }
+        
+        .lead {
+            font-size: 1.25rem;
+            color: #6E718A;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer {
+            background: #1C2051;
+            color: white;
+            padding: 48px 0 32px;
+            text-align: center;
+        }
+        
+        .footer a {
+            color: #9CA3AF;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            color: white;
         }
         
         @media (max-width: 768px) {
-            .comparison-table {
-                overflow-x: auto;
+            .nav-menu {
+                display: none;
             }
             
-            .comparison-table table {
-                min-width: 600px;
+            h1 {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav style="position: fixed; top: 0; left: 0; right: 0; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); z-index: 1000; height: 72px; display: flex; align-items: center;" role="navigation" aria-label="Main navigation">
-        <div class="container nav-container" style="max-width: 1280px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; height: 100%;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; height: 100%;">
-            <a href="index.html" style="font-size: 1.5rem; font-weight: 800; color: #1C2051; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
                 <span style="color: #5B5FDE;">⏰</span>
                 TimeBank Kids
             </a>
             
-            <ul style="display: flex; align-items: center; gap: 32px; list-style: none; margin: 0; padding: 0;" id="nav-menu">
-                <li><a href="how-it-works.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">How It Works</a></li>
-                <li><a href="pricing.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">Pricing</a></li>
-                <li><a href="blog.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">Blog</a></li>
-                <li><a href="about.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">About</a></li>
-                <li><a href="index.html#signup" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #5B5FDE; color: white; transition: all 0.2s ease;">Get Started</a></li>
+            <ul class="nav-menu">
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#signup" class="btn btn-primary">Get Started</a></li>
             </ul>
-            
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                ☰
-            </button>
         </div>
     </nav>
     
-    <!-- Pricing Hero -->
-    <section class="pricing-hero">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div class="text-center mb-xl">
-                <h1>Simple, Transparent Pricing</h1>
-                <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">Choose the perfect plan for your family. All plans include a 30-day free trial.</p>
-                
-                <div class="guarantee-badge mt-lg">
-                    <span>💰</span>
-                    <span>30-Day Money-Back Guarantee</span>
-                </div>
-            </div>
-            
-            <!-- Pricing Toggle -->
-            <div class="pricing-toggle-container">
-                <span style="font-weight: 600;">Monthly</span>
-                <label class="toggle-switch">
-                    <input type="checkbox" id="pricing-toggle">
-                    <span class="toggle-slider"></span>
-                </label>
-                <span style="font-weight: 600;">
-                    Yearly 
-                    <span style="background: #00D9A5; color: white; padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.75rem; margin-left: 0.5rem;">Save 20%</span>
-                </span>
-            </div>
-            
-            <!-- Pricing Cards -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
-                <!-- Starter Plan -->
-                <div class="pricing-card animate-on-scroll">
-                    <h3>Starter</h3>
-                    <div class="pricing-price">
-                        <span class="price-monthly">$0</span>
-                        <span class="price-yearly" style="display: none;">$0</span>
-                        <span>/month</span>
-                    </div>
-                    <p style="color: #6E718A; margin-bottom: 2rem;">Perfect for trying out TimeBank Kids</p>
-                    
-                    <ul class="features-list">
-                        <li>1 child account</li>
-                        <li>Basic task templates</li>
-                        <li>Time tracking dashboard</li>
-                        <li>Weekly email reports</li>
-                        <li>Community support</li>
-                        <li>Basic achievement badges</li>
-                    </ul>
-                    
-                    <a href="index.html#signup" class="btn btn-secondary btn-full btn-lg" style="margin-top: auto;">Start Free</a>
-                    
-                    <p style="text-align: center; font-size: 0.875rem; color: #6E718A; margin-top: 1rem;">
-                        No credit card required
-                    </p>
-                </div>
-                
-                <!-- Family Plan -->
-                <div class="pricing-card featured animate-on-scroll">
-                    <div class="pricing-badge">Most Popular</div>
-                    <h3>Family</h3>
-                    <div class="pricing-price">
-                        <span class="price-monthly">$12</span>
-                        <span class="price-yearly" style="display: none;">$9.99</span>
-                        <span>/month</span>
-                    </div>
-                    <p style="color: #6E718A; margin-bottom: 2rem;">Everything you need for family harmony</p>
-                    
-                    <ul class="features-list">
-                        <li><strong>Up to 4 children</strong></li>
-                        <li><strong>Custom rewards system</strong></li>
-                        <li><strong>Advanced time analytics</strong></li>
-                        <li>Goal setting & tracking</li>
-                        <li>Parent mobile app</li>
-                        <li>Priority email support</li>
-                        <li>Bonus time multipliers</li>
-                        <li>Family challenges</li>
-                        <li>Export reports</li>
-                    </ul>
-                    
-                    <a href="index.html#signup" class="btn btn-primary btn-full btn-lg" style="margin-top: auto;">Start Free Trial</a>
-                    
-                    <p style="text-align: center; font-size: 0.875rem; color: #6E718A; margin-top: 1rem;">
-                        Then <span class="price-monthly">$12/mo</span><span class="price-yearly" style="display: none;">$119/year</span>
-                    </p>
-                </div>
-                
-                <!-- Premium Plan -->
-                <div class="pricing-card animate-on-scroll">
-                    <h3>Premium</h3>
-                    <div class="pricing-price">
-                        <span class="price-monthly">$25</span>
-                        <span class="price-yearly" style="display: none;">$19.99</span>
-                        <span>/month</span>
-                    </div>
-                    <p style="color: #6E718A; margin-bottom: 2rem;">For large families & advanced features</p>
-                    
-                    <ul class="features-list">
-                        <li><strong>Unlimited children</strong></li>
-                        <li><strong>Everything in Family</strong></li>
-                        <li><strong>AI-powered insights</strong></li>
-                        <li>Financial education tools</li>
-                        <li>Real allowance integration</li>
-                        <li>24/7 phone support</li>
-                        <li>1-on-1 onboarding</li>
-                        <li>API access</li>
-                        <li>White-label options</li>
-                    </ul>
-                    
-                    <a href="index.html#signup" class="btn btn-secondary btn-full btn-lg" style="margin-top: auto;">Start Free Trial</a>
-                    
-                    <p style="text-align: center; font-size: 0.875rem; color: #6E718A; margin-top: 1rem;">
-                        Then <span class="price-monthly">$25/mo</span><span class="price-yearly" style="display: none;">$239/year</span>
-                    </p>
-                </div>
-            </div>
+    <div class="content">
+        
+<div class="hero">
+    <div class="container">
+        <span style="color: #00D9A5; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.875rem;">PRICING</span>
+        <h1>Simple, Transparent Pricing</h1>
+        <p class="lead">
+            Start free, upgrade when you're ready. No hidden fees, no surprises.
+        </p>
+    </div>
+</div>
+
+<div class="container" style="padding: 64px 16px;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 1000px; margin: 0 auto;">
+        <!-- Starter Plan -->
+        <div style="background: white; border: 2px solid #E5E7EB; border-radius: 16px; padding: 40px; text-align: center;">
+            <h3 style="font-size: 1.75rem; margin-bottom: 16px;">Starter</h3>
+            <div style="font-size: 3rem; font-weight: 800; color: #1C2051; margin-bottom: 8px;">$0</div>
+            <p style="color: #6E718A; margin-bottom: 32px;">Perfect for trying out TimeBank Kids</p>
+            <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 32px;">
+                <li style="padding: 8px 0; color: #4A4E5A;">✓ 1 child account</li>
+                <li style="padding: 8px 0; color: #4A4E5A;">✓ Basic task templates</li>
+                <li style="padding: 8px 0; color: #4A4E5A;">✓ Time tracking</li>
+                <li style="padding: 8px 0; color: #4A4E5A;">✓ Weekly reports</li>
+                <li style="padding: 8px 0; color: #4A4E5A;">✓ Email support</li>
+            </ul>
+            <a href="index.html#signup" class="btn" style="background: #F4F5F7; color: #1C2051; width: 100%; display: block;">Start Free</a>
         </div>
-    </section>
-    
-    <!-- Feature Comparison -->
-    <section class="comparison-section">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div class="text-center mb-xl">
-                <h2>Compare Plans</h2>
-                <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">Find the perfect fit for your family's needs</p>
+        
+        <!-- Family Plan -->
+        <div style="background: white; border: 2px solid #5B5FDE; border-radius: 16px; padding: 40px; text-align: center; transform: scale(1.05); box-shadow: 0 8px 32px rgba(91, 95, 222, 0.15);">
+            <div style="background: #5B5FDE; color: white; padding: 6px 24px; border-radius: 20px; font-size: 0.875rem; font-weight: 700; margin: -60px auto 20px; display: inline-block;">
+                MOST POPULAR
             </div>
-            
-            <div class="comparison-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Features</th>
-                            <th>Starter</th>
-                            <th>Family</th>
-                            <th>Premium</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Number of Children</strong></td>
-                            <td>1</td>
-                            <td>Up to 4</td>
-                            <td>Unlimited</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Task Management</strong></td>
-                            <td><span class="check-icon">✓</span> Basic</td>
-                            <td><span class="check-icon">✓</span> Advanced</td>
-                            <td><span class="check-icon">✓</span> Advanced + AI</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Time Tracking</strong></td>
-                            <td><span class="check-icon">✓</span></td>
-                            <td><span class="check-icon">✓</span></td>
-                            <td><span class="check-icon">✓</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Mobile Apps</strong></td>
-                            <td><span class="check-icon">✓</span> Child only</td>
-                            <td><span class="check-icon">✓</span> Parent & Child</td>
-                            <td><span class="check-icon">✓</span> Parent & Child</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Custom Rewards</strong></td>
-                            <td><span class="x-icon">✗</span></td>
-                            <td><span class="check-icon">✓</span></td>
-                            <td><span class="check-icon">✓</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Family Challenges</strong></td>
-                            <td><span class="x-icon">✗</span></td>
-                            <td><span class="check-icon">✓</span></td>
-                            <td><span class="check-icon">✓</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Analytics & Reports</strong></td>
-                            <td>Basic</td>
-                            <td>Advanced</td>
-                            <td>Advanced + Predictive</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Financial Education</strong></td>
-                            <td><span class="x-icon">✗</span></td>
-                            <td>Basic</td>
-                            <td>Advanced + Real Money</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Support</strong></td>
-                            <td>Community</td>
-                            <td>Priority Email</td>
-                            <td>24/7 Phone + Chat</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Data Export</strong></td>
-                            <td><span class="x-icon">✗</span></td>
-                            <td><span class="check-icon">✓</span></td>
-                            <td><span class="check-icon">✓</span> + API</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <h3 style="font-size: 1.75rem; margin-bottom: 16px;">Family</h3>
+            <div style="font-size: 3rem; font-weight: 800; color: #5B5FDE; margin-bottom: 8px;">$12</div>
+            <p style="color: #6E718A; margin-bottom: 32px;">Everything you need for family harmony</p>
+            <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 32px;">
+                <li style="padding: 8px 0; color: #4A4E5A;">✓ <strong>Up to 4 children</strong></li>
+                <li style="padding: 8px 0; color: #4A4E5A;">✓ <strong>Custom rewards</strong></li>
+                <li style="padding: 8px 0; color: #4A4E5A;">✓ Goal tracking</li>
+                <li style="padding: 8px 0; color: #4A4E5A;">✓ Advanced analytics</li>
+                <li style="padding: 8px 0; color: #4A4E5A;">✓ Priority support</li>
+            </ul>
+            <a href="index.html#signup" class="btn btn-primary" style="width: 100%; display: block;">Start Free Trial</a>
         </div>
-    </section>
-    
-    <!-- FAQ Section -->
-    <section style="padding-top: 64px; padding-bottom: 64px;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div class="text-center mb-xl">
-                <h2>Pricing FAQs</h2>
-                <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">Common questions about our plans and pricing</p>
-            </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 32px;">
-                <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                    <h3 style="margin-bottom: 16px;">Can I change plans anytime?</h3>
-                    <p>Yes! You can upgrade or downgrade your plan at any time. When upgrading, you'll be prorated for the current billing period. Downgrades take effect at the next billing cycle.</p>
-                </div>
-                
-                <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                    <h3 style="margin-bottom: 16px;">Is there really no credit card required for the free plan?</h3>
-                    <p>Absolutely! The Starter plan is completely free forever with no credit card required. It's perfect for trying out TimeBank Kids with one child.</p>
-                </div>
-                
-                <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                    <h3 style="margin-bottom: 16px;">What happens after the 30-day trial?</h3>
-                    <p>After your trial ends, you'll be automatically charged for your chosen plan unless you cancel. You can cancel anytime during the trial with no charges.</p>
-                </div>
-                
-                <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                    <h3 style="margin-bottom: 16px;">Do you offer educational discounts?</h3>
-                    <p>Yes! We offer 50% off for educators and homeschooling families. We also have special pricing for schools and organizations. Contact us for details.</p>
-                </div>
-                
-                <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                    <h3 style="margin-bottom: 16px;">What's your refund policy?</h3>
-                    <p>We offer a 30-day money-back guarantee on all paid plans. If you're not satisfied for any reason, just contact us for a full refund.</p>
-                </div>
-                
-                <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                    <h3 style="margin-bottom: 16px;">Can I add more children later?</h3>
-                    <p>Of course! You can add children to your account anytime. If you exceed your plan's limit, we'll help you upgrade to the right plan for your family.</p>
-                </div>
-            </div>
+        
+        <!-- Premium Plan -->
+        <div style="background: white; border: 2px solid #E5E7EB; border-radius: 16px; padding: 40px; text-align: center;">
+            <h3 style="font-size: 1.75rem; margin-bottom: 16px;">Premium</h3>
+            <div style="font-size: 3rem; font-weight: 800; color: #1C2051; margin-bottom: 8px;">$25</div>
+            <p style="color: #6E718A; margin-bottom: 32px;">For large families & advanced features</p>
+            <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 32px;">
+                <li style="padding: 8px 0; color: #4A4E5A;">✓ <strong>Unlimited children</strong></li>
+                <li style="padding: 8px 0; color: #4A4E5A;">✓ Everything in Family</li>
+                <li style="padding: 8px 0; color: #4A4E5A;">✓ AI suggestions</li>
+                <li style="padding: 8px 0; color: #4A4E5A;">✓ Family challenges</li>
+                <li style="padding: 8px 0; color: #4A4E5A;">✓ 24/7 phone support</li>
+            </ul>
+            <a href="index.html#signup" class="btn" style="background: #F4F5F7; color: #1C2051; width: 100%; display: block;">Start Free Trial</a>
         </div>
-    </section>
+    </div>
     
-    <!-- Testimonial Section -->
-    <section style="padding-top: 64px; padding-bottom: 64px; background: #F9FAFB;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                <div style="font-size: 3rem; margin-bottom: 24px;">⭐⭐⭐⭐⭐</div>
-                <p style="font-size: 1.5rem; font-style: italic; margin-bottom: 24px;">
-                    "TimeBank Kids has been worth every penny. The premium plan's financial education features are teaching my kids real money management skills. They're learning lessons that will last a lifetime."
-                </p>
-                <div style="display: flex; gap: 16px; align-items: center; justify-content: center">
-                    <div style="width: 60px; height: 60px; background: #D1D5DB; border-radius: 50%;"></div>
-                    <div style="text-align: left;">
-                        <strong>Jennifer K.</strong>
-                        <p style="color: #6E718A; margin: 0;">Premium member, mom of 5</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div style="text-align: center; margin-top: 48px;">
+        <p style="color: #6E718A;">
+            <span style="color: #00D9A5; margin-right: 24px;">✓ 30-day money-back guarantee</span>
+            <span style="color: #00D9A5; margin-right: 24px;">✓ No credit card required</span>
+            <span style="color: #00D9A5;">✓ Cancel anytime</span>
+        </p>
+    </div>
+</div>
+
+    </div>
     
-    <!-- CTA Section -->
-    <section style="padding-top: 64px; padding-bottom: 64px;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                <h2 style="color: white;">Start Your 30-Day Free Trial</h2>
-                <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">
-                    Join thousands of families transforming screen time into life lessons
-                </p>
-                <a href="index.html#signup" style="display: inline-block; padding: 16px 32px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #00D9A5; color: white; font-size: 1.125rem; transition: all 0.2s ease;">Get Started Now</a>
-                <p style="font-size: 0.875rem; margin-top: 1rem; opacity: 0.9;">
-                    No credit card required • Cancel anytime • 30-day money-back guarantee
-                </p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer style="background: #1C2051; color: white; padding: 64px 0 32px;" 
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 48px; margin-bottom: 48px;" 
-                <div>
-                    <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 16px; color: white;">Product</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="how-it-works.html">How It Works</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="index.html#testimonials">Reviews</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4>Company</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="about.html">About Us</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4>Support</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="help.html">Help Center</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="security.html">Security</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4>Stay Updated</h4>
-                    <p style="color: #9CA3AF; margin-bottom: 1rem;">Get parenting tips and product updates</p>
-                    <form id="footer-signup" style="display: flex; flex-direction: column; gap: 8px">
-                        <input 
-                            type="email" 
-                            class="form-input" 
-                            placeholder="Your email" 
-                            required 
-                            style="background: #2D3142; border-color: #4A4E5A; color: white;"
-                        >
-                        <button type="submit" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #5B5FDE; color: white; transition: all 0.2s ease;">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            
-            <div style="text-align: center; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); color: #9CA3AF;" 
-                <p>&copy; 2024 TimeBank Kids. All rights reserved. Made with ❤️ for families everywhere.</p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 TimeBank Kids. All rights reserved.</p>
+            <div style="margin-top: 16px;">
+                <a href="privacy.html" style="margin: 0 16px;">Privacy</a>
+                <a href="terms.html" style="margin: 0 16px;">Terms</a>
+                <a href="security.html" style="margin: 0 16px;">Security</a>
+                <a href="contact.html" style="margin: 0 16px;">Contact</a>
             </div>
         </div>
     </footer>
-    
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
 </body>
 </html>

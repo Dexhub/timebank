@@ -3,641 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Join TimeBank Kids - Help us build the future of family technology. Browse open positions and join our mission-driven team.">
-    <meta name="keywords" content="TimeBank Kids careers, jobs, hiring, tech careers, family technology jobs">
-    <meta name="author" content="TimeBank Kids">
-    
-    <title>Careers - TimeBank Kids | Join Our Mission</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <title>Careers - TimeBank Kids</title>
     <style>
-        /* Page-specific styles */
-        .careers-hero {
-            background: linear-gradient(135deg, #5B5FDE 0%, #00D9A5 100%);
-            color: white;
-            padding: var(--spacing-4xl) 0;
-            margin-top: 72px;
-            position: relative;
-            overflow: hidden;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
-        .careers-hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -25%;
-            width: 100%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-            background-size: 40px 40px;
-            transform: rotate(30deg);
-            opacity: 0.3;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #1C2051;
         }
         
-        .careers-hero h1 {
-            color: white;
-            font-size: clamp(3rem, 6vw, 4rem);
-        }
-        
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-            margin-top: 48px;
-        }
-        
-        .value-card {
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
             background: white;
-            padding: 32px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            transition: all 0.2s ease;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            z-index: 1000;
+            height: 72px;
         }
         
-        .value-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 48px rgba(0,0,0,0.16);
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
         }
         
-        .value-icon {
-            width: 80px;
-            height: 80px;
-            background: #C5C8FF;
-            border-radius: 16px;
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #1C2051;
+            text-decoration: none;
             display: flex;
             align-items: center;
-            justify-content: center;
-            margin: 0 auto 16px;
-            font-size: 2.5rem;
+            gap: 8px;
         }
         
-        .job-listing {
-            background: white;
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+        
+        .nav-menu a {
+            color: #4A4E5A;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .nav-menu a:hover {
+            color: #5B5FDE;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
             border-radius: 12px;
-            padding: 32px;
-            margin-bottom: 24px;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            font-weight: 600;
+            text-decoration: none;
             transition: all 0.2s ease;
+            border: none;
             cursor: pointer;
         }
         
-        .job-listing:hover {
-            transform: translateX(4px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        .btn-primary {
+            background: #5B5FDE;
+            color: white;
         }
         
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 16px;
+        .btn-primary:hover {
+            background: #3A3E96;
         }
         
-        .job-tags {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-top: 16px;
+        .content {
+            margin-top: 72px;
+            min-height: calc(100vh - 72px - 200px);
+            padding: 64px 16px;
         }
         
-        .job-tag {
-            background: #F4F5F7;
-            padding: 4px 16px;
-            border-radius: var(--radius-full);
-            font-size: 0.875rem;
-            color: #4A4E5A;
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
         }
         
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 32px;
-            margin-top: 48px;
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            color: #1C2051;
         }
         
-        .benefit-item {
-            display: flex;
-            gap: 16px;
-            align-items: start;
+        .footer {
+            background: #1C2051;
+            color: white;
+            padding: 48px 0 32px;
+            text-align: center;
         }
         
-        .benefit-icon {
-            width: 48px;
-            height: 48px;
-            background: #C5C8FF;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            font-size: 1.5rem;
+        .footer a {
+            color: #9CA3AF;
+            text-decoration: none;
         }
         
-        .team-photos {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 8px;
-            margin-top: 48px;
-        }
-        
-        .team-photo {
-            aspect-ratio: 1;
-            background: #D1D5DB;
-            border-radius: 8px;
-            position: relative;
-            overflow: hidden;
+        .footer a:hover {
+            color: white;
         }
         
         @media (max-width: 768px) {
-            .values-grid {
-                grid-template-columns: 1fr;
+            .nav-menu {
+                display: none;
             }
             
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .team-photos {
-                grid-template-columns: repeat(2, 1fr);
+            h1 {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav style="position: fixed; top: 0; left: 0; right: 0; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); z-index: 1000; height: 72px; display: flex; align-items: center;" role="navigation" aria-label="Main navigation">
-        <div class="container nav-container" style="max-width: 1280px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; height: 100%;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; height: 100%;">
-            <a href="index.html" style="font-size: 1.5rem; font-weight: 800; color: #1C2051; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
                 <span style="color: #5B5FDE;">⏰</span>
                 TimeBank Kids
             </a>
             
-            <ul style="display: flex; align-items: center; gap: 32px; list-style: none; margin: 0; padding: 0;" id="nav-menu">
-                <li><a href="how-it-works.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">How It Works</a></li>
-                <li><a href="pricing.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">Pricing</a></li>
-                <li><a href="blog.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">Blog</a></li>
-                <li><a href="about.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">About</a></li>
-                <li><a href="index.html#signup" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #5B5FDE; color: white; transition: all 0.2s ease;">Get Started</a></li>
+            <ul class="nav-menu">
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#signup" class="btn btn-primary">Get Started</a></li>
             </ul>
-            
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                ☰
-            </button>
         </div>
     </nav>
     
-    <!-- Careers Hero -->
-    <section class="careers-hero">
-        <div class="container text-center" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="position: relative;">
-            <h1>Help Us Build the Future of Family</h1>
-            <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">
-                Join a team that's passionate about empowering families to thrive in the digital age. 
-                We're looking for talented people who share our vision.
+    <div class="content">
+        
+<div class="container">
+    <h1>Join Our Team</h1>
+    <p style="color: #6E718A; margin-bottom: 48px;">Help us build the future of family technology</p>
+    
+    <div style="max-width: 800px; margin: 0 auto;">
+        <section style="margin-bottom: 48px;">
+            <h2 style="margin-bottom: 24px;">Why TimeBank Kids?</h2>
+            <p style="font-size: 1.125rem; line-height: 1.8; color: #4A4E5A;">
+                We're on a mission to transform how families interact with technology. Join us in creating 
+                tools that bring families closer together instead of driving them apart.
             </p>
-            <div style="display: flex; gap: 16px; justify-content: center">
-                <a href="#positions" class="btn btn-secondary btn-lg" style="background: white; color: #5B5FDE;">View Open Positions</a>
-                <a href="#culture" class="btn btn-secondary btn-lg" style="background: transparent; border: 2px solid white; color: white;">Learn About Culture</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Mission Section -->
-    <section style="padding-top: 64px; padding-bottom: 64px;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div class="text-center mb-xl">
-                <h2>Our Mission Drives Everything We Do</h2>
-                <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">
-                    We believe technology should strengthen family bonds, not strain them. Every day, we work to help 
-                    millions of families find balance, teach responsibility, and create lasting memories.
-                </p>
-            </div>
-            
-            <div class="values-grid">
-                <div class="value-card animate-on-scroll">
-                    <div class="value-icon">🌟</div>
-                    <h3>Impact First</h3>
-                    <p style="color: #6E718A;">
-                        Every feature we build, every decision we make, starts with one question: 
-                        Will this help families thrive?
-                    </p>
+        </section>
+        
+        <section style="margin-bottom: 48px;">
+            <h3 style="margin-bottom: 24px;">Our Culture</h3>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+                <div style="background: #F9FAFB; padding: 32px; border-radius: 12px;">
+                    <h4 style="color: #5B5FDE; margin-bottom: 8px;">👨‍👩‍👧‍👦 Family First</h4>
+                    <p style="color: #6E718A;">We understand that our team members have families too. Flexible hours and remote work.</p>
                 </div>
-                
-                <div class="value-card animate-on-scroll">
-                    <div class="value-icon">🤝</div>
-                    <h3>Trust & Transparency</h3>
-                    <p style="color: #6E718A;">
-                        We handle family data with extreme care and communicate openly about 
-                        everything we do.
-                    </p>
+                <div style="background: #F9FAFB; padding: 32px; border-radius: 12px;">
+                    <h4 style="color: #00D9A5; margin-bottom: 8px;">🎯 Mission Driven</h4>
+                    <p style="color: #6E718A;">Every line of code, every design decision makes a real difference in families' lives.</p>
                 </div>
-                
-                <div class="value-card animate-on-scroll">
-                    <div class="value-icon">🎯</div>
-                    <h3>Excellence Always</h3>
-                    <p style="color: #6E718A;">
-                        We set high standards for ourselves because families deserve the very 
-                        best tools and experiences.
-                    </p>
+                <div style="background: #F9FAFB; padding: 32px; border-radius: 12px;">
+                    <h4 style="color: #FFB800; margin-bottom: 8px;">🚀 Growth Mindset</h4>
+                    <p style="color: #6E718A;">Learn, experiment, and grow. We celebrate both successes and learning from failures.</p>
+                </div>
+                <div style="background: #F9FAFB; padding: 32px; border-radius: 12px;">
+                    <h4 style="color: #9B59B6; margin-bottom: 8px;">💡 Innovation</h4>
+                    <p style="color: #6E718A;">We're building something new. Your ideas and creativity are valued and encouraged.</p>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- Culture Section -->
-    <section id="culture" style="padding-top: 64px; padding-bottom: 64px; background: #F9FAFB;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <h2 class="text-center mb-xl">Life at TimeBank Kids</h2>
-            
-            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
-                <div>
-                    <h3 style="margin-bottom: 24px;">A Culture Built on Balance</h3>
-                    <p style="margin-bottom: 24px;">
-                        We practice what we preach. Our team enjoys flexible schedules, generous parental leave, 
-                        and a culture that truly values work-life balance. Because we can't help families find 
-                        balance if we don't have it ourselves.
-                    </p>
-                    
-                    <div style="margin-top: 32px;">
-                        <div style="display: flex; gap: 64px; margin-bottom: 24px;">
-                            <div>
-                                <h4 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 0;">4.8/5</h4>
-                                <p style="color: #6E718A;">Glassdoor Rating</p>
-                            </div>
-                            <div>
-                                <h4 class="gradient-text" style="font-size: 2.5rem; margin-bottom: 0;">96%</h4>
-                                <p style="color: #6E718A;">Recommend to Friend</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <blockquote style="border-left: 4px solid #5B5FDE; padding-left: 24px; margin-top: 32px;">
-                        <p style="font-style: italic; color: #4A4E5A;">
-                            "I've never worked somewhere that so genuinely cares about both its mission and its people. 
-                            The flexibility to be there for my own kids while building something meaningful for millions 
-                            of families is incredible."
-                        </p>
-                        <cite style="color: #6E718A;">— Sarah, Senior Engineer</cite>
-                    </blockquote>
-                </div>
-                
-                <div>
-                    <div class="team-photos">
-                        <div class="team-photo" style="background: #C5C8FF;"></div>
-                        <div class="team-photo" style="background: #A3F5E1;"></div>
-                        <div class="team-photo" style="background: #FFE399;"></div>
-                        <div class="team-photo" style="background: var(--accent-coral);"></div>
-                        <div class="team-photo" style="background: #9B59B6;"></div>
-                        <div class="team-photo" style="background: #5B5FDE;"></div>
-                        <div class="team-photo" style="background: #00D9A5;"></div>
-                        <div class="team-photo" style="background: #FFB800;"></div>
-                    </div>
-                    <p style="text-align: center; margin-top: 16px; color: #6E718A;">
-                        Our diverse team spans 12 countries and 4 continents
-                    </p>
-                </div>
+        </section>
+        
+        <section style="margin-bottom: 48px;">
+            <h3 style="margin-bottom: 24px;">Open Positions</h3>
+            <div style="background: white; border: 2px solid #E5E7EB; padding: 32px; border-radius: 12px; margin-bottom: 16px;">
+                <h4 style="margin-bottom: 8px;">Senior Mobile Developer</h4>
+                <p style="color: #6E718A; margin-bottom: 16px;">React Native • Full-time • Remote</p>
+                <a href="#" style="color: #5B5FDE; font-weight: 600;">Learn More →</a>
             </div>
-        </div>
-    </section>
-    
-    <!-- Benefits Section -->
-    <section style="padding-top: 64px; padding-bottom: 64px;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <h2 class="text-center mb-xl">Benefits That Support Your Whole Life</h2>
-            
-            <div class="benefits-grid">
-                <div class="benefit-item animate-on-scroll">
-                    <div class="benefit-icon">🏥</div>
-                    <div>
-                        <h4>Comprehensive Healthcare</h4>
-                        <p style="color: #6E718A;">
-                            100% coverage for you and your family, including dental, vision, and mental health
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="benefit-item animate-on-scroll">
-                    <div class="benefit-icon">🏖️</div>
-                    <div>
-                        <h4>Flexible Time Off</h4>
-                        <p style="color: #6E718A;">
-                            Unlimited PTO, company-wide recharge weeks, and sabbatical options
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="benefit-item animate-on-scroll">
-                    <div class="benefit-icon">👶</div>
-                    <div>
-                        <h4>Family Support</h4>
-                        <p style="color: #6E718A;">
-                            16 weeks parental leave, childcare assistance, and fertility benefits
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="benefit-item animate-on-scroll">
-                    <div class="benefit-icon">🏡</div>
-                    <div>
-                        <h4>Remote-First Culture</h4>
-                        <p style="color: #6E718A;">
-                            Work from anywhere with quarterly team gatherings and home office stipend
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="benefit-item animate-on-scroll">
-                    <div class="benefit-icon">📚</div>
-                    <div>
-                        <h4>Growth & Learning</h4>
-                        <p style="color: #6E718A;">
-                            $5,000 annual learning budget, mentorship programs, and career coaching
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="benefit-item animate-on-scroll">
-                    <div class="benefit-icon">💰</div>
-                    <div>
-                        <h4>Competitive Compensation</h4>
-                        <p style="color: #6E718A;">
-                            Top-tier salaries, equity for all, and transparent pay scales
-                        </p>
-                    </div>
-                </div>
+            <div style="background: white; border: 2px solid #E5E7EB; padding: 32px; border-radius: 12px; margin-bottom: 16px;">
+                <h4 style="margin-bottom: 8px;">Product Designer</h4>
+                <p style="color: #6E718A; margin-bottom: 16px;">UI/UX • Full-time • San Francisco or Remote</p>
+                <a href="#" style="color: #5B5FDE; font-weight: 600;">Learn More →</a>
             </div>
-            
-            <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                <h3 style="margin-bottom: 16px;">🎁 And So Much More...</h3>
-                <p style="margin-bottom: 0;">
-                    Annual wellness stipend • Free TimeBank Kids for your family • Team retreats • 
-                    Volunteer time off • Pet insurance • Commuter benefits • And more!
-                </p>
+            <div style="background: white; border: 2px solid #E5E7EB; padding: 32px; border-radius: 12px; margin-bottom: 16px;">
+                <h4 style="margin-bottom: 8px;">Customer Success Manager</h4>
+                <p style="color: #6E718A; margin-bottom: 16px;">Support • Full-time • Remote</p>
+                <a href="#" style="color: #5B5FDE; font-weight: 600;">Learn More →</a>
             </div>
-        </div>
-    </section>
-    
-    <!-- Open Positions -->
-    <section id="positions" style="padding-top: 64px; padding-bottom: 64px; background: #F9FAFB;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <h2 class="text-center mb-xl">Open Positions</h2>
-            <p class="lead text-center mb-xl">
-                Join us in building something families will love for generations
+        </section>
+        
+        <section>
+            <h3 style="margin-bottom: 16px;">Don't See Your Role?</h3>
+            <p style="color: #4A4E5A; margin-bottom: 24px;">
+                We're always looking for talented people who share our mission. Send us your resume!
             </p>
-            
-            <div style="max-width: 900px; margin: 0 auto;">
-                <!-- Engineering -->
-                <h3 style="margin-bottom: 24px;">Engineering</h3>
-                
-                <a href="#" class="job-listing" style="display: block; text-decoration: none; color: inherit;">
-                    <div class="job-header">
-                        <div>
-                            <h4 style="margin-bottom: 4px;">Senior Frontend Engineer</h4>
-                            <p style="color: #6E718A;">Build delightful experiences for millions of families</p>
-                        </div>
-                        <span style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #F4F5F7; color: #1C2051; transition: all 0.2s ease;">Apply →</span>
-                    </div>
-                    <div class="job-tags">
-                        <span class="job-tag">Remote</span>
-                        <span class="job-tag">React</span>
-                        <span class="job-tag">TypeScript</span>
-                        <span class="job-tag">$150k - $200k</span>
-                    </div>
-                </a>
-                
-                <a href="#" class="job-listing" style="display: block; text-decoration: none; color: inherit;">
-                    <div class="job-header">
-                        <div>
-                            <h4 style="margin-bottom: 4px;">Backend Engineer - Security Focus</h4>
-                            <p style="color: #6E718A;">Help us maintain bank-level security for family data</p>
-                        </div>
-                        <span style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #F4F5F7; color: #1C2051; transition: all 0.2s ease;">Apply →</span>
-                    </div>
-                    <div class="job-tags">
-                        <span class="job-tag">Remote</span>
-                        <span class="job-tag">Node.js</span>
-                        <span class="job-tag">Security</span>
-                        <span class="job-tag">$140k - $190k</span>
-                    </div>
-                </a>
-                
-                <a href="#" class="job-listing" style="display: block; text-decoration: none; color: inherit;">
-                    <div class="job-header">
-                        <div>
-                            <h4 style="margin-bottom: 4px;">Mobile Developer (iOS/Android)</h4>
-                            <p style="color: #6E718A;">Create native experiences that kids and parents love</p>
-                        </div>
-                        <span style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #F4F5F7; color: #1C2051; transition: all 0.2s ease;">Apply →</span>
-                    </div>
-                    <div class="job-tags">
-                        <span class="job-tag">San Francisco / Remote</span>
-                        <span class="job-tag">React Native</span>
-                        <span class="job-tag">$130k - $180k</span>
-                    </div>
-                </a>
-                
-                <!-- Product & Design -->
-                <h3 style="margin-bottom: 24px; margin-top: 48px;">Product & Design</h3>
-                
-                <a href="#" class="job-listing" style="display: block; text-decoration: none; color: inherit;">
-                    <div class="job-header">
-                        <div>
-                            <h4 style="margin-bottom: 4px;">Senior Product Designer</h4>
-                            <p style="color: #6E718A;">Design intuitive experiences for all family members</p>
-                        </div>
-                        <span style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #F4F5F7; color: #1C2051; transition: all 0.2s ease;">Apply →</span>
-                    </div>
-                    <div class="job-tags">
-                        <span class="job-tag">Remote</span>
-                        <span class="job-tag">Figma</span>
-                        <span class="job-tag">User Research</span>
-                        <span class="job-tag">$140k - $180k</span>
-                    </div>
-                </a>
-                
-                <a href="#" class="job-listing" style="display: block; text-decoration: none; color: inherit;">
-                    <div class="job-header">
-                        <div>
-                            <h4 style="margin-bottom: 4px;">Product Manager - Growth</h4>
-                            <p style="color: #6E718A;">Drive adoption and help more families discover TimeBank Kids</p>
-                        </div>
-                        <span style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #F4F5F7; color: #1C2051; transition: all 0.2s ease;">Apply →</span>
-                    </div>
-                    <div class="job-tags">
-                        <span class="job-tag">New York / Remote</span>
-                        <span class="job-tag">Analytics</span>
-                        <span class="job-tag">A/B Testing</span>
-                        <span class="job-tag">$150k - $190k</span>
-                    </div>
-                </a>
-                
-                <!-- Marketing & Sales -->
-                <h3 style="margin-bottom: 24px; margin-top: 48px;">Marketing & Sales</h3>
-                
-                <a href="#" class="job-listing" style="display: block; text-decoration: none; color: inherit;">
-                    <div class="job-header">
-                        <div>
-                            <h4 style="margin-bottom: 4px;">Content Marketing Manager</h4>
-                            <p style="color: #6E718A;">Tell our story and help parents navigate digital parenting</p>
-                        </div>
-                        <span style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #F4F5F7; color: #1C2051; transition: all 0.2s ease;">Apply →</span>
-                    </div>
-                    <div class="job-tags">
-                        <span class="job-tag">Remote</span>
-                        <span class="job-tag">Writing</span>
-                        <span class="job-tag">SEO</span>
-                        <span class="job-tag">$100k - $130k</span>
-                    </div>
-                </a>
-                
-                <!-- Don't see your role? -->
-                <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                    <h3>Don't See Your Perfect Role?</h3>
-                    <p style="margin-bottom: 24px;">
-                        We're always looking for exceptional people who share our mission. Send us your resume 
-                        and tell us how you'd like to contribute.
-                    </p>
-                    <a href="mailto:careers@timebankkids.com" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #5B5FDE; color: white; transition: all 0.2s ease;">Send Open Application</a>
-                </div>
-            </div>
-        </div>
-    </section>
+            <a href="mailto:careers@timebankkids.com" class="btn btn-primary">Get In Touch</a>
+        </section>
+    </div>
+</div>
+
+    </div>
     
-    <!-- Hiring Process -->
-    <section style="padding-top: 64px; padding-bottom: 64px;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <h2 class="text-center mb-xl">Our Hiring Process</h2>
-            <p class="lead text-center mb-xl">
-                We respect your time and aim to make hiring transparent, fair, and efficient
-            </p>
-            
-            <div class="grid grid-cols-4 md:grid-cols-2 gap-lg" style="max-width: 1000px; margin: 0 auto;">
-                <div class="text-center animate-on-scroll">
-                    <div style="width: 60px; height: 60px; background: #5B5FDE; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-weight: 700; font-size: 1.25rem;">
-                        1
-                    </div>
-                    <h4>Application Review</h4>
-                    <p style="color: #6E718A; font-size: 0.875rem;">
-                        We review every application and respond within 5 business days
-                    </p>
-                </div>
-                
-                <div class="text-center animate-on-scroll">
-                    <div style="width: 60px; height: 60px; background: #5B5FDE; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-weight: 700; font-size: 1.25rem;">
-                        2
-                    </div>
-                    <h4>Initial Chat</h4>
-                    <p style="color: #6E718A; font-size: 0.875rem;">
-                        30-min video call to discuss your experience and answer questions
-                    </p>
-                </div>
-                
-                <div class="text-center animate-on-scroll">
-                    <div style="width: 60px; height: 60px; background: #5B5FDE; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-weight: 700; font-size: 1.25rem;">
-                        3
-                    </div>
-                    <h4>Team Interview</h4>
-                    <p style="color: #6E718A; font-size: 0.875rem;">
-                        Meet your potential teammates and dive deeper into the role
-                    </p>
-                </div>
-                
-                <div class="text-center animate-on-scroll">
-                    <div style="width: 60px; height: 60px; background: #5B5FDE; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-weight: 700; font-size: 1.25rem;">
-                        4
-                    </div>
-                    <h4>Decision</h4>
-                    <p style="color: #6E718A; font-size: 0.875rem;">
-                        We make decisions quickly and provide feedback either way
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- CTA Section -->
-    <section style="padding-top: 64px; padding-bottom: 64px; background: #F9FAFB;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                <h2 style="color: white;">Ready to Make a Difference?</h2>
-                <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">
-                    Join us in building technology that strengthens family bonds and helps children develop healthy habits for life.
-                </p>
-                <div style="display: flex; gap: 16px; justify-content: center">
-                    <a href="#positions" class="btn btn-secondary btn-lg" style="background: white; color: #5B5FDE;">View Open Positions</a>
-                    <a href="about.html" class="btn btn-secondary btn-lg" style="background: transparent; border: 2px solid white; color: white;">Learn More About Us</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer style="background: #1C2051; color: white; padding: 64px 0 32px;" 
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 48px; margin-bottom: 48px;" 
-                <div>
-                    <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 16px; color: white;">Product</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="how-it-works.html">How It Works</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="index.html#testimonials">Reviews</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4>Company</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="about.html">About Us</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4>Support</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="help.html">Help Center</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="security.html">Security</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4>Stay Updated</h4>
-                    <p style="color: #9CA3AF; margin-bottom: 1rem;">Get parenting tips and product updates</p>
-                    <form id="footer-signup" style="display: flex; flex-direction: column; gap: 8px">
-                        <input 
-                            type="email" 
-                            class="form-input" 
-                            placeholder="Your email" 
-                            required 
-                            style="background: #2D3142; border-color: #4A4E5A; color: white;"
-                        >
-                        <button type="submit" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #5B5FDE; color: white; transition: all 0.2s ease;">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            
-            <div style="text-align: center; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); color: #9CA3AF;" 
-                <p>&copy; 2024 TimeBank Kids. All rights reserved. Made with ❤️ for families everywhere.</p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 TimeBank Kids. All rights reserved.</p>
+            <div style="margin-top: 16px;">
+                <a href="privacy.html" style="margin: 0 16px;">Privacy</a>
+                <a href="terms.html" style="margin: 0 16px;">Terms</a>
+                <a href="security.html" style="margin: 0 16px;">Security</a>
+                <a href="contact.html" style="margin: 0 16px;">Contact</a>
             </div>
         </div>
     </footer>
-    
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
 </body>
 </html>

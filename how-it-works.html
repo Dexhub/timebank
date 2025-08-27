@@ -3,527 +3,348 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn how TimeBank Kids works - The revolutionary family app that transforms screen time battles into teachable moments through gamified rewards.">
-    <meta name="keywords" content="how TimeBank Kids works, screen time management process, family app tutorial, parental control features">
-    <meta name="author" content="TimeBank Kids">
-    
-    <title>How It Works - TimeBank Kids | Transform Screen Time Into Life Lessons</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <title>How It Works - TimeBank Kids</title>
     <style>
-        /* Page-specific styles */
-        .process-hero {
-            background: linear-gradient(135deg, #C5C8FF 0%, #5B5FDE 100%);
-            color: white;
-            padding: 64px 0;
-            margin-top: 72px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
-        .process-hero h1 {
-            color: white;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #1C2051;
         }
         
-        .process-step {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 64px;
-            align-items: center;
-            padding: 64px 0;
-        }
-        
-        .process-step:nth-child(even) {
-            direction: rtl;
-        }
-        
-        .process-step:nth-child(even) > * {
-            direction: ltr;
-        }
-        
-        .step-content h2 {
-            color: #5B5FDE;
-            margin-bottom: 24px;
-        }
-        
-        .step-number {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background: #5B5FDE;
-            color: white;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 40px;
-            font-weight: 700;
-            margin-right: 16px;
-        }
-        
-        .step-features {
-            list-style: none;
-            margin-top: 24px;
-        }
-        
-        .step-features li {
-            padding: 8px 0;
-            padding-left: 24px;
-            position: relative;
-        }
-        
-        .step-features li::before {
-            content: "✓";
-            position: absolute;
+        .nav {
+            position: fixed;
+            top: 0;
             left: 0;
-            color: #00D9A5;
-            font-weight: 700;
-        }
-        
-        .step-visual {
-            background: #F9FAFB;
-            border-radius: 12px;
-            padding: 48px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            text-align: center;
-        }
-        
-        .demo-screen {
+            right: 0;
             background: white;
-            border: 2px solid #E5E7EB;
-            border-radius: 8px;
-            padding: 32px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            z-index: 1000;
+            height: 72px;
+        }
+        
+        .nav-container {
+            max-width: 1280px;
             margin: 0 auto;
-            max-width: 300px;
-        }
-        
-        .faq-section {
-            padding: 64px 0;
-            background: #F9FAFB;
-        }
-        
-        .faq-item {
-            background: white;
-            border-radius: 8px;
-            padding: 24px;
-            margin-bottom: 16px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        
-        .faq-item:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-        
-        .faq-question {
-            font-weight: 600;
-            font-size: 1.125rem;
+            padding: 0 16px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 100%;
         }
         
-        .faq-answer {
-            margin-top: 16px;
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #1C2051;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+        
+        .nav-menu a {
+            color: #4A4E5A;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .nav-menu a:hover {
+            color: #5B5FDE;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: #5B5FDE;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #3A3E96;
+        }
+        
+        .content {
+            margin-top: 72px;
+            min-height: calc(100vh - 72px - 200px);
+            padding: 64px 16px;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(135deg, #E8E9FF 0%, #F9FAFB 100%);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            color: #1C2051;
+        }
+        
+        .lead {
+            font-size: 1.25rem;
             color: #6E718A;
-            display: none;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
-        .faq-item.active .faq-answer {
-            display: block;
+        .footer {
+            background: #1C2051;
+            color: white;
+            padding: 48px 0 32px;
+            text-align: center;
         }
         
-        .faq-item.active .faq-toggle {
-            transform: rotate(180deg);
+        .footer a {
+            color: #9CA3AF;
+            text-decoration: none;
         }
         
-        .faq-toggle {
-            transition: transform 0.2s ease;
+        .footer a:hover {
+            color: white;
         }
         
         @media (max-width: 768px) {
-            .process-step {
-                grid-template-columns: 1fr;
-                direction: ltr;
+            .nav-menu {
+                display: none;
             }
             
-            .process-step:nth-child(even) {
-                direction: ltr;
+            h1 {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav style="position: fixed; top: 0; left: 0; right: 0; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); z-index: 1000; height: 72px; display: flex; align-items: center;" role="navigation" aria-label="Main navigation">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; height: 100%; width: 100%;">
-            <a href="index.html" style="font-size: 1.5rem; font-weight: 800; color: #1C2051; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
                 <span style="color: #5B5FDE;">⏰</span>
                 TimeBank Kids
             </a>
             
-            <ul style="display: flex; align-items: center; gap: 32px; list-style: none; margin: 0; padding: 0;" id="nav-menu">
-                <li><a href="how-it-works.html" style="color: #5B5FDE; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">How It Works</a></li>
-                <li><a href="pricing.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">Pricing</a></li>
-                <li><a href="blog.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">Blog</a></li>
-                <li><a href="about.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">About</a></li>
-                <li><a href="index.html#signup" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #5B5FDE; color: white; transition: all 0.2s ease;">Get Started</a></li>
+            <ul class="nav-menu">
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#signup" class="btn btn-primary">Get Started</a></li>
             </ul>
-            
-            <button style="display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer;" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                ☰
-            </button>
         </div>
     </nav>
     
-    <!-- Hero Section -->
-    <section class="process-hero">
-        <div class="container text-center" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <h1>How TimeBank Kids Works</h1>
-            <p style="font-size: 1.25rem; line-height: 1.6; color: white; opacity: 0.9; max-width: 800px; margin: 0 auto;">
-                Transform your family's relationship with screen time in just 4 simple steps. 
-                No complicated setup, no battles - just a positive system that works.
+    <div class="content">
+        
+<div class="hero">
+    <div class="container">
+        <span style="color: #00D9A5; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.875rem;">HOW IT WORKS</span>
+        <h1>Get Started in Minutes</h1>
+        <p class="lead">
+            Transform your family's relationship with screen time in just 4 simple steps. 
+            No complicated setup, no battles - just a positive system that works.
+        </p>
+    </div>
+</div>
+
+<div class="container" style="padding: 64px 16px;">
+    <div style="text-align: center; margin-bottom: 64px;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 24px;">Our Simple 4-Step Process</h2>
+    </div>
+    
+    <div style="display: grid; gap: 64px;">
+        <!-- Step 1 -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
+            <div>
+                <h3 style="font-size: 2rem; margin-bottom: 16px;">
+                    <span style="display: inline-block; width: 48px; height: 48px; background: #5B5FDE; color: white; border-radius: 50%; text-align: center; line-height: 48px; margin-right: 16px;">1</span>
+                    Set Up Your Family
+                </h3>
+                <p style="font-size: 1.125rem; color: #6E718A; margin-bottom: 24px;">
+                    Get started in under 5 minutes with our guided setup process.
+                </p>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 8px 0; color: #4A4E5A;">✓ Add family members with age-appropriate settings</li>
+                    <li style="padding: 8px 0; color: #4A4E5A;">✓ Choose from pre-made task templates</li>
+                    <li style="padding: 8px 0; color: #4A4E5A;">✓ Set screen time goals and earning rates</li>
+                    <li style="padding: 8px 0; color: #4A4E5A;">✓ Configure device connections</li>
+                </ul>
+            </div>
+            <div style="background: #F9FAFB; padding: 48px; border-radius: 16px; text-align: center;">
+                <div style="background: white; padding: 32px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                    <h4 style="margin-bottom: 24px;">Family Setup</h4>
+                    <div style="background: #F4F5F7; padding: 16px; border-radius: 8px; margin-bottom: 16px; text-align: left;">
+                        <strong>👦 Tommy (Age 10)</strong><br>
+                        <small style="color: #6E718A;">2hr daily limit • 30min per task</small>
+                    </div>
+                    <div style="background: #F4F5F7; padding: 16px; border-radius: 8px; margin-bottom: 16px; text-align: left;">
+                        <strong>👧 Emma (Age 12)</strong><br>
+                        <small style="color: #6E718A;">3hr daily limit • 45min per task</small>
+                    </div>
+                    <button class="btn btn-primary" style="width: 100%;">+ Add Child</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Step 2 -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
+            <div style="background: #F9FAFB; padding: 48px; border-radius: 16px; text-align: center;">
+                <div style="background: white; padding: 32px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                    <h4 style="margin-bottom: 24px;">Today's Tasks</h4>
+                    <div style="background: #D0FBF0; padding: 12px; border-radius: 8px; margin-bottom: 12px; text-align: left;">
+                        ✓ Make bed (+15 min)
+                    </div>
+                    <div style="background: #D0FBF0; padding: 12px; border-radius: 8px; margin-bottom: 12px; text-align: left;">
+                        ✓ Homework (+45 min)
+                    </div>
+                    <div style="border: 2px solid #E5E7EB; padding: 12px; border-radius: 8px; margin-bottom: 12px; text-align: left;">
+                        ⏰ Walk dog (+30 min)
+                    </div>
+                    <div style="border: 2px solid #E5E7EB; padding: 12px; border-radius: 8px; text-align: left;">
+                        📚 Read 20 pages (+30 min)
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 style="font-size: 2rem; margin-bottom: 16px;">
+                    <span style="display: inline-block; width: 48px; height: 48px; background: #00D9A5; color: white; border-radius: 50%; text-align: center; line-height: 48px; margin-right: 16px;">2</span>
+                    Kids Earn Time
+                </h3>
+                <p style="font-size: 1.125rem; color: #6E718A; margin-bottom: 24px;">
+                    Children complete real activities to earn screen time.
+                </p>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 8px 0; color: #4A4E5A;">✓ Age-appropriate chores and responsibilities</li>
+                    <li style="padding: 8px 0; color: #4A4E5A;">✓ Educational activities and homework</li>
+                    <li style="padding: 8px 0; color: #4A4E5A;">✓ Physical exercise and outdoor play</li>
+                    <li style="padding: 8px 0; color: #4A4E5A;">✓ Family time and helping others</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Step 3 -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
+            <div>
+                <h3 style="font-size: 2rem; margin-bottom: 16px;">
+                    <span style="display: inline-block; width: 48px; height: 48px; background: #FFB800; color: white; border-radius: 50%; text-align: center; line-height: 48px; margin-right: 16px;">3</span>
+                    Smart Time Management
+                </h3>
+                <p style="font-size: 1.125rem; color: #6E718A; margin-bottom: 24px;">
+                    Kids learn to budget their earned time wisely.
+                </p>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 8px 0; color: #4A4E5A;">✓ Visual time bank shows current balance</li>
+                    <li style="padding: 8px 0; color: #4A4E5A;">✓ Set priorities for different apps</li>
+                    <li style="padding: 8px 0; color: #4A4E5A;">✓ Save time for special occasions</li>
+                    <li style="padding: 8px 0; color: #4A4E5A;">✓ Learn consequences of overspending</li>
+                </ul>
+            </div>
+            <div style="background: #F9FAFB; padding: 48px; border-radius: 16px; text-align: center;">
+                <div style="background: white; padding: 32px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                    <h4 style="margin-bottom: 24px;">Time Bank</h4>
+                    <div style="font-size: 2.5rem; color: #5B5FDE; font-weight: 700; margin: 24px 0;">
+                        2h 15m
+                    </div>
+                    <p style="color: #6E718A; margin-bottom: 24px;">Available today</p>
+                    <div style="text-align: left; font-size: 0.875rem;">
+                        <div style="padding: 8px 0;">🎮 Gaming: 45m used</div>
+                        <div style="padding: 8px 0;">📺 Videos: 30m used</div>
+                        <div style="padding: 8px 0;">💰 Saved: 1h 30m</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Step 4 -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
+            <div style="background: #F9FAFB; padding: 48px; border-radius: 16px; text-align: center;">
+                <div style="background: white; padding: 32px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                    <h4 style="margin-bottom: 24px;">This Week</h4>
+                    <div style="background: #FFF1CC; padding: 16px; border-radius: 8px; margin-bottom: 24px;">
+                        🏆 7-Day Streak!
+                    </div>
+                    <div style="text-align: left; font-size: 0.875rem;">
+                        <p style="margin-bottom: 8px;"><strong>Tasks completed:</strong> 28/35</p>
+                        <p style="margin-bottom: 8px;"><strong>Time earned:</strong> 14h 30m</p>
+                        <p style="margin-bottom: 8px;"><strong>Family rank:</strong> Top 10%</p>
+                        <p><strong>Next goal:</strong> 30 tasks!</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 style="font-size: 2rem; margin-bottom: 16px;">
+                    <span style="display: inline-block; width: 48px; height: 48px; background: #9B59B6; color: white; border-radius: 50%; text-align: center; line-height: 48px; margin-right: 16px;">4</span>
+                    Track Progress
+                </h3>
+                <p style="font-size: 1.125rem; color: #6E718A; margin-bottom: 24px;">
+                    Watch your family transform with insights and achievements.
+                </p>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 8px 0; color: #4A4E5A;">✓ Weekly family reports</li>
+                    <li style="padding: 8px 0; color: #4A4E5A;">✓ Achievement badges and milestones</li>
+                    <li style="padding: 8px 0; color: #4A4E5A;">✓ Positive reinforcement system</li>
+                    <li style="padding: 8px 0; color: #4A4E5A;">✓ Family challenges and goals</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- CTA -->
+    <div style="text-align: center; margin-top: 80px;">
+        <div style="background: linear-gradient(135deg, #5B5FDE, #3A3E96); padding: 64px; border-radius: 16px; color: white;">
+            <h2 style="color: white; font-size: 2.5rem; margin-bottom: 16px;">Ready to Get Started?</h2>
+            <p style="font-size: 1.25rem; opacity: 0.9; margin-bottom: 32px;">
+                Join thousands of families who've ended screen time battles forever
+            </p>
+            <a href="index.html#signup" class="btn" style="background: #00D9A5; color: white; font-size: 1.125rem; padding: 16px 32px;">
+                Start Your Free Trial
+            </a>
+            <p style="margin-top: 16px; font-size: 0.875rem; opacity: 0.8;">
+                30-day free trial • No credit card required • Cancel anytime
             </p>
         </div>
-    </section>
+    </div>
+</div>
+
+    </div>
     
-    <!-- Process Steps -->
-    <section style="padding-top: 64px; padding-bottom: 64px;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <!-- Step 1 -->
-            <div class="process-step animate-on-scroll">
-                <div class="step-content">
-                    <h2><span class="step-number">1</span>Set Up Your Family Account</h2>
-                    <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">Get started in under 5 minutes with our guided setup process.</p>
-                    <ul class="step-features">
-                        <li>Add each family member with age-appropriate settings</li>
-                        <li>Choose from pre-made task templates or create custom ones</li>
-                        <li>Set screen time goals and earning rates</li>
-                        <li>Configure device connections and time limits</li>
-                    </ul>
-                    <p style="margin-top: 24px;">
-                        <strong>Pro tip:</strong> Start with our recommended settings and adjust as you learn what works best for your family.
-                    </p>
-                </div>
-                <div class="step-visual">
-                    <div class="demo-screen">
-                        <h4 style="margin-bottom: 16px;">Family Setup</h4>
-                        <div style="background: #F4F5F7; padding: 16px; border-radius: 4px; margin-bottom: 8px;">
-                            <strong>👦 Tommy (Age 10)</strong><br>
-                            <small>2hr daily limit • 30min per task</small>
-                        </div>
-                        <div style="background: #F4F5F7; padding: 16px; border-radius: 4px; margin-bottom: 8px;">
-                            <strong>👧 Emma (Age 12)</strong><br>
-                            <small>3hr daily limit • 45min per task</small>
-                        </div>
-                        <button style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #5B5FDE; color: white; transition: all 0.2s ease; width: 100%; margin-top: 16px; border: none; cursor: pointer;">+ Add Child</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Step 2 -->
-            <div class="process-step animate-on-scroll">
-                <div class="step-content">
-                    <h2><span class="step-number">2</span>Kids Complete Real Activities</h2>
-                    <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">Children earn screen time by completing meaningful tasks and activities.</p>
-                    <ul class="step-features">
-                        <li>Age-appropriate chores and responsibilities</li>
-                        <li>Educational activities like reading or homework</li>
-                        <li>Physical exercise and outdoor play</li>
-                        <li>Family time and helping others</li>
-                    </ul>
-                    <p style="margin-top: 24px;">
-                        <strong>The magic:</strong> Kids are motivated to complete tasks because they see immediate rewards in their time bank.
-                    </p>
-                </div>
-                <div class="step-visual">
-                    <div class="demo-screen">
-                        <h4 style="margin-bottom: 16px;">Today's Tasks</h4>
-                        <div style="background: #A3F5E1; padding: 8px; border-radius: 4px; margin-bottom: 8px;">
-                            ✓ Make bed (+15 min)
-                        </div>
-                        <div style="background: #A3F5E1; padding: 8px; border-radius: 4px; margin-bottom: 8px;">
-                            ✓ Homework (+45 min)
-                        </div>
-                        <div style="border: 2px solid #E5E7EB; padding: 8px; border-radius: 4px; margin-bottom: 8px;">
-                            ⏰ Walk dog (+30 min)
-                        </div>
-                        <div style="border: 2px solid #E5E7EB; padding: 8px; border-radius: 4px;">
-                            📚 Read 20 pages (+30 min)
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Step 3 -->
-            <div class="process-step animate-on-scroll">
-                <div class="step-content">
-                    <h2><span class="step-number">3</span>Smart Time Management</h2>
-                    <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">Kids learn to budget their earned time across different activities.</p>
-                    <ul class="step-features">
-                        <li>Visual time bank shows current balance</li>
-                        <li>Set priorities for different apps and games</li>
-                        <li>Save time for special occasions</li>
-                        <li>Learn consequences of overspending</li>
-                    </ul>
-                    <p style="margin-top: 24px;">
-                        <strong>Life skill:</strong> Children develop real budgeting skills that translate to financial literacy.
-                    </p>
-                </div>
-                <div class="step-visual">
-                    <div class="demo-screen">
-                        <h4 style="margin-bottom: 16px;">Time Bank</h4>
-                        <div style="font-size: 2.5rem; color: #5B5FDE; font-weight: 700; margin: 16px 0;">
-                            2h 15m
-                        </div>
-                        <p style="color: #6E718A; margin-bottom: 24px;">Available today</p>
-                        <div style="font-size: 0.875rem;">
-                            <div style="margin-bottom: 8px;">
-                                🎮 Gaming: 45m used
-                            </div>
-                            <div style="margin-bottom: 8px;">
-                                📺 Videos: 30m used
-                            </div>
-                            <div>
-                                💰 Saved: 1h 30m
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Step 4 -->
-            <div class="process-step animate-on-scroll">
-                <div class="step-content">
-                    <h2><span class="step-number">4</span>Track Progress & Celebrate</h2>
-                    <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">Watch your family transform with insights and achievements.</p>
-                    <ul class="step-features">
-                        <li>Weekly family reports and insights</li>
-                        <li>Achievement badges and milestones</li>
-                        <li>Positive reinforcement system</li>
-                        <li>Family challenges and goals</li>
-                    </ul>
-                    <p style="margin-top: 24px;">
-                        <strong>Result:</strong> Screen time becomes a tool for teaching responsibility, not a source of conflict.
-                    </p>
-                </div>
-                <div class="step-visual">
-                    <div class="demo-screen">
-                        <h4 style="margin-bottom: 16px;">This Week</h4>
-                        <div style="background: #FFE399; padding: 16px; border-radius: 4px; margin-bottom: 16px; text-align: center;">
-                            🏆 7-Day Streak!
-                        </div>
-                        <div style="font-size: 0.875rem;">
-                            <p style="margin-bottom: 8px;"><strong>Tasks completed:</strong> 28/35</p>
-                            <p style="margin-bottom: 8px;"><strong>Time earned:</strong> 14h 30m</p>
-                            <p style="margin-bottom: 8px;"><strong>Family rank:</strong> Top 10%</p>
-                            <p><strong>Next goal:</strong> 30 tasks!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Features Grid -->
-    <section style="padding-top: 64px; padding-bottom: 64px; background: #F9FAFB;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div style="text-align: center; margin-bottom: 32px;">
-                <h2>Everything You Need for Success</h2>
-                <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">Powerful features designed with busy parents in mind</p>
-            </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
-                <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                    <div style="font-size: 2.5rem; margin-bottom: 16px;">🎯</div>
-                    <h3>Smart Task System</h3>
-                    <p>Age-appropriate tasks that automatically adjust as kids grow. From simple chores to complex responsibilities.</p>
-                </div>
-                
-                <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                    <div style="font-size: 2.5rem; margin-bottom: 16px;">📊</div>
-                    <h3>Real-Time Dashboard</h3>
-                    <p>See everything at a glance. Know exactly what's happening without constant monitoring or nagging.</p>
-                </div>
-                
-                <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                    <div style="font-size: 2.5rem; margin-bottom: 16px;">🏆</div>
-                    <h3>Achievement System</h3>
-                    <p>Kids earn badges, unlock rewards, and see their progress. Positive reinforcement that actually works.</p>
-                </div>
-                
-                <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                    <div style="font-size: 2.5rem; margin-bottom: 16px;">💰</div>
-                    <h3>Financial Education</h3>
-                    <p>Convert time to allowance. Teach budgeting, saving, and the value of work in a way kids understand.</p>
-                </div>
-                
-                <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                    <div style="font-size: 2.5rem; margin-bottom: 16px;">👨‍👩‍👧‍👦</div>
-                    <h3>Family Challenges</h3>
-                    <p>Weekly challenges that get everyone involved. Build stronger bonds while teaching important lessons.</p>
-                </div>
-                
-                <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                    <div style="font-size: 2.5rem; margin-bottom: 16px;">🔒</div>
-                    <h3>Safe & Secure</h3>
-                    <p>Bank-level security, COPPA compliant, and designed with children's privacy as the top priority.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div style="text-align: center; margin-bottom: 32px;">
-                <h2>Frequently Asked Questions</h2>
-                <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">Everything you need to know about TimeBank Kids</p>
-            </div>
-            
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>How is this different from regular parental controls?</span>
-                        <span class="faq-toggle">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Traditional parental controls are restrictive and often lead to conflicts. TimeBank Kids is empowering - it teaches kids to manage their own time by earning it through positive behaviors. Instead of just blocking access, we're teaching valuable life skills like time management, work ethic, and financial literacy.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What ages is TimeBank Kids suitable for?</span>
-                        <span class="faq-toggle">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>TimeBank Kids works best for children ages 6-17. The system adapts to different age groups with appropriate tasks, earning rates, and features. Younger kids get simpler tasks and visual rewards, while teens can access more complex financial education features.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>How do you prevent kids from gaming the system?</span>
-                        <span class="faq-toggle">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Parents approve completed tasks before time is credited. We use smart verification methods like photo uploads for certain tasks and location verification for outdoor activities. The system also tracks patterns to flag unusual behavior. Most importantly, the positive reinforcement model naturally encourages honest participation.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What devices does it work with?</span>
-                        <span class="faq-toggle">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>TimeBank Kids works with all major platforms: iOS, Android, Windows, Mac, and popular gaming consoles. Our app integrates with device-level controls to enforce time limits across all connected devices. One account manages everything.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>What happens if my child runs out of screen time?</span>
-                        <span class="faq-toggle">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>When time runs out, devices enter "earning mode" - kids can see available tasks to earn more time. Emergency override options are available for parents. The key is that kids learn the consequence naturally and are motivated to plan better next time, rather than just being cut off.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- CTA Section -->
-    <section style="padding-top: 64px; padding-bottom: 64px;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div style="background: linear-gradient(135deg, #5B5FDE, #3A3E96); color: white; text-align: center; max-width: 800px; margin: 0 auto; padding: 48px; border-radius: 16px; box-shadow: 0 8px 24px rgba(91, 95, 222, 0.3);">
-                <h2 style="color: white;">Ready to Transform Your Family?</h2>
-                <p style="font-size: 1.25rem; line-height: 1.6; color: rgba(255,255,255,0.9); margin-bottom: 2rem;">
-                    Join thousands of families who've discovered a better way to manage screen time
-                </p>
-                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-                    <a href="index.html#signup" style="display: inline-block; padding: 16px 32px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #00D9A5; color: white; font-size: 1.125rem; transition: all 0.2s ease;">Start Free Trial</a>
-                    <a href="pricing.html" style="display: inline-block; padding: 16px 32px; border-radius: 12px; font-weight: 600; text-decoration: none; background: white; color: #5B5FDE; font-size: 1.125rem; transition: all 0.2s ease;">View Pricing</a>
-                </div>
-                <p style="font-size: 0.875rem; margin-top: 1rem; opacity: 0.9;">
-                    30-day free trial • No credit card required • Cancel anytime
-                </p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer style="background: #1C2051; color: white; padding: 64px 0 32px;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 48px; margin-bottom: 48px;">
-                <div>
-                    <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 16px; color: white;">Product</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="how-it-works.html">How It Works</a></li>
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="pricing.html">Pricing</a></li>
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="index.html#features">Features</a></li>
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="index.html#testimonials">Reviews</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 16px; color: white;">Company</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="about.html">About Us</a></li>
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="blog.html">Blog</a></li>
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="careers.html">Careers</a></li>
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 16px; color: white;">Support</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="help.html">Help Center</a></li>
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="privacy.html">Privacy Policy</a></li>
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="terms.html">Terms of Service</a></li>
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="security.html">Security</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 16px; color: white;">Stay Updated</h4>
-                    <p style="color: #9CA3AF; margin-bottom: 1rem;">Get parenting tips and product updates</p>
-                    <form id="footer-signup" style="display: flex; flex-direction: column; gap: 8px;">
-                        <input 
-                            type="email" 
-                            style="padding: 12px 16px; border-radius: 8px; border: 1px solid #4A4E5A; font-size: 1rem; background: #2D3142; color: white;" 
-                            placeholder="Your email" 
-                            required
-                        >
-                        <button type="submit" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #5B5FDE; color: white; transition: all 0.2s ease;">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            
-            <div style="text-align: center; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); color: #9CA3AF;">
-                <p>&copy; 2024 TimeBank Kids. All rights reserved. Made with ❤️ for families everywhere.</p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 TimeBank Kids. All rights reserved.</p>
+            <div style="margin-top: 16px;">
+                <a href="privacy.html" style="margin: 0 16px;">Privacy</a>
+                <a href="terms.html" style="margin: 0 16px;">Terms</a>
+                <a href="security.html" style="margin: 0 16px;">Security</a>
+                <a href="contact.html" style="margin: 0 16px;">Contact</a>
             </div>
         </div>
     </footer>
-    
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
-    <script>
-        // FAQ Toggle
-        document.querySelectorAll('.faq-item').forEach(item => {
-            item.addEventListener('click', () => {
-                item.classList.toggle('active');
-            });
-        });
-    </script>
 </body>
 </html>

@@ -3,437 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About TimeBank Kids - Learn about our mission to transform screen time battles into teachable moments and the team behind the revolution.">
-    <meta name="keywords" content="About TimeBank Kids, company mission, parenting technology team, screen time solution story">
-    <meta name="author" content="TimeBank Kids">
-    
-    <title>About Us - TimeBank Kids | Our Mission & Story</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <title>About Us - TimeBank Kids</title>
     <style>
-        /* Page-specific styles */
-        .about-hero {
-            background: linear-gradient(135deg, #C5C8FF 0%, #5B5FDE 100%);
-            color: white;
-            padding: 64px 0;
-            margin-top: 72px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
-        .about-hero h1 {
-            color: white;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #1C2051;
         }
         
-        .mission-section {
-            padding: 64px 0;
-        }
-        
-        .story-section {
-            background: #F9FAFB;
-            padding: 64px 0;
-        }
-        
-        .story-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 64px;
-            align-items: center;
-        }
-        
-        .story-image {
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
             background: white;
-            padding: 48px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            z-index: 1000;
+            height: 72px;
         }
         
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+        
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #1C2051;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            align-items: center;
             gap: 32px;
-            margin-top: 48px;
+            list-style: none;
         }
         
-        .value-card {
-            text-align: center;
-            padding: 32px;
+        .nav-menu a {
+            color: #4A4E5A;
+            text-decoration: none;
+            font-weight: 500;
         }
         
-        .value-icon {
-            width: 80px;
-            height: 80px;
-            background: #C5C8FF;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 16px;
-            font-size: 2rem;
+        .nav-menu a:hover {
+            color: #5B5FDE;
         }
         
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-            margin-top: 48px;
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
         }
         
-        .team-member {
-            text-align: center;
-        }
-        
-        .team-avatar {
-            width: 150px;
-            height: 150px;
-            background: #D1D5DB;
-            border-radius: 50%;
-            margin: 0 auto 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            font-weight: 700;
-            color: white;
-        }
-        
-        .stats-section {
+        .btn-primary {
             background: #5B5FDE;
             color: white;
-            padding: 64px 0;
         }
         
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 32px;
+        .btn-primary:hover {
+            background: #3A3E96;
         }
         
-        .stat {
+        .content {
+            margin-top: 72px;
+            min-height: calc(100vh - 72px - 200px);
+            padding: 64px 16px;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(135deg, #E8E9FF 0%, #F9FAFB 100%);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            color: #1C2051;
+        }
+        
+        .lead {
+            font-size: 1.25rem;
+            color: #6E718A;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer {
+            background: #1C2051;
+            color: white;
+            padding: 48px 0 32px;
             text-align: center;
         }
         
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 8px;
+        .footer a {
+            color: #9CA3AF;
+            text-decoration: none;
         }
         
-        .stat-label {
-            font-size: 1.125rem;
-            opacity: 0.9;
+        .footer a:hover {
+            color: white;
         }
         
         @media (max-width: 768px) {
-            .story-content {
-                grid-template-columns: 1fr;
+            .nav-menu {
+                display: none;
             }
             
-            .values-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .team-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
+            h1 {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav style="position: fixed; top: 0; left: 0; right: 0; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); z-index: 1000; height: 72px; display: flex; align-items: center;" role="navigation" aria-label="Main navigation">
-        <div class="container nav-container" style="max-width: 1280px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; height: 100%;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; height: 100%;">
-            <a href="index.html" style="font-size: 1.5rem; font-weight: 800; color: #1C2051; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
                 <span style="color: #5B5FDE;">⏰</span>
                 TimeBank Kids
             </a>
             
-            <ul style="display: flex; align-items: center; gap: 32px; list-style: none; margin: 0; padding: 0;" id="nav-menu">
-                <li><a href="how-it-works.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">How It Works</a></li>
-                <li><a href="pricing.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">Pricing</a></li>
-                <li><a href="blog.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">Blog</a></li>
-                <li><a href="about.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">About</a></li>
-                <li><a href="index.html#signup" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #5B5FDE; color: white; transition: all 0.2s ease;">Get Started</a></li>
+            <ul class="nav-menu">
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#signup" class="btn btn-primary">Get Started</a></li>
             </ul>
-            
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                ☰
-            </button>
         </div>
     </nav>
     
-    <!-- About Hero -->
-    <section class="about-hero">
-        <div class="container text-center" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <h1>We're Parents, Just Like You</h1>
-            <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">
-                TimeBank Kids was born from our own struggles with screen time battles. 
-                We knew there had to be a better way than constant negotiations and guilt.
+    <div class="content">
+        
+<div class="hero">
+    <div class="container">
+        <span style="color: #00D9A5; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.875rem;">ABOUT US</span>
+        <h1>Our Mission</h1>
+        <p class="lead">
+            We believe technology should bring families together, not tear them apart. 
+            TimeBank Kids transforms screen time from a source of conflict into a tool for teaching life skills.
+        </p>
+    </div>
+</div>
+
+<div class="container" style="padding: 64px 16px;">
+    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <h2 style="font-size: 2rem; margin-bottom: 32px;">Built by Parents, for Parents</h2>
+        <p style="font-size: 1.125rem; line-height: 1.8; color: #6E718A; margin-bottom: 48px;">
+            TimeBank Kids was born from the daily struggles we faced as parents trying to manage our children's screen time. 
+            We tried timers, charts, and countless negotiations, but nothing worked. So we built something better.
+        </p>
+        
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin: 64px 0;">
+            <div style="text-align: center;">
+                <div style="font-size: 3rem; color: #5B5FDE; font-weight: 800;">10K+</div>
+                <p style="color: #6E718A;">Happy Families</p>
+            </div>
+            <div style="text-align: center;">
+                <div style="font-size: 3rem; color: #00D9A5; font-weight: 800;">4.9</div>
+                <p style="color: #6E718A;">App Store Rating</p>
+            </div>
+            <div style="text-align: center;">
+                <div style="font-size: 3rem; color: #FFB800; font-weight: 800;">2M+</div>
+                <p style="color: #6E718A;">Tasks Completed</p>
+            </div>
+        </div>
+        
+        <div style="background: #F9FAFB; padding: 48px; border-radius: 16px; margin: 48px 0;">
+            <h3 style="margin-bottom: 24px;">Our Values</h3>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; text-align: left;">
+                <div>
+                    <h4 style="color: #5B5FDE; margin-bottom: 8px;">🎯 Purpose-Driven</h4>
+                    <p style="color: #6E718A;">Every feature we build helps families grow stronger together.</p>
+                </div>
+                <div>
+                    <h4 style="color: #00D9A5; margin-bottom: 8px;">🛡️ Privacy First</h4>
+                    <p style="color: #6E718A;">Your family's data is sacred. We never sell or share it.</p>
+                </div>
+                <div>
+                    <h4 style="color: #FFB800; margin-bottom: 8px;">💡 Evidence-Based</h4>
+                    <p style="color: #6E718A;">Built on child psychology research and positive reinforcement.</p>
+                </div>
+                <div>
+                    <h4 style="color: #9B59B6; margin-bottom: 8px;">👨‍👩‍👧‍👦 Family-Focused</h4>
+                    <p style="color: #6E718A;">Designed to bring harmony, not add another layer of control.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div style="background: linear-gradient(135deg, #5B5FDE, #3A3E96); padding: 48px; border-radius: 16px; color: white;">
+            <h3 style="color: white; margin-bottom: 24px;">Join Our Mission</h3>
+            <p style="opacity: 0.9; margin-bottom: 24px;">
+                Help us create a world where technology brings families closer together.
             </p>
+            <a href="index.html#signup" class="btn" style="background: white; color: #5B5FDE;">
+                Start Your Free Trial
+            </a>
         </div>
-    </section>
+    </div>
+</div>
+
+    </div>
     
-    <!-- Mission Section -->
-    <section class="mission-section">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div class="text-center mb-xl">
-                <h2>Our Mission</h2>
-                <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">
-                    To transform screen time from a source of family conflict into a powerful tool 
-                    for teaching children essential life skills: time management, work ethic, and financial literacy.
-                </p>
-            </div>
-            
-            <div class="values-grid">
-                <div class="value-card animate-on-scroll">
-                    <div class="value-icon">🎯</div>
-                    <h3>Empower, Don't Control</h3>
-                    <p>We believe in teaching kids to manage their own time rather than imposing strict controls.</p>
-                </div>
-                
-                <div class="value-card animate-on-scroll">
-                    <div class="value-icon">🤝</div>
-                    <h3>Build Trust</h3>
-                    <p>Create transparent systems that both parents and children can trust and understand.</p>
-                </div>
-                
-                <div class="value-card animate-on-scroll">
-                    <div class="value-icon">🌱</div>
-                    <h3>Life Skills First</h3>
-                    <p>Every feature we build focuses on teaching skills that will serve children throughout their lives.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Story Section -->
-    <section class="story-section">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div class="story-content">
-                <div class="animate-on-scroll">
-                    <h2>Our Story</h2>
-                    <p style="margin-bottom: 16px;">
-                        In 2022, our founder Sarah Chen was at her wit's end. Her three kids were constantly 
-                        battling over screen time, and every day ended in tears and frustration.
-                    </p>
-                    <p style="margin-bottom: 16px;">
-                        "I tried everything," Sarah recalls. "Timers, charts, apps that just blocked access. 
-                        Nothing worked long-term. My kids saw screens as forbidden fruit, and I was always the bad guy."
-                    </p>
-                    <p style="margin-bottom: 16px;">
-                        Then came the breakthrough: What if kids could earn their screen time like adults earn money? 
-                        What if we could teach them that time has value, effort brings rewards, and they have control 
-                        over their choices?
-                    </p>
-                    <p>
-                        <strong>TimeBank Kids was born.</strong> Today, we're helping thousands of families transform 
-                        their relationship with technology, one earned minute at a time.
-                    </p>
-                </div>
-                
-                <div class="story-image animate-on-scroll">
-                    <div style="text-align: center;">
-                        <div style="font-size: 5rem; margin-bottom: 16px;">👨‍👩‍👧‍👦</div>
-                        <h3 style="margin-bottom: 16px;">10,000+ Families Strong</h3>
-                        <p style="color: #6E718A;">
-                            From single parents to large families, from tech-savvy to tech-worried, 
-                            our community spans every background united by one goal: raising responsible kids.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Team Section -->
-    <section style="padding-top: 64px; padding-bottom: 64px;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div class="text-center mb-xl">
-                <h2>Meet Our Team</h2>
-                <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">Parents, educators, and technologists working together</p>
-            </div>
-            
-            <div class="team-grid">
-                <div class="team-member animate-on-scroll">
-                    <div class="team-avatar" style="background: #5B5FDE;">SC</div>
-                    <h4>Sarah Chen</h4>
-                    <p style="color: #6E718A; margin-bottom: 8px;">Founder & CEO</p>
-                    <p style="font-size: 0.875rem;">Mom of 3, former Google product manager</p>
-                </div>
-                
-                <div class="team-member animate-on-scroll">
-                    <div class="team-avatar" style="background: #00D9A5;">MR</div>
-                    <h4>Marcus Rodriguez</h4>
-                    <p style="color: #6E718A; margin-bottom: 8px;">CTO</p>
-                    <p style="font-size: 0.875rem;">Dad of 2, 15+ years in EdTech</p>
-                </div>
-                
-                <div class="team-member animate-on-scroll">
-                    <div class="team-avatar" style="background: #FFB800;">JT</div>
-                    <h4>Dr. Jennifer Taylor</h4>
-                    <p style="color: #6E718A; margin-bottom: 8px;">Child Psychology Advisor</p>
-                    <p style="font-size: 0.875rem;">Child development expert, author</p>
-                </div>
-                
-                <div class="team-member animate-on-scroll">
-                    <div class="team-avatar" style="background: #3A3E96;">AK</div>
-                    <h4>Alex Kim</h4>
-                    <p style="color: #6E718A; margin-bottom: 8px;">Head of Product</p>
-                    <p style="font-size: 0.875rem;">Parent, former teacher, UX specialist</p>
-                </div>
-            </div>
-            
-            <div class="text-center mt-xl">
-                <p style="color: #6E718A;">
-                    Plus 25+ passionate team members across engineering, support, and community management
-                </p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div class="stats-grid">
-                <div class="stat animate-on-scroll">
-                    <div class="stat-number">10,000+</div>
-                    <div class="stat-label">Happy Families</div>
-                </div>
-                
-                <div class="stat animate-on-scroll">
-                    <div class="stat-number">2.5M</div>
-                    <div class="stat-label">Tasks Completed</div>
-                </div>
-                
-                <div class="stat animate-on-scroll">
-                    <div class="stat-number">98%</div>
-                    <div class="stat-label">Parent Satisfaction</div>
-                </div>
-                
-                <div class="stat animate-on-scroll">
-                    <div class="stat-number">4.9/5</div>
-                    <div class="stat-label">App Store Rating</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Investors Section -->
-    <section style="padding-top: 64px; padding-bottom: 64px; background: #F9FAFB;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div class="text-center mb-xl">
-                <h2>Backed by the Best</h2>
-                <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">Trusted by leading investors in education and family technology</p>
-            </div>
-            
-            <div style="display: flex; align-items: center; justify-content: center">
-                <div style="padding: 24px; background: white; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                    <strong>Bessemer Venture Partners</strong>
-                </div>
-                <div style="padding: 24px; background: white; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                    <strong>Reach Capital</strong>
-                </div>
-                <div style="padding: 24px; background: white; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                    <strong>Imaginable Futures</strong>
-                </div>
-                <div style="padding: 24px; background: white; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                    <strong>Learn Capital</strong>
-                </div>
-            </div>
-            
-            <div class="text-center mt-xl">
-                <p style="color: #6E718A;">
-                    $12M in funding to help families everywhere transform screen time
-                </p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- CTA Section -->
-    <section style="padding-top: 64px; padding-bottom: 64px;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                <h2 style="color: white;">Join Our Mission</h2>
-                <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">
-                    Help us create a world where technology brings families together instead of driving them apart
-                </p>
-                <div style="display: flex; gap: 16px; justify-content: center">
-                    <a href="index.html#signup" style="display: inline-block; padding: 16px 32px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #00D9A5; color: white; font-size: 1.125rem; transition: all 0.2s ease;">Try TimeBank Kids</a>
-                    <a href="careers.html" class="btn btn-secondary btn-lg" style="background: white; color: #5B5FDE;">Join Our Team</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer style="background: #1C2051; color: white; padding: 64px 0 32px;" 
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 48px; margin-bottom: 48px;" 
-                <div>
-                    <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 16px; color: white;">Product</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="how-it-works.html">How It Works</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="index.html#testimonials">Reviews</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4>Company</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="about.html">About Us</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4>Support</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="help.html">Help Center</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="security.html">Security</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4>Stay Updated</h4>
-                    <p style="color: #9CA3AF; margin-bottom: 1rem;">Get parenting tips and product updates</p>
-                    <form id="footer-signup" style="display: flex; flex-direction: column; gap: 8px">
-                        <input 
-                            type="email" 
-                            class="form-input" 
-                            placeholder="Your email" 
-                            required 
-                            style="background: #2D3142; border-color: #4A4E5A; color: white;"
-                        >
-                        <button type="submit" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #5B5FDE; color: white; transition: all 0.2s ease;">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            
-            <div style="text-align: center; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); color: #9CA3AF;" 
-                <p>&copy; 2024 TimeBank Kids. All rights reserved. Made with ❤️ for families everywhere.</p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 TimeBank Kids. All rights reserved.</p>
+            <div style="margin-top: 16px;">
+                <a href="privacy.html" style="margin: 0 16px;">Privacy</a>
+                <a href="terms.html" style="margin: 0 16px;">Terms</a>
+                <a href="security.html" style="margin: 0 16px;">Security</a>
+                <a href="contact.html" style="margin: 0 16px;">Contact</a>
             </div>
         </div>
     </footer>
-    
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
 </body>
 </html>

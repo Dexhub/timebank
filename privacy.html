@@ -3,536 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TimeBank Kids Privacy Policy - Learn how we protect your family's data with bank-level security and COPPA compliance.">
-    <meta name="keywords" content="TimeBank Kids privacy policy, COPPA compliance, family data security, children's privacy protection">
-    <meta name="author" content="TimeBank Kids">
-    
-    <title>Privacy Policy - TimeBank Kids | Your Family's Data Security</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <title>Privacy Policy - TimeBank Kids</title>
     <style>
-        /* Page-specific styles */
-        .privacy-hero {
-            background: linear-gradient(135deg, #F9FAFB 0%, white 100%);
-            padding: 64px 0;
-            margin-top: 72px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
-        .privacy-nav {
-            position: sticky;
-            top: 100px;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #1C2051;
+        }
+        
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
             background: white;
-            padding: 24px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            max-height: calc(100vh - 120px);
-            overflow-y: auto;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            z-index: 1000;
+            height: 72px;
         }
         
-        .privacy-nav h3 {
-            font-size: 1rem;
-            margin-bottom: 16px;
-            color: #4A4E5A;
-        }
-        
-        .privacy-nav ul {
-            list-style: none;
-        }
-        
-        .privacy-nav li {
-            margin-bottom: 8px;
-        }
-        
-        .privacy-nav a {
-            color: #6E718A;
-            text-decoration: none;
-            font-size: 0.875rem;
-            display: block;
-            padding: 4px 0;
-            border-left: 3px solid transparent;
-            padding-left: 8px;
-            transition: all 0.2s ease;
-        }
-        
-        .privacy-nav a:hover,
-        .privacy-nav a.active {
-            color: #5B5FDE;
-            border-left-color: #5B5FDE;
-            background: #F9FAFB;
-        }
-        
-        .privacy-content {
-            background: white;
-            padding: 48px;
-            border-radius: 12px;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-        }
-        
-        .privacy-content h2 {
-            margin-top: 48px;
-            margin-bottom: 24px;
-            padding-top: 24px;
-            border-top: 1px solid #E5E7EB;
-        }
-        
-        .privacy-content h2:first-child {
-            margin-top: 0;
-            padding-top: 0;
-            border-top: none;
-        }
-        
-        .privacy-content h3 {
-            margin-top: 32px;
-            margin-bottom: 16px;
-        }
-        
-        .privacy-content ul {
-            margin-left: 32px;
-            margin-bottom: 16px;
-        }
-        
-        .privacy-content li {
-            margin-bottom: 8px;
-        }
-        
-        .security-badges {
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 16px;
             display: flex;
-            gap: 24px;
-            margin: 32px 0;
-            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
         }
         
-        .security-badge {
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #1C2051;
+            text-decoration: none;
             display: flex;
             align-items: center;
             gap: 8px;
-            background: #F9FAFB;
-            padding: 8px 16px;
-            border-radius: 8px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+        
+        .nav-menu a {
+            color: #4A4E5A;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .nav-menu a:hover {
+            color: #5B5FDE;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 12px;
             font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
         }
         
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 24px 0;
+        .btn-primary {
+            background: #5B5FDE;
+            color: white;
         }
         
-        .data-table th,
-        .data-table td {
-            padding: 16px;
-            text-align: left;
-            border-bottom: 1px solid #E5E7EB;
+        .btn-primary:hover {
+            background: #3A3E96;
         }
         
-        .data-table th {
-            background: #F9FAFB;
-            font-weight: 600;
+        .content {
+            margin-top: 72px;
+            min-height: calc(100vh - 72px - 200px);
+            padding: 64px 16px;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            color: #1C2051;
+        }
+        
+        .footer {
+            background: #1C2051;
+            color: white;
+            padding: 48px 0 32px;
+            text-align: center;
+        }
+        
+        .footer a {
+            color: #9CA3AF;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            color: white;
         }
         
         @media (max-width: 768px) {
-            .privacy-nav {
-                position: relative;
-                top: 0;
-                margin-bottom: 32px;
+            .nav-menu {
+                display: none;
+            }
+            
+            h1 {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav style="position: fixed; top: 0; left: 0; right: 0; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); z-index: 1000; height: 72px; display: flex; align-items: center;" role="navigation" aria-label="Main navigation">
-        <div class="container nav-container" style="max-width: 1280px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; height: 100%;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; height: 100%;">
-            <a href="index.html" style="font-size: 1.5rem; font-weight: 800; color: #1C2051; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
                 <span style="color: #5B5FDE;">⏰</span>
                 TimeBank Kids
             </a>
             
-            <ul style="display: flex; align-items: center; gap: 32px; list-style: none; margin: 0; padding: 0;" id="nav-menu">
-                <li><a href="how-it-works.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">How It Works</a></li>
-                <li><a href="pricing.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">Pricing</a></li>
-                <li><a href="blog.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">Blog</a></li>
-                <li><a href="about.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">About</a></li>
-                <li><a href="index.html#signup" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #5B5FDE; color: white; transition: all 0.2s ease;">Get Started</a></li>
+            <ul class="nav-menu">
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#signup" class="btn btn-primary">Get Started</a></li>
             </ul>
-            
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                ☰
-            </button>
         </div>
     </nav>
     
-    <!-- Privacy Hero -->
-    <section class="privacy-hero">
-        <div class="container text-center" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <h1>Privacy & Security</h1>
-            <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">Your family's privacy is our top priority. Learn how we protect your data.</p>
-            <p style="color: #6E718A; margin-top: 16px;">
-                Last updated: March 15, 2024
+    <div class="content">
+        
+<div class="container">
+    <h1>Privacy Policy</h1>
+    <p style="color: #6E718A; margin-bottom: 48px;">Last updated: January 2024</p>
+    
+    <div style="max-width: 800px; margin: 0 auto;">
+        <section style="margin-bottom: 48px;">
+            <h2 style="margin-bottom: 24px;">Our Commitment to Privacy</h2>
+            <p style="font-size: 1.125rem; line-height: 1.8; color: #4A4E5A; margin-bottom: 24px;">
+                At TimeBank Kids, protecting your family's privacy is our top priority. We believe that your personal information belongs to you, 
+                and we're committed to being transparent about how we collect, use, and protect it.
             </p>
-        </div>
-    </section>
-    
-    <!-- Privacy Content -->
-    <section style="padding-top: 64px; padding-bottom: 64px;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div class="grid" style="grid-template-columns: 250px 1fr; gap: 48px;">
-                <!-- Side Navigation -->
-                <aside class="privacy-nav">
-                    <h3>Quick Navigation</h3>
-                    <ul>
-                        <li><a href="#overview" class="active">Overview</a></li>
-                        <li><a href="#data-collection">Data We Collect</a></li>
-                        <li><a href="#data-use">How We Use Data</a></li>
-                        <li><a href="#data-protection">Data Protection</a></li>
-                        <li><a href="#coppa">COPPA Compliance</a></li>
-                        <li><a href="#parental-rights">Parental Rights</a></li>
-                        <li><a href="#data-sharing">Data Sharing</a></li>
-                        <li><a href="#security">Security Measures</a></li>
-                        <li><a href="#retention">Data Retention</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                    </ul>
-                </aside>
-                
-                <!-- Main Content -->
-                <div class="privacy-content">
-                    <section id="overview">
-                        <h2>Privacy Overview</h2>
-                        <p>
-                            At TimeBank Kids, we understand that your family's privacy is sacred. We've built our platform with privacy 
-                            and security at its core, ensuring that your children's data is protected with the same care we'd want for our own families.
-                        </p>
-                        
-                        <div class="security-badges">
-                            <div class="security-badge">
-                                <span>🔒</span>
-                                <span>Bank-Level Security</span>
-                            </div>
-                            <div class="security-badge">
-                                <span>👶</span>
-                                <span>COPPA Compliant</span>
-                            </div>
-                            <div class="security-badge">
-                                <span>🛡️</span>
-                                <span>SOC 2 Type II</span>
-                            </div>
-                            <div class="security-badge">
-                                <span>🔐</span>
-                                <span>End-to-End Encryption</span>
-                            </div>
-                        </div>
-                    </section>
-                    
-                    <section id="data-collection">
-                        <h2>Data We Collect</h2>
-                        <p>
-                            We collect only the minimum information necessary to provide our service effectively:
-                        </p>
-                        
-                        <h3>Parent Account Information</h3>
-                        <ul>
-                            <li>Name and email address</li>
-                            <li>Payment information (processed securely by Stripe)</li>
-                            <li>Device information for app access</li>
-                            <li>Communication preferences</li>
-                        </ul>
-                        
-                        <h3>Child Account Information</h3>
-                        <ul>
-                            <li>First name and age</li>
-                            <li>Task completion data</li>
-                            <li>Screen time usage patterns</li>
-                            <li>Achievement and reward history</li>
-                        </ul>
-                        
-                        <h3>What We DON'T Collect</h3>
-                        <ul>
-                            <li>Children's last names or full identities</li>
-                            <li>Precise location data</li>
-                            <li>Contents of children's devices</li>
-                            <li>Social media information</li>
-                            <li>Biometric data</li>
-                        </ul>
-                    </section>
-                    
-                    <section id="data-use">
-                        <h2>How We Use Your Data</h2>
-                        <p>
-                            Every piece of data we collect serves a specific purpose in helping your family:
-                        </p>
-                        
-                        <table class="data-table">
-                            <thead>
-                                <tr>
-                                    <th>Data Type</th>
-                                    <th>Purpose</th>
-                                    <th>Who Can Access</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Task completion</td>
-                                    <td>Track progress and calculate rewards</td>
-                                    <td>Parent accounts only</td>
-                                </tr>
-                                <tr>
-                                    <td>Screen time usage</td>
-                                    <td>Enforce limits and provide insights</td>
-                                    <td>Parent accounts only</td>
-                                </tr>
-                                <tr>
-                                    <td>Email address</td>
-                                    <td>Account security and updates</td>
-                                    <td>TimeBank Kids support (when needed)</td>
-                                </tr>
-                                <tr>
-                                    <td>Age information</td>
-                                    <td>Age-appropriate task suggestions</td>
-                                    <td>Automated system only</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </section>
-                    
-                    <section id="data-protection">
-                        <h2>How We Protect Your Data</h2>
-                        <ul>
-                            <li><strong>Encryption:</strong> All data is encrypted in transit (TLS 1.3) and at rest (AES-256)</li>
-                            <li><strong>Access Controls:</strong> Strict role-based access with multi-factor authentication</li>
-                            <li><strong>Regular Audits:</strong> Third-party security audits every 6 months</li>
-                            <li><strong>Data Isolation:</strong> Each family's data is logically separated</li>
-                            <li><strong>Secure Infrastructure:</strong> Hosted on SOC 2 compliant servers</li>
-                        </ul>
-                    </section>
-                    
-                    <section id="coppa">
-                        <h2>COPPA Compliance</h2>
-                        <p>
-                            TimeBank Kids is fully compliant with the Children's Online Privacy Protection Act (COPPA). 
-                            This means we:
-                        </p>
-                        <ul>
-                            <li>Never collect personal information from children under 13 without parental consent</li>
-                            <li>Provide parents full control over their children's data</li>
-                            <li>Allow parents to review and delete their children's information at any time</li>
-                            <li>Never sell or share children's data with third parties</li>
-                            <li>Implement industry-leading security measures to protect children's privacy</li>
-                        </ul>
-                        
-                        <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                            <h4 style="margin-bottom: 8px;">COPPA Safe Harbor</h4>
-                            <p style="margin: 0;">
-                                TimeBank Kids participates in the PRIVO COPPA Safe Harbor certification program. 
-                                Our certification can be verified at <a href="#" style="color: #5B5FDE;">privacy.privo.com</a>
-                            </p>
-                        </div>
-                    </section>
-                    
-                    <section id="parental-rights">
-                        <h2>Your Rights as a Parent</h2>
-                        <p>You have complete control over your family's data:</p>
-                        
-                        <h3>Access Rights</h3>
-                        <ul>
-                            <li>View all data we have about your family</li>
-                            <li>Download your data in a portable format</li>
-                            <li>See a log of who has accessed your data</li>
-                        </ul>
-                        
-                        <h3>Control Rights</h3>
-                        <ul>
-                            <li>Update or correct any information</li>
-                            <li>Delete specific data points</li>
-                            <li>Close your account and delete all data</li>
-                            <li>Opt out of any non-essential data collection</li>
-                        </ul>
-                        
-                        <h3>Communication Rights</h3>
-                        <ul>
-                            <li>Choose which emails you receive</li>
-                            <li>Control notification preferences</li>
-                            <li>Opt out of product research</li>
-                        </ul>
-                    </section>
-                    
-                    <section id="data-sharing">
-                        <h2>Data Sharing Policy</h2>
-                        <p>
-                            <strong>We NEVER sell your family's data. Period.</strong>
-                        </p>
-                        <p>
-                            We only share data in these limited circumstances:
-                        </p>
-                        <ul>
-                            <li><strong>With your consent:</strong> Only when you explicitly approve</li>
-                            <li><strong>For security:</strong> To prevent fraud or abuse</li>
-                            <li><strong>Legal requirements:</strong> If required by law (we'll notify you unless prohibited)</li>
-                            <li><strong>Service providers:</strong> Trusted partners who help run our service (under strict contracts)</li>
-                        </ul>
-                    </section>
-                    
-                    <section id="security">
-                        <h2>Security Measures</h2>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 32px;">
-                            <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                                <h4>Technical Security</h4>
-                                <ul style="margin: 0;">
-                                    <li>256-bit SSL encryption</li>
-                                    <li>Secure cloud infrastructure</li>
-                                    <li>Regular security updates</li>
-                                    <li>Intrusion detection systems</li>
-                                </ul>
-                            </div>
-                            
-                            <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                                <h4>Operational Security</h4>
-                                <ul style="margin: 0;">
-                                    <li>Employee background checks</li>
-                                    <li>Security training programs</li>
-                                    <li>Limited data access</li>
-                                    <li>Regular security audits</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                    
-                    <section id="retention">
-                        <h2>Data Retention</h2>
-                        <p>We keep your data only as long as necessary:</p>
-                        <ul>
-                            <li><strong>Active accounts:</strong> Data retained while account is active</li>
-                            <li><strong>Deleted accounts:</strong> Data removed within 30 days</li>
-                            <li><strong>Backups:</strong> Removed from backups within 90 days</li>
-                            <li><strong>Legal holds:</strong> Only retained if legally required</li>
-                        </ul>
-                    </section>
-                    
-                    <section id="contact">
-                        <h2>Contact Our Privacy Team</h2>
-                        <p>
-                            Have questions about privacy or want to exercise your rights? We're here to help:
-                        </p>
-                        
-                        <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                            <h4>Privacy Team Contact</h4>
-                            <p><strong>Email:</strong> privacy@timebankkids.com</p>
-                            <p><strong>Phone:</strong> 1-800-TIMEBANK</p>
-                            <p><strong>Mail:</strong> TimeBank Kids Privacy Team<br>
-                            123 Family Way, Suite 100<br>
-                            San Francisco, CA 94105</p>
-                            <p style="margin: 0;"><strong>Response time:</strong> Within 48 hours</p>
-                        </div>
-                    </section>
-                </div>
+        </section>
+        
+        <section style="margin-bottom: 48px;">
+            <h3 style="margin-bottom: 16px;">Information We Collect</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="padding: 12px 0; color: #4A4E5A;">✓ Account information (name, email, password)</li>
+                <li style="padding: 12px 0; color: #4A4E5A;">✓ Child profiles (first name, age)</li>
+                <li style="padding: 12px 0; color: #4A4E5A;">✓ Usage data (tasks completed, time earned)</li>
+                <li style="padding: 12px 0; color: #4A4E5A;">✓ Device information for app functionality</li>
+            </ul>
+        </section>
+        
+        <section style="margin-bottom: 48px;">
+            <h3 style="margin-bottom: 16px;">How We Use Your Information</h3>
+            <p style="color: #4A4E5A; margin-bottom: 16px;">We use your information solely to:</p>
+            <ul style="list-style: none; padding: 0;">
+                <li style="padding: 12px 0; color: #4A4E5A;">• Provide and improve the TimeBank Kids service</li>
+                <li style="padding: 12px 0; color: #4A4E5A;">• Send important account updates</li>
+                <li style="padding: 12px 0; color: #4A4E5A;">• Provide customer support</li>
+                <li style="padding: 12px 0; color: #4A4E5A;">• Ensure safety and security</li>
+            </ul>
+        </section>
+        
+        <section style="margin-bottom: 48px;">
+            <h3 style="margin-bottom: 16px;">What We Never Do</h3>
+            <div style="background: #FFF1CC; padding: 24px; border-radius: 12px;">
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 8px 0; color: #4A4E5A;">❌ We NEVER sell your data</li>
+                    <li style="padding: 8px 0; color: #4A4E5A;">❌ We NEVER share personal information with advertisers</li>
+                    <li style="padding: 8px 0; color: #4A4E5A;">❌ We NEVER track children across apps or websites</li>
+                    <li style="padding: 8px 0; color: #4A4E5A;">❌ We NEVER use your data for targeted advertising</li>
+                </ul>
             </div>
-        </div>
-    </section>
-    
-    <!-- Trust Section -->
-    <section style="padding-top: 64px; padding-bottom: 64px; background: #F9FAFB;">
-        <div class="container text-center" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <h2>Your Trust Is Everything</h2>
-            <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">
-                We're parents too. We built TimeBank Kids with the privacy standards we demand for our own families. 
-                Your trust is the foundation of everything we do.
+        </section>
+        
+        <section style="margin-bottom: 48px;">
+            <h3 style="margin-bottom: 16px;">Your Rights</h3>
+            <p style="color: #4A4E5A; margin-bottom: 16px;">You have the right to:</p>
+            <ul style="list-style: none; padding: 0;">
+                <li style="padding: 12px 0; color: #4A4E5A;">✓ Access your data anytime</li>
+                <li style="padding: 12px 0; color: #4A4E5A;">✓ Update or correct information</li>
+                <li style="padding: 12px 0; color: #4A4E5A;">✓ Delete your account and all associated data</li>
+                <li style="padding: 12px 0; color: #4A4E5A;">✓ Export your data in a readable format</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h3 style="margin-bottom: 16px;">Contact Us</h3>
+            <p style="color: #4A4E5A;">
+                If you have any questions about our privacy practices, please contact us at:<br>
+                <a href="mailto:privacy@timebankkids.com" style="color: #5B5FDE;">privacy@timebankkids.com</a>
             </p>
-            
-            <div style="display: flex; gap: 16px; justify-content: center">
-                <a href="security.html" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #5B5FDE; color: white; transition: all 0.2s ease;">Learn About Security</a>
-                <a href="contact.html" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #F4F5F7; color: #1C2051; transition: all 0.2s ease;">Contact Privacy Team</a>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
+</div>
+
+    </div>
     
-    <!-- Footer -->
-    <footer style="background: #1C2051; color: white; padding: 64px 0 32px;" 
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 48px; margin-bottom: 48px;" 
-                <div>
-                    <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 16px; color: white;">Product</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="how-it-works.html">How It Works</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="index.html#testimonials">Reviews</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4>Company</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="about.html">About Us</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4>Support</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="help.html">Help Center</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="security.html">Security</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4>Stay Updated</h4>
-                    <p style="color: #9CA3AF; margin-bottom: 1rem;">Get parenting tips and product updates</p>
-                    <form id="footer-signup" style="display: flex; flex-direction: column; gap: 8px">
-                        <input 
-                            type="email" 
-                            class="form-input" 
-                            placeholder="Your email" 
-                            required 
-                            style="background: #2D3142; border-color: #4A4E5A; color: white;"
-                        >
-                        <button type="submit" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #5B5FDE; color: white; transition: all 0.2s ease;">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            
-            <div style="text-align: center; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); color: #9CA3AF;" 
-                <p>&copy; 2024 TimeBank Kids. All rights reserved. Made with ❤️ for families everywhere.</p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 TimeBank Kids. All rights reserved.</p>
+            <div style="margin-top: 16px;">
+                <a href="privacy.html" style="margin: 0 16px;">Privacy</a>
+                <a href="terms.html" style="margin: 0 16px;">Terms</a>
+                <a href="security.html" style="margin: 0 16px;">Security</a>
+                <a href="contact.html" style="margin: 0 16px;">Contact</a>
             </div>
         </div>
     </footer>
-    
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
-    <script>
-        // Smooth scroll and active nav
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.privacy-nav a');
-        
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 150;
-                if (window.scrollY >= sectionTop) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').slice(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
 </body>
 </html>
