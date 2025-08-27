@@ -23,9 +23,9 @@
     <style>
         /* Page-specific styles */
         .about-hero {
-            background: linear-gradient(135deg, var(--primary-blue-light) 0%, var(--primary-blue) 100%);
+            background: linear-gradient(135deg, #C5C8FF 0%, #5B5FDE 100%);
             color: white;
-            padding: var(--spacing-3xl) 0;
+            padding: 64px 0;
             margin-top: 72px;
         }
         
@@ -34,57 +34,57 @@
         }
         
         .mission-section {
-            padding: var(--spacing-3xl) 0;
+            padding: 64px 0;
         }
         
         .story-section {
-            background: var(--gray-50);
-            padding: var(--spacing-3xl) 0;
+            background: #F9FAFB;
+            padding: 64px 0;
         }
         
         .story-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-3xl);
+            gap: 64px;
             align-items: center;
         }
         
         .story-image {
             background: white;
-            padding: var(--spacing-2xl);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-md);
+            padding: 48px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
         
         .values-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: var(--spacing-xl);
-            margin-top: var(--spacing-2xl);
+            gap: 32px;
+            margin-top: 48px;
         }
         
         .value-card {
             text-align: center;
-            padding: var(--spacing-xl);
+            padding: 32px;
         }
         
         .value-icon {
             width: 80px;
             height: 80px;
-            background: var(--primary-blue-light);
+            background: #C5C8FF;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto var(--spacing-md);
+            margin: 0 auto 16px;
             font-size: 2rem;
         }
         
         .team-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: var(--spacing-lg);
-            margin-top: var(--spacing-2xl);
+            gap: 24px;
+            margin-top: 48px;
         }
         
         .team-member {
@@ -94,9 +94,9 @@
         .team-avatar {
             width: 150px;
             height: 150px;
-            background: var(--gray-300);
+            background: #D1D5DB;
             border-radius: 50%;
-            margin: 0 auto var(--spacing-md);
+            margin: 0 auto 16px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -106,15 +106,15 @@
         }
         
         .stats-section {
-            background: var(--primary-blue);
+            background: #5B5FDE;
             color: white;
-            padding: var(--spacing-3xl) 0;
+            padding: 64px 0;
         }
         
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: var(--spacing-xl);
+            gap: 32px;
         }
         
         .stat {
@@ -124,7 +124,7 @@
         .stat-number {
             font-size: 3rem;
             font-weight: 700;
-            margin-bottom: var(--spacing-sm);
+            margin-bottom: 8px;
         }
         
         .stat-label {
@@ -153,19 +153,19 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav" role="navigation" aria-label="Main navigation">
-        <div class="container nav-container">
-            <a href="index.html" class="nav-logo">
-                <span style="color: var(--primary-blue);">⏰</span>
+    <nav style="position: fixed; top: 0; left: 0; right: 0; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); z-index: 1000; height: 72px; display: flex; align-items: center;" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container" style="max-width: 1280px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; height: 100%;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; height: 100%;">
+            <a href="index.html" style="font-size: 1.5rem; font-weight: 800; color: #1C2051; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                <span style="color: #5B5FDE;">⏰</span>
                 TimeBank Kids
             </a>
             
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
-                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="about.html" class="nav-link" style="color: var(--primary-blue);">About</a></li>
-                <li><a href="index.html#signup" class="btn btn-primary">Get Started</a></li>
+            <ul style="display: flex; align-items: center; gap: 32px; list-style: none; margin: 0; padding: 0;" id="nav-menu">
+                <li><a href="how-it-works.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">How It Works</a></li>
+                <li><a href="pricing.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">Pricing</a></li>
+                <li><a href="blog.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">Blog</a></li>
+                <li><a href="about.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">About</a></li>
+                <li><a href="index.html#signup" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #5B5FDE; color: white; transition: all 0.2s ease;">Get Started</a></li>
             </ul>
             
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -176,9 +176,9 @@
     
     <!-- About Hero -->
     <section class="about-hero">
-        <div class="container text-center">
+        <div class="container text-center" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
             <h1>We're Parents, Just Like You</h1>
-            <p class="lead" style="color: white; opacity: 0.9; max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">
                 TimeBank Kids was born from our own struggles with screen time battles. 
                 We knew there had to be a better way than constant negotiations and guilt.
             </p>
@@ -187,10 +187,10 @@
     
     <!-- Mission Section -->
     <section class="mission-section">
-        <div class="container">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
             <div class="text-center mb-xl">
                 <h2>Our Mission</h2>
-                <p class="lead" style="max-width: 800px; margin: 0 auto;">
+                <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">
                     To transform screen time from a source of family conflict into a powerful tool 
                     for teaching children essential life skills: time management, work ethic, and financial literacy.
                 </p>
@@ -220,19 +220,19 @@
     
     <!-- Story Section -->
     <section class="story-section">
-        <div class="container">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
             <div class="story-content">
                 <div class="animate-on-scroll">
                     <h2>Our Story</h2>
-                    <p style="margin-bottom: var(--spacing-md);">
+                    <p style="margin-bottom: 16px;">
                         In 2022, our founder Sarah Chen was at her wit's end. Her three kids were constantly 
                         battling over screen time, and every day ended in tears and frustration.
                     </p>
-                    <p style="margin-bottom: var(--spacing-md);">
+                    <p style="margin-bottom: 16px;">
                         "I tried everything," Sarah recalls. "Timers, charts, apps that just blocked access. 
                         Nothing worked long-term. My kids saw screens as forbidden fruit, and I was always the bad guy."
                     </p>
-                    <p style="margin-bottom: var(--spacing-md);">
+                    <p style="margin-bottom: 16px;">
                         Then came the breakthrough: What if kids could earn their screen time like adults earn money? 
                         What if we could teach them that time has value, effort brings rewards, and they have control 
                         over their choices?
@@ -245,9 +245,9 @@
                 
                 <div class="story-image animate-on-scroll">
                     <div style="text-align: center;">
-                        <div style="font-size: 5rem; margin-bottom: var(--spacing-md);">👨‍👩‍👧‍👦</div>
-                        <h3 style="margin-bottom: var(--spacing-md);">10,000+ Families Strong</h3>
-                        <p style="color: var(--gray-600);">
+                        <div style="font-size: 5rem; margin-bottom: 16px;">👨‍👩‍👧‍👦</div>
+                        <h3 style="margin-bottom: 16px;">10,000+ Families Strong</h3>
+                        <p style="color: #6E718A;">
                             From single parents to large families, from tech-savvy to tech-worried, 
                             our community spans every background united by one goal: raising responsible kids.
                         </p>
@@ -258,45 +258,45 @@
     </section>
     
     <!-- Team Section -->
-    <section class="py-3xl">
-        <div class="container">
+    <section style="padding-top: 64px; padding-bottom: 64px;">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
             <div class="text-center mb-xl">
                 <h2>Meet Our Team</h2>
-                <p class="lead">Parents, educators, and technologists working together</p>
+                <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">Parents, educators, and technologists working together</p>
             </div>
             
             <div class="team-grid">
                 <div class="team-member animate-on-scroll">
-                    <div class="team-avatar" style="background: var(--primary-blue);">SC</div>
+                    <div class="team-avatar" style="background: #5B5FDE;">SC</div>
                     <h4>Sarah Chen</h4>
-                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-sm);">Founder & CEO</p>
+                    <p style="color: #6E718A; margin-bottom: 8px;">Founder & CEO</p>
                     <p style="font-size: 0.875rem;">Mom of 3, former Google product manager</p>
                 </div>
                 
                 <div class="team-member animate-on-scroll">
-                    <div class="team-avatar" style="background: var(--growth-green);">MR</div>
+                    <div class="team-avatar" style="background: #00D9A5;">MR</div>
                     <h4>Marcus Rodriguez</h4>
-                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-sm);">CTO</p>
+                    <p style="color: #6E718A; margin-bottom: 8px;">CTO</p>
                     <p style="font-size: 0.875rem;">Dad of 2, 15+ years in EdTech</p>
                 </div>
                 
                 <div class="team-member animate-on-scroll">
-                    <div class="team-avatar" style="background: var(--achievement-gold);">JT</div>
+                    <div class="team-avatar" style="background: #FFB800;">JT</div>
                     <h4>Dr. Jennifer Taylor</h4>
-                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-sm);">Child Psychology Advisor</p>
+                    <p style="color: #6E718A; margin-bottom: 8px;">Child Psychology Advisor</p>
                     <p style="font-size: 0.875rem;">Child development expert, author</p>
                 </div>
                 
                 <div class="team-member animate-on-scroll">
-                    <div class="team-avatar" style="background: var(--primary-blue-dark);">AK</div>
+                    <div class="team-avatar" style="background: #3A3E96;">AK</div>
                     <h4>Alex Kim</h4>
-                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-sm);">Head of Product</p>
+                    <p style="color: #6E718A; margin-bottom: 8px;">Head of Product</p>
                     <p style="font-size: 0.875rem;">Parent, former teacher, UX specialist</p>
                 </div>
             </div>
             
             <div class="text-center mt-xl">
-                <p style="color: var(--gray-600);">
+                <p style="color: #6E718A;">
                     Plus 25+ passionate team members across engineering, support, and community management
                 </p>
             </div>
@@ -305,7 +305,7 @@
     
     <!-- Stats Section -->
     <section class="stats-section">
-        <div class="container">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
             <div class="stats-grid">
                 <div class="stat animate-on-scroll">
                     <div class="stat-number">10,000+</div>
@@ -331,30 +331,30 @@
     </section>
     
     <!-- Investors Section -->
-    <section class="py-3xl bg-light">
-        <div class="container">
+    <section style="padding-top: 64px; padding-bottom: 64px; background: #F9FAFB;">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
             <div class="text-center mb-xl">
                 <h2>Backed by the Best</h2>
-                <p class="lead">Trusted by leading investors in education and family technology</p>
+                <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">Trusted by leading investors in education and family technology</p>
             </div>
             
-            <div class="flex justify-center items-center gap-xl flex-wrap">
-                <div style="padding: var(--spacing-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+            <div style="display: flex; align-items: center; justify-content: center">
+                <div style="padding: 24px; background: white; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
                     <strong>Bessemer Venture Partners</strong>
                 </div>
-                <div style="padding: var(--spacing-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+                <div style="padding: 24px; background: white; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
                     <strong>Reach Capital</strong>
                 </div>
-                <div style="padding: var(--spacing-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+                <div style="padding: 24px; background: white; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
                     <strong>Imaginable Futures</strong>
                 </div>
-                <div style="padding: var(--spacing-lg); background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+                <div style="padding: 24px; background: white; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
                     <strong>Learn Capital</strong>
                 </div>
             </div>
             
             <div class="text-center mt-xl">
-                <p style="color: var(--gray-600);">
+                <p style="color: #6E718A;">
                     $12M in funding to help families everywhere transform screen time
                 </p>
             </div>
@@ -362,72 +362,72 @@
     </section>
     
     <!-- CTA Section -->
-    <section class="py-3xl">
-        <div class="container">
-            <div class="card" style="background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark)); color: white; text-align: center; max-width: 800px; margin: 0 auto;">
+    <section style="padding-top: 64px; padding-bottom: 64px;">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
+            <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
                 <h2 style="color: white;">Join Our Mission</h2>
-                <p class="lead" style="color: rgba(255,255,255,0.9); margin-bottom: 2rem;">
+                <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">
                     Help us create a world where technology brings families together instead of driving them apart
                 </p>
-                <div class="flex gap-md justify-center">
-                    <a href="index.html#signup" class="btn btn-success btn-lg">Try TimeBank Kids</a>
-                    <a href="careers.html" class="btn btn-secondary btn-lg" style="background: white; color: var(--primary-blue);">Join Our Team</a>
+                <div style="display: flex; gap: 16px; justify-content: center">
+                    <a href="index.html#signup" style="display: inline-block; padding: 16px 32px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #00D9A5; color: white; font-size: 1.125rem; transition: all 0.2s ease;">Try TimeBank Kids</a>
+                    <a href="careers.html" class="btn btn-secondary btn-lg" style="background: white; color: #5B5FDE;">Join Our Team</a>
                 </div>
             </div>
         </div>
     </section>
     
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Product</h4>
-                    <ul class="footer-links">
-                        <li><a href="how-it-works.html">How It Works</a></li>
+    <footer style="background: #1C2051; color: white; padding: 64px 0 32px;" 
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 48px; margin-bottom: 48px;" 
+                <div>
+                    <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 16px; color: white;">Product</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="how-it-works.html">How It Works</a></li>
                         <li><a href="pricing.html">Pricing</a></li>
                         <li><a href="index.html#features">Features</a></li>
                         <li><a href="index.html#testimonials">Reviews</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-section">
+                <div>
                     <h4>Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="about.html">About Us</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="careers.html">Careers</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-section">
+                <div>
                     <h4>Support</h4>
-                    <ul class="footer-links">
-                        <li><a href="help.html">Help Center</a></li>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="help.html">Help Center</a></li>
                         <li><a href="privacy.html">Privacy Policy</a></li>
                         <li><a href="terms.html">Terms of Service</a></li>
                         <li><a href="security.html">Security</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-section">
+                <div>
                     <h4>Stay Updated</h4>
-                    <p style="color: var(--gray-400); margin-bottom: 1rem;">Get parenting tips and product updates</p>
-                    <form id="footer-signup" class="flex flex-col gap-sm">
+                    <p style="color: #9CA3AF; margin-bottom: 1rem;">Get parenting tips and product updates</p>
+                    <form id="footer-signup" style="display: flex; flex-direction: column; gap: 8px">
                         <input 
                             type="email" 
                             class="form-input" 
                             placeholder="Your email" 
                             required 
-                            style="background: var(--gray-800); border-color: var(--gray-700); color: white;"
+                            style="background: #2D3142; border-color: #4A4E5A; color: white;"
                         >
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                        <button type="submit" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #5B5FDE; color: white; transition: all 0.2s ease;">Subscribe</button>
                     </form>
                 </div>
             </div>
             
-            <div class="footer-bottom">
+            <div style="text-align: center; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); color: #9CA3AF;" 
                 <p>&copy; 2024 TimeBank Kids. All rights reserved. Made with ❤️ for families everywhere.</p>
             </div>
         </div>

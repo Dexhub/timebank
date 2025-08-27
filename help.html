@@ -23,8 +23,8 @@
     <style>
         /* Page-specific styles */
         .help-hero {
-            background: linear-gradient(135deg, var(--primary-blue-light) 0%, var(--growth-green-light) 100%);
-            padding: var(--spacing-3xl) 0;
+            background: linear-gradient(135deg, #C5C8FF 0%, #A3F5E1 100%);
+            padding: 64px 0;
             margin-top: 72px;
             position: relative;
             overflow: hidden;
@@ -46,139 +46,139 @@
         .search-box {
             background: white;
             border-radius: var(--radius-full);
-            padding: var(--spacing-sm);
+            padding: 8px;
             display: flex;
             align-items: center;
             max-width: 600px;
-            margin: var(--spacing-xl) auto 0;
-            box-shadow: var(--shadow-xl);
+            margin: 32px auto 0;
+            box-shadow: 0 12px 48px rgba(0,0,0,0.16);
         }
         
         .search-box input {
             flex: 1;
             border: none;
-            padding: var(--spacing-md);
+            padding: 16px;
             font-size: 1.125rem;
             outline: none;
         }
         
         .search-box button {
-            background: var(--primary-blue);
+            background: #5B5FDE;
             color: white;
             border: none;
             border-radius: var(--radius-full);
-            padding: var(--spacing-md) var(--spacing-xl);
+            padding: 16px 32px;
             font-weight: 600;
             cursor: pointer;
-            transition: all var(--transition-base);
+            transition: all 0.2s ease;
         }
         
         .search-box button:hover {
-            background: var(--primary-blue-dark);
+            background: #3A3E96;
             transform: scale(1.05);
         }
         
         .help-categories {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: var(--spacing-xl);
-            margin-top: var(--spacing-3xl);
+            gap: 32px;
+            margin-top: 64px;
         }
         
         .help-category-card {
             background: white;
-            padding: var(--spacing-xl);
-            border-radius: var(--radius-lg);
+            padding: 32px;
+            border-radius: 12px;
             text-align: center;
-            box-shadow: var(--shadow-md);
-            transition: all var(--transition-base);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.2s ease;
             cursor: pointer;
         }
         
         .help-category-card:hover {
             transform: translateY(-4px);
-            box-shadow: var(--shadow-xl);
+            box-shadow: 0 12px 48px rgba(0,0,0,0.16);
         }
         
         .help-icon {
             width: 80px;
             height: 80px;
-            background: var(--gray-100);
-            border-radius: var(--radius-xl);
+            background: #F4F5F7;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto var(--spacing-md);
+            margin: 0 auto 16px;
             font-size: 2.5rem;
-            transition: all var(--transition-base);
+            transition: all 0.2s ease;
         }
         
         .help-category-card:hover .help-icon {
-            background: var(--primary-blue-light);
+            background: #C5C8FF;
             transform: scale(1.1);
         }
         
         .faq-item {
             background: white;
-            border-radius: var(--radius-md);
-            margin-bottom: var(--spacing-md);
+            border-radius: 8px;
+            margin-bottom: 16px;
             overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            transition: all var(--transition-base);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
         }
         
         .faq-question {
-            padding: var(--spacing-lg);
+            padding: 24px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: space-between;
             font-weight: 600;
-            transition: all var(--transition-base);
+            transition: all 0.2s ease;
         }
         
         .faq-question:hover {
-            background: var(--gray-50);
+            background: #F9FAFB;
         }
         
         .faq-question.active {
-            background: var(--primary-blue-light);
+            background: #C5C8FF;
         }
         
         .faq-answer {
-            padding: 0 var(--spacing-lg);
+            padding: 0 24px;
             max-height: 0;
             overflow: hidden;
-            transition: all var(--transition-base);
+            transition: all 0.2s ease;
         }
         
         .faq-answer.open {
-            padding: var(--spacing-lg);
+            padding: 24px;
             max-height: 500px;
         }
         
         .tutorial-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: var(--spacing-xl);
+            gap: 32px;
         }
         
         .tutorial-card {
             background: white;
-            border-radius: var(--radius-lg);
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: var(--shadow-md);
-            transition: all var(--transition-base);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.2s ease;
         }
         
         .tutorial-card:hover {
             transform: translateY(-4px);
-            box-shadow: var(--shadow-xl);
+            box-shadow: 0 12px 48px rgba(0,0,0,0.16);
         }
         
         .tutorial-thumbnail {
             height: 200px;
-            background: var(--gray-300);
+            background: #D1D5DB;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -195,7 +195,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: var(--shadow-lg);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
         }
         
         @media (max-width: 768px) {
@@ -211,19 +211,19 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav" role="navigation" aria-label="Main navigation">
-        <div class="container nav-container">
-            <a href="index.html" class="nav-logo">
-                <span style="color: var(--primary-blue);">⏰</span>
+    <nav style="position: fixed; top: 0; left: 0; right: 0; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); z-index: 1000; height: 72px; display: flex; align-items: center;" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container" style="max-width: 1280px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; height: 100%;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; height: 100%;">
+            <a href="index.html" style="font-size: 1.5rem; font-weight: 800; color: #1C2051; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                <span style="color: #5B5FDE;">⏰</span>
                 TimeBank Kids
             </a>
             
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
-                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="index.html#signup" class="btn btn-primary">Get Started</a></li>
+            <ul style="display: flex; align-items: center; gap: 32px; list-style: none; margin: 0; padding: 0;" id="nav-menu">
+                <li><a href="how-it-works.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">How It Works</a></li>
+                <li><a href="pricing.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">Pricing</a></li>
+                <li><a href="blog.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">Blog</a></li>
+                <li><a href="about.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">About</a></li>
+                <li><a href="index.html#signup" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #5B5FDE; color: white; transition: all 0.2s ease;">Get Started</a></li>
             </ul>
             
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -234,9 +234,9 @@
     
     <!-- Help Hero -->
     <section class="help-hero">
-        <div class="container text-center" style="position: relative;">
+        <div class="container text-center" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="position: relative;">
             <h1 style="color: white;">How Can We Help?</h1>
-            <p class="lead" style="color: white; opacity: 0.95;">
+            <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">
                 Find answers, watch tutorials, and learn how to make the most of TimeBank Kids
             </p>
             
@@ -248,18 +248,18 @@
     </section>
     
     <!-- Help Categories -->
-    <section class="py-3xl">
-        <div class="container">
+    <section style="padding-top: 64px; padding-bottom: 64px;">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
             <h2 class="text-center mb-xl">Browse Help Topics</h2>
             
             <div class="help-categories">
                 <div class="help-category-card animate-on-scroll">
                     <div class="help-icon">🚀</div>
                     <h3>Getting Started</h3>
-                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">
+                    <p style="color: #6E718A; margin-bottom: 16px;">
                         Set up your account, add family members, and start earning screen time
                     </p>
-                    <a href="#" style="color: var(--primary-blue); font-weight: 600;">
+                    <a href="#" style="color: #5B5FDE; font-weight: 600;">
                         View Articles →
                     </a>
                 </div>
@@ -267,10 +267,10 @@
                 <div class="help-category-card animate-on-scroll">
                     <div class="help-icon">👨‍👩‍👧‍👦</div>
                     <h3>Family Management</h3>
-                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">
+                    <p style="color: #6E718A; margin-bottom: 16px;">
                         Add children, set up tasks, manage screen time limits
                     </p>
-                    <a href="#" style="color: var(--primary-blue); font-weight: 600;">
+                    <a href="#" style="color: #5B5FDE; font-weight: 600;">
                         View Articles →
                     </a>
                 </div>
@@ -278,10 +278,10 @@
                 <div class="help-category-card animate-on-scroll">
                     <div class="help-icon">💳</div>
                     <h3>Billing & Account</h3>
-                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">
+                    <p style="color: #6E718A; margin-bottom: 16px;">
                         Subscription management, payment issues, account settings
                     </p>
-                    <a href="#" style="color: var(--primary-blue); font-weight: 600;">
+                    <a href="#" style="color: #5B5FDE; font-weight: 600;">
                         View Articles →
                     </a>
                 </div>
@@ -289,10 +289,10 @@
                 <div class="help-category-card animate-on-scroll">
                     <div class="help-icon">📱</div>
                     <h3>App Features</h3>
-                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">
+                    <p style="color: #6E718A; margin-bottom: 16px;">
                         Learn about all features and how to use them effectively
                     </p>
-                    <a href="#" style="color: var(--primary-blue); font-weight: 600;">
+                    <a href="#" style="color: #5B5FDE; font-weight: 600;">
                         View Articles →
                     </a>
                 </div>
@@ -300,10 +300,10 @@
                 <div class="help-category-card animate-on-scroll">
                     <div class="help-icon">🔧</div>
                     <h3>Troubleshooting</h3>
-                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">
+                    <p style="color: #6E718A; margin-bottom: 16px;">
                         Fix common issues and technical problems
                     </p>
-                    <a href="#" style="color: var(--primary-blue); font-weight: 600;">
+                    <a href="#" style="color: #5B5FDE; font-weight: 600;">
                         View Articles →
                     </a>
                 </div>
@@ -311,10 +311,10 @@
                 <div class="help-category-card animate-on-scroll">
                     <div class="help-icon">🔒</div>
                     <h3>Privacy & Security</h3>
-                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">
+                    <p style="color: #6E718A; margin-bottom: 16px;">
                         Learn how we protect your family's data
                     </p>
-                    <a href="#" style="color: var(--primary-blue); font-weight: 600;">
+                    <a href="#" style="color: #5B5FDE; font-weight: 600;">
                         View Articles →
                     </a>
                 </div>
@@ -323,94 +323,94 @@
     </section>
     
     <!-- Popular Articles -->
-    <section class="py-3xl bg-light">
-        <div class="container">
+    <section style="padding-top: 64px; padding-bottom: 64px; background: #F9FAFB;">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
             <h2 class="text-center mb-xl">Most Popular Articles</h2>
             
-            <div class="grid grid-cols-3 md:grid-cols-1 gap-lg">
-                <a href="#" class="card" style="text-decoration: none; color: inherit;">
-                    <h4 style="color: var(--primary-blue); margin-bottom: var(--spacing-sm);">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+                <a href="#" style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                    <h4 style="color: #5B5FDE; margin-bottom: 8px;">
                         How to Set Up Your First Child Account
                     </h4>
-                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">
+                    <p style="color: #6E718A; margin-bottom: 16px;">
                         Step-by-step guide to adding your child and configuring their first tasks
                     </p>
-                    <span style="color: var(--primary-blue); font-weight: 600;">Read More →</span>
+                    <span style="color: #5B5FDE; font-weight: 600;">Read More →</span>
                 </a>
                 
-                <a href="#" class="card" style="text-decoration: none; color: inherit;">
-                    <h4 style="color: var(--primary-blue); margin-bottom: var(--spacing-sm);">
+                <a href="#" style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                    <h4 style="color: #5B5FDE; margin-bottom: 8px;">
                         Understanding Screen Time Limits
                     </h4>
-                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">
+                    <p style="color: #6E718A; margin-bottom: 16px;">
                         Learn how to set healthy boundaries and customize limits by day
                     </p>
-                    <span style="color: var(--primary-blue); font-weight: 600;">Read More →</span>
+                    <span style="color: #5B5FDE; font-weight: 600;">Read More →</span>
                 </a>
                 
-                <a href="#" class="card" style="text-decoration: none; color: inherit;">
-                    <h4 style="color: var(--primary-blue); margin-bottom: var(--spacing-sm);">
+                <a href="#" style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                    <h4 style="color: #5B5FDE; margin-bottom: 8px;">
                         Creating Age-Appropriate Tasks
                     </h4>
-                    <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">
+                    <p style="color: #6E718A; margin-bottom: 16px;">
                         Tips for assigning tasks that match your child's abilities
                     </p>
-                    <span style="color: var(--primary-blue); font-weight: 600;">Read More →</span>
+                    <span style="color: #5B5FDE; font-weight: 600;">Read More →</span>
                 </a>
             </div>
         </div>
     </section>
     
     <!-- Video Tutorials -->
-    <section class="py-3xl">
-        <div class="container">
+    <section style="padding-top: 64px; padding-bottom: 64px;">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
             <h2 class="text-center mb-xl">Video Tutorials</h2>
             <p class="lead text-center mb-xl">Learn with quick, easy-to-follow video guides</p>
             
             <div class="tutorial-grid">
                 <div class="tutorial-card animate-on-scroll">
-                    <div class="tutorial-thumbnail" style="background: linear-gradient(135deg, var(--primary-blue-light), var(--primary-blue));">
+                    <div class="tutorial-thumbnail" style="background: linear-gradient(135deg, #C5C8FF, #5B5FDE);">
                         <div class="play-button">▶️</div>
                     </div>
-                    <div style="padding: var(--spacing-lg);">
+                    <div style="padding: 24px;">
                         <h4>Getting Started (5 min)</h4>
-                        <p style="color: var(--gray-600); margin-top: var(--spacing-sm);">
+                        <p style="color: #6E718A; margin-top: 8px;">
                             Complete walkthrough of setting up your TimeBank Kids account
                         </p>
                     </div>
                 </div>
                 
                 <div class="tutorial-card animate-on-scroll">
-                    <div class="tutorial-thumbnail" style="background: linear-gradient(135deg, var(--growth-green-light), var(--growth-green));">
+                    <div class="tutorial-thumbnail" style="background: linear-gradient(135deg, #A3F5E1, #00D9A5);">
                         <div class="play-button">▶️</div>
                     </div>
-                    <div style="padding: var(--spacing-lg);">
+                    <div style="padding: 24px;">
                         <h4>Managing Multiple Kids (3 min)</h4>
-                        <p style="color: var(--gray-600); margin-top: var(--spacing-sm);">
+                        <p style="color: #6E718A; margin-top: 8px;">
                             Tips for families with multiple children of different ages
                         </p>
                     </div>
                 </div>
                 
                 <div class="tutorial-card animate-on-scroll">
-                    <div class="tutorial-thumbnail" style="background: linear-gradient(135deg, var(--achievement-gold-light), var(--achievement-gold));">
+                    <div class="tutorial-thumbnail" style="background: linear-gradient(135deg, #FFE399, #FFB800);">
                         <div class="play-button">▶️</div>
                     </div>
-                    <div style="padding: var(--spacing-lg);">
+                    <div style="padding: 24px;">
                         <h4>Reward System Deep Dive (4 min)</h4>
-                        <p style="color: var(--gray-600); margin-top: var(--spacing-sm);">
+                        <p style="color: #6E718A; margin-top: 8px;">
                             Maximize motivation with our reward and achievement system
                         </p>
                     </div>
                 </div>
                 
                 <div class="tutorial-card animate-on-scroll">
-                    <div class="tutorial-thumbnail" style="background: linear-gradient(135deg, var(--accent-coral), var(--accent-purple));">
+                    <div class="tutorial-thumbnail" style="background: linear-gradient(135deg, var(--accent-coral), #9B59B6);">
                         <div class="play-button">▶️</div>
                     </div>
-                    <div style="padding: var(--spacing-lg);">
+                    <div style="padding: 24px;">
                         <h4>Mobile App Features (6 min)</h4>
-                        <p style="color: var(--gray-600); margin-top: var(--spacing-sm);">
+                        <p style="color: #6E718A; margin-top: 8px;">
                             Tour of all mobile app features for parents and kids
                         </p>
                     </div>
@@ -420,8 +420,8 @@
     </section>
     
     <!-- FAQ Section -->
-    <section class="py-3xl bg-light">
-        <div class="container">
+    <section style="padding-top: 64px; padding-bottom: 64px; background: #F9FAFB;">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
             <h2 class="text-center mb-xl">Frequently Asked Questions</h2>
             
             <div style="max-width: 800px; margin: 0 auto;">
@@ -499,34 +499,34 @@
     </section>
     
     <!-- Still Need Help -->
-    <section class="py-3xl">
-        <div class="container">
-            <div class="card" style="background: linear-gradient(135deg, var(--primary-blue), var(--growth-green)); color: white; text-align: center; max-width: 800px; margin: 0 auto;">
+    <section style="padding-top: 64px; padding-bottom: 64px;">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
+            <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
                 <h2 style="color: white;">Still Need Help?</h2>
-                <p class="lead" style="color: rgba(255,255,255,0.9); margin-bottom: 2rem;">
+                <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">
                     Our support team is here to help you succeed with TimeBank Kids
                 </p>
                 
-                <div class="grid grid-cols-3 md:grid-cols-1 gap-lg" style="margin-top: var(--spacing-2xl);">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
                     <div>
-                        <div style="font-size: 3rem; margin-bottom: var(--spacing-sm);">💬</div>
+                        <div style="font-size: 3rem; margin-bottom: 8px;">💬</div>
                         <h4 style="color: white;">Live Chat</h4>
                         <p style="opacity: 0.9;">Get instant answers</p>
-                        <a href="#" class="btn btn-secondary" style="margin-top: var(--spacing-md);">Start Chat</a>
+                        <a href="#" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #F4F5F7; color: #1C2051; transition: all 0.2s ease;">Start Chat</a>
                     </div>
                     
                     <div>
-                        <div style="font-size: 3rem; margin-bottom: var(--spacing-sm);">📧</div>
+                        <div style="font-size: 3rem; margin-bottom: 8px;">📧</div>
                         <h4 style="color: white;">Email Support</h4>
                         <p style="opacity: 0.9;">24-hour response</p>
-                        <a href="mailto:support@timebankkids.com" class="btn btn-secondary" style="margin-top: var(--spacing-md);">Send Email</a>
+                        <a href="mailto:support@timebankkids.com" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #F4F5F7; color: #1C2051; transition: all 0.2s ease;">Send Email</a>
                     </div>
                     
                     <div>
-                        <div style="font-size: 3rem; margin-bottom: var(--spacing-sm);">📞</div>
+                        <div style="font-size: 3rem; margin-bottom: 8px;">📞</div>
                         <h4 style="color: white;">Phone Support</h4>
                         <p style="opacity: 0.9;">Mon-Fri 8AM-8PM PST</p>
-                        <a href="tel:1-800-555-0123" class="btn btn-secondary" style="margin-top: var(--spacing-md);">Call Now</a>
+                        <a href="tel:1-800-555-0123" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #F4F5F7; color: #1C2051; transition: all 0.2s ease;">Call Now</a>
                     </div>
                 </div>
             </div>
@@ -534,56 +534,56 @@
     </section>
     
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Product</h4>
-                    <ul class="footer-links">
-                        <li><a href="how-it-works.html">How It Works</a></li>
+    <footer style="background: #1C2051; color: white; padding: 64px 0 32px;" 
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 48px; margin-bottom: 48px;" 
+                <div>
+                    <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 16px; color: white;">Product</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="how-it-works.html">How It Works</a></li>
                         <li><a href="pricing.html">Pricing</a></li>
                         <li><a href="index.html#features">Features</a></li>
                         <li><a href="index.html#testimonials">Reviews</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-section">
+                <div>
                     <h4>Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="about.html">About Us</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="careers.html">Careers</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-section">
+                <div>
                     <h4>Support</h4>
-                    <ul class="footer-links">
-                        <li><a href="help.html">Help Center</a></li>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="help.html">Help Center</a></li>
                         <li><a href="privacy.html">Privacy Policy</a></li>
                         <li><a href="terms.html">Terms of Service</a></li>
                         <li><a href="security.html">Security</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-section">
+                <div>
                     <h4>Stay Updated</h4>
-                    <p style="color: var(--gray-400); margin-bottom: 1rem;">Get parenting tips and product updates</p>
-                    <form id="footer-signup" class="flex flex-col gap-sm">
+                    <p style="color: #9CA3AF; margin-bottom: 1rem;">Get parenting tips and product updates</p>
+                    <form id="footer-signup" style="display: flex; flex-direction: column; gap: 8px">
                         <input 
                             type="email" 
                             class="form-input" 
                             placeholder="Your email" 
                             required 
-                            style="background: var(--gray-800); border-color: var(--gray-700); color: white;"
+                            style="background: #2D3142; border-color: #4A4E5A; color: white;"
                         >
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                        <button type="submit" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #5B5FDE; color: white; transition: all 0.2s ease;">Subscribe</button>
                     </form>
                 </div>
             </div>
             
-            <div class="footer-bottom">
+            <div style="text-align: center; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); color: #9CA3AF;" 
                 <p>&copy; 2024 TimeBank Kids. All rights reserved. Made with ❤️ for families everywhere.</p>
             </div>
         </div>

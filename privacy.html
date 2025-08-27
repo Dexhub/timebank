@@ -23,8 +23,8 @@
     <style>
         /* Page-specific styles */
         .privacy-hero {
-            background: linear-gradient(135deg, var(--gray-50) 0%, white 100%);
-            padding: var(--spacing-3xl) 0;
+            background: linear-gradient(135deg, #F9FAFB 0%, white 100%);
+            padding: 64px 0;
             margin-top: 72px;
         }
         
@@ -32,17 +32,17 @@
             position: sticky;
             top: 100px;
             background: white;
-            padding: var(--spacing-lg);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-md);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             max-height: calc(100vh - 120px);
             overflow-y: auto;
         }
         
         .privacy-nav h3 {
             font-size: 1rem;
-            margin-bottom: var(--spacing-md);
-            color: var(--gray-700);
+            margin-bottom: 16px;
+            color: #4A4E5A;
         }
         
         .privacy-nav ul {
@@ -50,39 +50,39 @@
         }
         
         .privacy-nav li {
-            margin-bottom: var(--spacing-sm);
+            margin-bottom: 8px;
         }
         
         .privacy-nav a {
-            color: var(--gray-600);
+            color: #6E718A;
             text-decoration: none;
             font-size: 0.875rem;
             display: block;
-            padding: var(--spacing-xs) 0;
+            padding: 4px 0;
             border-left: 3px solid transparent;
-            padding-left: var(--spacing-sm);
-            transition: all var(--transition-base);
+            padding-left: 8px;
+            transition: all 0.2s ease;
         }
         
         .privacy-nav a:hover,
         .privacy-nav a.active {
-            color: var(--primary-blue);
-            border-left-color: var(--primary-blue);
-            background: var(--gray-50);
+            color: #5B5FDE;
+            border-left-color: #5B5FDE;
+            background: #F9FAFB;
         }
         
         .privacy-content {
             background: white;
-            padding: var(--spacing-2xl);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-sm);
+            padding: 48px;
+            border-radius: 12px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
         }
         
         .privacy-content h2 {
-            margin-top: var(--spacing-2xl);
-            margin-bottom: var(--spacing-lg);
-            padding-top: var(--spacing-lg);
-            border-top: 1px solid var(--gray-200);
+            margin-top: 48px;
+            margin-bottom: 24px;
+            padding-top: 24px;
+            border-top: 1px solid #E5E7EB;
         }
         
         .privacy-content h2:first-child {
@@ -92,51 +92,51 @@
         }
         
         .privacy-content h3 {
-            margin-top: var(--spacing-xl);
-            margin-bottom: var(--spacing-md);
+            margin-top: 32px;
+            margin-bottom: 16px;
         }
         
         .privacy-content ul {
-            margin-left: var(--spacing-xl);
-            margin-bottom: var(--spacing-md);
+            margin-left: 32px;
+            margin-bottom: 16px;
         }
         
         .privacy-content li {
-            margin-bottom: var(--spacing-sm);
+            margin-bottom: 8px;
         }
         
         .security-badges {
             display: flex;
-            gap: var(--spacing-lg);
-            margin: var(--spacing-xl) 0;
+            gap: 24px;
+            margin: 32px 0;
             flex-wrap: wrap;
         }
         
         .security-badge {
             display: flex;
             align-items: center;
-            gap: var(--spacing-sm);
-            background: var(--gray-50);
-            padding: var(--spacing-sm) var(--spacing-md);
-            border-radius: var(--radius-md);
+            gap: 8px;
+            background: #F9FAFB;
+            padding: 8px 16px;
+            border-radius: 8px;
             font-weight: 600;
         }
         
         .data-table {
             width: 100%;
             border-collapse: collapse;
-            margin: var(--spacing-lg) 0;
+            margin: 24px 0;
         }
         
         .data-table th,
         .data-table td {
-            padding: var(--spacing-md);
+            padding: 16px;
             text-align: left;
-            border-bottom: 1px solid var(--gray-200);
+            border-bottom: 1px solid #E5E7EB;
         }
         
         .data-table th {
-            background: var(--gray-50);
+            background: #F9FAFB;
             font-weight: 600;
         }
         
@@ -144,26 +144,26 @@
             .privacy-nav {
                 position: relative;
                 top: 0;
-                margin-bottom: var(--spacing-xl);
+                margin-bottom: 32px;
             }
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav" role="navigation" aria-label="Main navigation">
-        <div class="container nav-container">
-            <a href="index.html" class="nav-logo">
-                <span style="color: var(--primary-blue);">⏰</span>
+    <nav style="position: fixed; top: 0; left: 0; right: 0; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); z-index: 1000; height: 72px; display: flex; align-items: center;" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container" style="max-width: 1280px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; height: 100%;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; height: 100%;">
+            <a href="index.html" style="font-size: 1.5rem; font-weight: 800; color: #1C2051; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                <span style="color: #5B5FDE;">⏰</span>
                 TimeBank Kids
             </a>
             
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
-                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="index.html#signup" class="btn btn-primary">Get Started</a></li>
+            <ul style="display: flex; align-items: center; gap: 32px; list-style: none; margin: 0; padding: 0;" id="nav-menu">
+                <li><a href="how-it-works.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">How It Works</a></li>
+                <li><a href="pricing.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">Pricing</a></li>
+                <li><a href="blog.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">Blog</a></li>
+                <li><a href="about.html" style="color: #4A4E5A; text-decoration: none; font-weight: 500; transition: color 0.2s ease;">About</a></li>
+                <li><a href="index.html#signup" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #5B5FDE; color: white; transition: all 0.2s ease;">Get Started</a></li>
             </ul>
             
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -174,19 +174,19 @@
     
     <!-- Privacy Hero -->
     <section class="privacy-hero">
-        <div class="container text-center">
+        <div class="container text-center" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
             <h1>Privacy & Security</h1>
-            <p class="lead">Your family's privacy is our top priority. Learn how we protect your data.</p>
-            <p style="color: var(--gray-600); margin-top: var(--spacing-md);">
+            <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">Your family's privacy is our top priority. Learn how we protect your data.</p>
+            <p style="color: #6E718A; margin-top: 16px;">
                 Last updated: March 15, 2024
             </p>
         </div>
     </section>
     
     <!-- Privacy Content -->
-    <section class="py-3xl">
-        <div class="container">
-            <div class="grid" style="grid-template-columns: 250px 1fr; gap: var(--spacing-2xl);">
+    <section style="padding-top: 64px; padding-bottom: 64px;">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
+            <div class="grid" style="grid-template-columns: 250px 1fr; gap: 48px;">
                 <!-- Side Navigation -->
                 <aside class="privacy-nav">
                     <h3>Quick Navigation</h3>
@@ -329,11 +329,11 @@
                             <li>Implement industry-leading security measures to protect children's privacy</li>
                         </ul>
                         
-                        <div class="card" style="background: var(--primary-blue-light); margin-top: var(--spacing-lg);">
-                            <h4 style="margin-bottom: var(--spacing-sm);">COPPA Safe Harbor</h4>
+                        <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                            <h4 style="margin-bottom: 8px;">COPPA Safe Harbor</h4>
                             <p style="margin: 0;">
                                 TimeBank Kids participates in the PRIVO COPPA Safe Harbor certification program. 
-                                Our certification can be verified at <a href="#" style="color: var(--primary-blue);">privacy.privo.com</a>
+                                Our certification can be verified at <a href="#" style="color: #5B5FDE;">privacy.privo.com</a>
                             </p>
                         </div>
                     </section>
@@ -383,8 +383,8 @@
                     
                     <section id="security">
                         <h2>Security Measures</h2>
-                        <div class="grid grid-cols-2 md:grid-cols-1 gap-lg" style="margin-top: var(--spacing-lg);">
-                            <div class="card">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 32px;">
+                            <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
                                 <h4>Technical Security</h4>
                                 <ul style="margin: 0;">
                                     <li>256-bit SSL encryption</li>
@@ -394,7 +394,7 @@
                                 </ul>
                             </div>
                             
-                            <div class="card">
+                            <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
                                 <h4>Operational Security</h4>
                                 <ul style="margin: 0;">
                                     <li>Employee background checks</li>
@@ -423,7 +423,7 @@
                             Have questions about privacy or want to exercise your rights? We're here to help:
                         </p>
                         
-                        <div class="card" style="background: var(--gray-50);">
+                        <div style="background: white; padding: 32px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
                             <h4>Privacy Team Contact</h4>
                             <p><strong>Email:</strong> privacy@timebankkids.com</p>
                             <p><strong>Phone:</strong> 1-800-TIMEBANK</p>
@@ -439,72 +439,72 @@
     </section>
     
     <!-- Trust Section -->
-    <section class="py-3xl bg-light">
-        <div class="container text-center">
+    <section style="padding-top: 64px; padding-bottom: 64px; background: #F9FAFB;">
+        <div class="container text-center" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
             <h2>Your Trust Is Everything</h2>
-            <p class="lead" style="max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 1.25rem; line-height: 1.6; color: #6E718A;">
                 We're parents too. We built TimeBank Kids with the privacy standards we demand for our own families. 
                 Your trust is the foundation of everything we do.
             </p>
             
-            <div class="flex gap-md justify-center mt-xl">
-                <a href="security.html" class="btn btn-primary">Learn About Security</a>
-                <a href="contact.html" class="btn btn-secondary">Contact Privacy Team</a>
+            <div style="display: flex; gap: 16px; justify-content: center">
+                <a href="security.html" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #5B5FDE; color: white; transition: all 0.2s ease;">Learn About Security</a>
+                <a href="contact.html" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #F4F5F7; color: #1C2051; transition: all 0.2s ease;">Contact Privacy Team</a>
             </div>
         </div>
     </section>
     
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Product</h4>
-                    <ul class="footer-links">
-                        <li><a href="how-it-works.html">How It Works</a></li>
+    <footer style="background: #1C2051; color: white; padding: 64px 0 32px;" 
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;" style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 48px; margin-bottom: 48px;" 
+                <div>
+                    <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 16px; color: white;">Product</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="how-it-works.html">How It Works</a></li>
                         <li><a href="pricing.html">Pricing</a></li>
                         <li><a href="index.html#features">Features</a></li>
                         <li><a href="index.html#testimonials">Reviews</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-section">
+                <div>
                     <h4>Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="about.html">About Us</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="careers.html">Careers</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-section">
+                <div>
                     <h4>Support</h4>
-                    <ul class="footer-links">
-                        <li><a href="help.html">Help Center</a></li>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 8px 0;"><a style="color: #9CA3AF; text-decoration: none; transition: color 0.2s ease;" href="help.html">Help Center</a></li>
                         <li><a href="privacy.html">Privacy Policy</a></li>
                         <li><a href="terms.html">Terms of Service</a></li>
                         <li><a href="security.html">Security</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-section">
+                <div>
                     <h4>Stay Updated</h4>
-                    <p style="color: var(--gray-400); margin-bottom: 1rem;">Get parenting tips and product updates</p>
-                    <form id="footer-signup" class="flex flex-col gap-sm">
+                    <p style="color: #9CA3AF; margin-bottom: 1rem;">Get parenting tips and product updates</p>
+                    <form id="footer-signup" style="display: flex; flex-direction: column; gap: 8px">
                         <input 
                             type="email" 
                             class="form-input" 
                             placeholder="Your email" 
                             required 
-                            style="background: var(--gray-800); border-color: var(--gray-700); color: white;"
+                            style="background: #2D3142; border-color: #4A4E5A; color: white;"
                         >
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                        <button type="submit" style="display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; background: #5B5FDE; color: white; transition: all 0.2s ease;">Subscribe</button>
                     </form>
                 </div>
             </div>
             
-            <div class="footer-bottom">
+            <div style="text-align: center; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); color: #9CA3AF;" 
                 <p>&copy; 2024 TimeBank Kids. All rights reserved. Made with ❤️ for families everywhere.</p>
             </div>
         </div>
