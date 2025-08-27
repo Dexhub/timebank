@@ -189,39 +189,48 @@
         </section>
         
         <!-- Problem Section -->
-        <section class="py-3xl bg-light">
+        <section style="padding: 60px 0; background-color: #F4F5F7;">
             <div class="container">
-                <div class="text-center mb-xl">
-                    <span class="text-primary" style="font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.875rem;">THE PROBLEM</span>
-                    <h2 style="margin-top: 1rem;">The Screen Time Crisis Is Real</h2>
-                    <p class="lead">And traditional approaches aren't working</p>
+                <div style="text-align: center; margin-bottom: 48px;">
+                    <span style="font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 14px; color: #5B5FDE;">THE PROBLEM</span>
+                    <h2 style="margin-top: 16px; font-size: 42px; font-weight: 800; color: #111827;">The Screen Time Crisis Is Real</h2>
+                    <p style="font-size: 20px; color: #6B7280; margin-top: 8px;">And traditional approaches aren't working</p>
                 </div>
                 
-                <div class="grid grid-cols-3 md:grid-cols-1 gap-lg">
-                    <div class="stat-card animate-on-scroll">
-                        <div class="stat-number">54%</div>
-                        <p class="stat-label">of parents believe their child is addicted to screens</p>
-                        <div style="margin-top: 1rem; width: 60px; height: 4px; background: linear-gradient(90deg, var(--primary-blue), var(--growth-green)); margin: 1rem auto 0;"></div>
-                    </div>
-                    
-                    <div class="stat-card animate-on-scroll" style="animation-delay: 0.1s;">
-                        <div class="stat-number">7.5hrs</div>
-                        <p class="stat-label">average daily screen time for kids aged 8-18</p>
-                        <div style="margin-top: 1rem; width: 60px; height: 4px; background: linear-gradient(90deg, var(--growth-green), var(--achievement-gold)); margin: 1rem auto 0;"></div>
-                    </div>
-                    
-                    <div class="stat-card animate-on-scroll" style="animation-delay: 0.2s;">
-                        <div class="stat-number">73%</div>
-                        <p class="stat-label">of families report daily conflicts over screen time</p>
-                        <div style="margin-top: 1rem; width: 60px; height: 4px; background: linear-gradient(90deg, var(--achievement-gold), var(--accent-coral)); margin: 1rem auto 0;"></div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 48px;">
+                    <style>
+                        @media (max-width: 768px) {
+                            .problem-stats {
+                                grid-template-columns: 1fr !important;
+                            }
+                        }
+                    </style>
+                    <div class="problem-stats" style="display: contents;">
+                        <div style="text-align: center; padding: 32px; background: white; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                            <div style="font-size: 56px; font-weight: 800; background: linear-gradient(135deg, #5B5FDE 0%, #00D9A5 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; margin-bottom: 8px;">54%</div>
+                            <p style="color: #6B7280; font-size: 16px;">of parents believe their child is addicted to screens</p>
+                            <div style="margin-top: 16px; width: 60px; height: 4px; background: linear-gradient(90deg, #5B5FDE, #00D9A5); margin: 16px auto 0;"></div>
+                        </div>
+                        
+                        <div style="text-align: center; padding: 32px; background: white; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                            <div style="font-size: 56px; font-weight: 800; background: linear-gradient(135deg, #00D9A5 0%, #FFB800 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; margin-bottom: 8px;">7.5hrs</div>
+                            <p style="color: #6B7280; font-size: 16px;">average daily screen time for kids aged 8-18</p>
+                            <div style="margin-top: 16px; width: 60px; height: 4px; background: linear-gradient(90deg, #00D9A5, #FFB800); margin: 16px auto 0;"></div>
+                        </div>
+                        
+                        <div style="text-align: center; padding: 32px; background: white; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                            <div style="font-size: 56px; font-weight: 800; background: linear-gradient(135deg, #FFB800 0%, #FF6B6B 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; margin-bottom: 8px;">73%</div>
+                            <p style="color: #6B7280; font-size: 16px;">of families report daily conflicts over screen time</p>
+                            <div style="margin-top: 16px; width: 60px; height: 4px; background: linear-gradient(90deg, #FFB800, #FF6B6B); margin: 16px auto 0;"></div>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="text-center mt-xl">
-                    <div style="max-width: 800px; margin: 0 auto; background: white; padding: 2.5rem; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);">
-                        <p class="lead" style="color: var(--gray-800); font-weight: 500;">
-                            <span style="font-size: 1.5rem; color: var(--accent-coral);">❌</span> You've tried timers, passwords, and endless negotiations.<br>
-                            <span style="display: block; margin-top: 1rem;">But nothing seems to work long-term. The battles continue, the guilt persists, and you wonder if there's a better way.</span>
+                <div style="text-align: center; margin-top: 48px;">
+                    <div style="max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+                        <p style="color: #374151; font-weight: 500; font-size: 20px; line-height: 1.6;">
+                            <span style="font-size: 24px; color: #FF6B6B;">❌</span> You've tried timers, passwords, and endless negotiations.<br>
+                            <span style="display: block; margin-top: 16px;">But nothing seems to work long-term. The battles continue, the guilt persists, and you wonder if there's a better way.</span>
                         </p>
                     </div>
                 </div>
